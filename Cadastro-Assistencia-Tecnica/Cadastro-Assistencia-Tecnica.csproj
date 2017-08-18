@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBF16C81-C45C-4FF4-9208-C54D0D5A2534}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cadastro_Assistencia_Tecnica</RootNamespace>
+    <AssemblyName>Cadastro Assistencia Tecnica</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5ACC1B68CDD9AD6D850E4D444FCD8E4D19627B37</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Cadastro-Assistencia-Tecnica_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>C:\Users\marco\Desktop\MaterialSkin-master\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\IFichaService.cs" />
+    <Compile Include="Business\Impl\FichaService.cs" />
+    <Compile Include="Componentes\ComboTextField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\ComboTextField.Designer.cs">
+      <DependentUpon>ComboTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\TextFieldValor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\TextFieldValor.Designer.cs">
+      <DependentUpon>TextFieldValor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\TextField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\TextField.Designer.cs">
+      <DependentUpon>TextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Exceptions\DataBaseNotFoundException.cs" />
+    <Compile Include="Exceptions\OperacaoDAOException.cs" />
+    <Compile Include="Model\Autocomplete.cs" />
+    <Compile Include="Model\Ficha.cs" />
+    <Compile Include="Model\MaterialSchemeColor.cs" />
+    <Compile Include="Persistence\ConnectionFactory.cs" />
+    <Compile Include="Persistence\FichaDAO.cs" />
+    <Compile Include="Print\DGVPrinter.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\FrmFichasCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmFichasCadastrar.Designer.cs">
+      <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrmSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSenha.Designer.cs">
+      <DependentUpon>FrmSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmVisualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmVisualizar.Designer.cs">
+      <DependentUpon>FrmVisualizar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Componentes\ComboTextField.resx">
+      <DependentUpon>ComboTextField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\TextFieldValor.resx">
+      <DependentUpon>TextFieldValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\TextField.resx">
+      <DependentUpon>TextField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmFichasCadastrar.resx">
+      <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmSenha.resx">
+      <DependentUpon>FrmSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmVisualizar.resx">
+      <DependentUpon>FrmVisualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Fonts\Roboto-Medium.ttf" />
+    <None Include="Fonts\Roboto-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisa_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagemFrmMain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assistencia_técnica-eletrodomésticos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assistencia_técnica-eletrodomésticos2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_editar_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_pesquisa_64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolslogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+    <None Include="Resources\shadow.png" />
+    <None Include="Resources\ic_view_module_black_24dp_1x.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\pen1.bmp" />
+    <None Include="Resources\pen2.png" />
+    <None Include="Resources\pen1.png" />
+    <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
+    <None Include="Resources\down.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
