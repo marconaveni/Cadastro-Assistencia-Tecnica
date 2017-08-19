@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    public partial class TextFieldValor : UserControl    {
+    public partial class TextFieldValor : UserControl
+    {
 
-        
+
 
         public TextFieldValor()
         {
@@ -36,7 +37,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public  int MaxLength
+        public int MaxLength
         {
             get { return Txt.MaxLength; }
             set { Txt.MaxLength = value; }
@@ -77,36 +78,51 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
                 double valor = Convert.ToDouble(Txt.Text);
                 Txt.Text = String.Format("{0:N}", valor);
             }
-            if (Txt.Text == ",")
-            {
-                Txt.Text = "";
-            }
         }
 
         private void Txt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (!char.IsDigit(e.KeyChar)))
+            String[] substrings = Txt.Text.Split(',');
+            int i = 0;
+            int c = 0;
+            foreach (var substring in substrings)
             {
-                int numVirgulas = Txt.Text.Split(',').Length;
-                if (e.KeyChar != ',' || numVirgulas > 1)
+                i = Convert.ToInt16(substring.Length);
+                c++;
+            }
+
+            if ((i > 1) && (c > 1) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+
+                if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (!char.IsDigit(e.KeyChar)))
                 {
-                    e.Handled = true;
+                    int numVirgulas = Txt.Text.Split(',').Length;
+                    if (e.KeyChar != ',' || numVirgulas > 1 || (e.KeyChar == ',' && Txt.Text == ""))
+                    {
+                        e.Handled = true;
+                    }
+
                 }
+
             }
         }
 
-        private void tm_Tick(object sender, EventArgs e)
+        private void Tm_Tick(object sender, EventArgs e)
         {
-            if (Ani.Width <= Txt.Width) 
+            if (Ani.Width <= Txt.Width)
             {
-                Ani.Width += aceleration + (Txt.Width /100)-1 ;
+                Ani.Width += aceleration + (Txt.Width / 100) - 1;
                 Ani.Left -= (aceleration / 2) + ((Txt.Width / 100) / 2);
                 aceleration++;
             }
 
         }
 
-        private void tm2_Tick(object sender, EventArgs e)
+        private void Tm2_Tick(object sender, EventArgs e)
         {
             if (Ani.Width > 0)
             {

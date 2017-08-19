@@ -15,7 +15,7 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using Cadastro_Assistencia_Tecnica.Properties;
 using System.Configuration;
-
+using System.Diagnostics;
 
 namespace Cadastro_Assistencia_Tecnica.Views
 {
@@ -28,7 +28,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private int id = 0;
         private string texto;
 
-        private Control controle;
 
         #region "Load e inicialização"
 
@@ -47,7 +46,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             try
             {
-
+                BtnOpcoes.Text = "Opções";
+                BtnThemeMaterial.Text = "Mudar Tema";
 
                 CmbAprovado.Items = "Em Aberto";
                 CmbAprovado.Items = "Sim";
@@ -95,7 +95,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 CmbEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
                 TxtConsultar.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
                 cmbPesquisa.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-
+                TxtDetalhes.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+                DtAprovado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+                DtOk.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+                DtEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+                DtEntrada.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
 
                 //List<string> fc = new List<string>();
                 //fc.Add("teste");
@@ -110,6 +114,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                     TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
                     TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
                     CmbAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
+                    TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
                 }
                 else
                 {
@@ -148,19 +153,21 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
 
             System.Globalization.CultureInfo cultureinfo = System.Threading.Thread.CurrentThread.CurrentCulture;
-            Ficha ficha = new Ficha();
-            ficha.Id = id;
-            ficha.NroFicha = TxtNumeroFicha.Text;
-            ficha.DataEntrada = Convert.ToDateTime(DtEntrada.Text.ToString());
-            ficha.Cliente = cultureinfo.TextInfo.ToTitleCase(TxtCliente.Text);
-            ficha.Telefone = TxtTelefone.Text;
-            ficha.Endereco = cultureinfo.TextInfo.ToTitleCase(TxtEndereco.Text);
-            ficha.NroEndereco = TxtNumeroEndereco.Text;
-            ficha.Aparelho1 = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text);
-            ficha.Marca = cultureinfo.TextInfo.ToTitleCase(TxtMarca.Text);
-            ficha.Modelo = cultureinfo.TextInfo.ToTitleCase(TxtModelo.Text);
-            ficha.Acessorios = CmbAcessorios.Text;
-            ficha.Estado = cultureinfo.TextInfo.ToTitleCase(TxtEstado.Text);
+            Ficha ficha = new Ficha()
+            {
+                Id = id,
+                NroFicha = TxtNumeroFicha.Text,
+                DataEntrada = Convert.ToDateTime(DtEntrada.Text.ToString()),
+                Cliente = cultureinfo.TextInfo.ToTitleCase(TxtCliente.Text),
+                Telefone = TxtTelefone.Text,
+                Endereco = cultureinfo.TextInfo.ToTitleCase(TxtEndereco.Text),
+                NroEndereco = TxtNumeroEndereco.Text,
+                Aparelho1 = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text),
+                Marca = cultureinfo.TextInfo.ToTitleCase(TxtMarca.Text),
+                Modelo = cultureinfo.TextInfo.ToTitleCase(TxtModelo.Text),
+                Acessorios = CmbAcessorios.Text,
+                Estado = cultureinfo.TextInfo.ToTitleCase(TxtEstado.Text)
+            };
             if (TxtValor.Text.Equals("")) { TxtValor.Text = "0"; } else { ficha.Valor = Convert.ToDecimal(String.Format("{0:C}", TxtValor.Text)); }
             ficha.Aprovado = CmbAprovado.Text;
             if (ficha.Aprovado.Equals("Sim") || ficha.Aprovado.Equals("Não")) { ficha.DataAprovado = DtAprovado.Text; } else { ficha.DataAprovado = ""; }
@@ -224,7 +231,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             DtOk.Text = "";
             CmbEntrega.SelectedIndex = 0;
             DtEntrega.Text = "";
-            TxtDetalhes.Clear();
+            TxtDetalhes.Text = "";
 
 
             BtnAlterar.Visible = false;
@@ -282,8 +289,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void FormatCells()
         {
 
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-            img.ImageLayout = DataGridViewImageCellLayout.Normal;
+            DataGridViewImageColumn img = new DataGridViewImageColumn()
+            {
+                ImageLayout = DataGridViewImageCellLayout.Normal
+            };
             object O = Resources.ResourceManager.GetObject("pen1");
             Image image = (Image)O;
             img.Image = image;
@@ -440,7 +449,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 MessageBox.Show("Digite valor correto!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtValor.Focus();
-                controle.BackColor = Color.FromArgb(255, 0, 0);
             }
         }
 
@@ -470,7 +478,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             FrmSenha fr = new FrmSenha();
             fr.ShowDialog();
-            if (fr.Senha().Equals("21322145"))
+            if (fr.Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
             {
                 BtnExcluir.Visible = true;
                 TxtNumeroFicha.Enabled = true;
@@ -498,14 +506,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
             if (CmbAprovado.Text.Equals("Sim") || CmbAprovado.Text.Equals("Não")) //verificação para ativar DtAprovado  no Formulário
             {
                 DtAprovado.Visible = true;
-                lineDtAprovado.Visible = true;
-                TDAprovado.Visible = true;
             }
             else
             {
                 DtAprovado.Visible = false;
-                lineDtAprovado.Visible = false;
-                TDAprovado.Visible = false;
             }
         }
 
@@ -514,14 +518,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
             if (CmbOk.Text.Equals("Sim"))    //verificação para ativar DtOk  no Formulário
             {
                 DtOk.Visible = true;
-                lineDtOk.Visible = true;
-                TDOk.Visible = true;
             }
             else
             {
                 DtOk.Visible = false;
-                lineDtOk.Visible = false;
-                TDOk.Visible = false;
             }
             if (CmbOk.Text.Equals("Sem Defeito"))    //verificação para ativar DtOk  no Formulário
             {
@@ -535,14 +535,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
             if (CmbEntrega.Text.Equals("Sim"))   //verificação para ativar DtEntrega no Formulário 
             {
                 DtEntrega.Visible = true;
-                lineDtEntrega.Visible = true;
-                TDEntrega.Visible = true;
             }
             else
             {
                 DtEntrega.Visible = false;
-                lineDtEntrega.Visible = false;
-                TDEntrega.Visible = false;
             }
 
 
@@ -581,28 +577,29 @@ namespace Cadastro_Assistencia_Tecnica.Views
                     MSDataGrid.Show(p);
                 }
 
-                Ficha ficha = new Ficha();
-                ficha.Id = Convert.ToInt16(DgViewConsultar.CurrentRow.Cells[0].Value);
-                ficha.DataEntrada = Convert.ToDateTime(DgViewConsultar.CurrentRow.Cells[1].Value.ToString());
-                ficha.NroFicha = DgViewConsultar.CurrentRow.Cells[2].Value.ToString();
-                ficha.Cliente = DgViewConsultar.CurrentRow.Cells[3].Value.ToString();
-                ficha.Telefone = DgViewConsultar.CurrentRow.Cells[4].Value.ToString();
-                ficha.Endereco = DgViewConsultar.CurrentRow.Cells[5].Value.ToString();
-                ficha.NroEndereco = DgViewConsultar.CurrentRow.Cells[6].Value.ToString();
-                ficha.Aparelho1 = DgViewConsultar.CurrentRow.Cells[7].Value.ToString();
-                ficha.Marca = DgViewConsultar.CurrentRow.Cells[8].Value.ToString();
-                ficha.Modelo = DgViewConsultar.CurrentRow.Cells[9].Value.ToString();
-                ficha.Acessorios = DgViewConsultar.CurrentRow.Cells[10].Value.ToString();
-                ficha.Estado = DgViewConsultar.CurrentRow.Cells[11].Value.ToString();
-                ficha.Valor = Convert.ToDecimal(DgViewConsultar.CurrentRow.Cells[12].Value.ToString());
-                ficha.Aprovado = DgViewConsultar.CurrentRow.Cells[13].Value.ToString();
-                ficha.DataAprovado = DgViewConsultar.CurrentRow.Cells[14].Value.ToString();
-                ficha.Ok = DgViewConsultar.CurrentRow.Cells[15].Value.ToString();
-                ficha.DataOk = DgViewConsultar.CurrentRow.Cells[16].Value.ToString();
-                ficha.Entrega = DgViewConsultar.CurrentRow.Cells[17].Value.ToString();
-                ficha.DataEntrega = DgViewConsultar.CurrentRow.Cells[18].Value.ToString();
-                ficha.Detalhes = DgViewConsultar.CurrentRow.Cells[19].Value.ToString();
-
+                Ficha ficha = new Ficha()
+                {
+                    Id = Convert.ToInt16(DgViewConsultar.CurrentRow.Cells[0].Value),
+                    DataEntrada = Convert.ToDateTime(DgViewConsultar.CurrentRow.Cells[1].Value.ToString()),
+                    NroFicha = DgViewConsultar.CurrentRow.Cells[2].Value.ToString(),
+                    Cliente = DgViewConsultar.CurrentRow.Cells[3].Value.ToString(),
+                    Telefone = DgViewConsultar.CurrentRow.Cells[4].Value.ToString(),
+                    Endereco = DgViewConsultar.CurrentRow.Cells[5].Value.ToString(),
+                    NroEndereco = DgViewConsultar.CurrentRow.Cells[6].Value.ToString(),
+                    Aparelho1 = DgViewConsultar.CurrentRow.Cells[7].Value.ToString(),
+                    Marca = DgViewConsultar.CurrentRow.Cells[8].Value.ToString(),
+                    Modelo = DgViewConsultar.CurrentRow.Cells[9].Value.ToString(),
+                    Acessorios = DgViewConsultar.CurrentRow.Cells[10].Value.ToString(),
+                    Estado = DgViewConsultar.CurrentRow.Cells[11].Value.ToString(),
+                    Valor = Convert.ToDecimal(DgViewConsultar.CurrentRow.Cells[12].Value.ToString()),
+                    Aprovado = DgViewConsultar.CurrentRow.Cells[13].Value.ToString(),
+                    DataAprovado = DgViewConsultar.CurrentRow.Cells[14].Value.ToString(),
+                    Ok = DgViewConsultar.CurrentRow.Cells[15].Value.ToString(),
+                    DataOk = DgViewConsultar.CurrentRow.Cells[16].Value.ToString(),
+                    Entrega = DgViewConsultar.CurrentRow.Cells[17].Value.ToString(),
+                    DataEntrega = DgViewConsultar.CurrentRow.Cells[18].Value.ToString(),
+                    Detalhes = DgViewConsultar.CurrentRow.Cells[19].Value.ToString()
+                };
                 texto = ficha.DoExibir();
                 SetForm(ficha);
 
@@ -629,57 +626,9 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
   
-     
-        
-  
-
-
-
-        #region "evento personalizar textbox e linhas"
-
-
-
-        private List<Control> DoControlLine()
-        {
-            List<Control> TxtControle = new List<Control>();
-
-
-            return TxtControle;
-        }
-
-
-        private void FocusColorlineTxt(object sender, EventArgs e)
-        {
-            List<Control> TxtControle = DoControlLine();
-
-            foreach (Control con in TxtControle)
-            {
-                if (("Ani" + this.ActiveControl.Name == con.Name) || (this.ActiveControl.Name == btnCadastrar.Name) || (this.ActiveControl.Name == BtnOpcoes.Name))
-                {
-                    con.BackColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                    controle = con;
-
-                }
-
-            }
-
-        }
-
-        private void tm_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        #endregion "evento colorir textbox"    
 
         #endregion "eventos"
 
-        private void DgViewConsultar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -748,58 +697,15 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void CmbPesquisa_DropDownClosed(object sender, EventArgs e)
         {
             GetFichas();
-            //FocusColorlineTxt(sender, e);
         }
 
 
-        private void ThemeMaterial_Click(object sender, EventArgs e)
+        private void BtnThemeMaterial_Click(object sender, EventArgs e)
         {
             materialSkinManager.ColorScheme = MaterialSchemeColor.ChangeColor();
             TxtNumeroFicha.Focus();
-
         }
 
-        private void materialTabSelector1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabCadastroMaterial_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TDAprovado_Click(object sender, EventArgs e)
-        {
-            DtAprovado.Select();
-            SendKeys.Send("%{DOWN}");
-        }
-
-        private void TDOk_Click(object sender, EventArgs e)
-        {
-            DtOk.Select();
-            SendKeys.Send("%{DOWN}");
-        }
-
-        private void TDEntrega_Click(object sender, EventArgs e)
-        {
-            DtEntrega.Select();
-            SendKeys.Send("%{DOWN}");
-        }
-
-        private void TDEntrada_Click(object sender, EventArgs e)
-        {
-            DtEntrada.Select();
-            SendKeys.Send("%{DOWN}");
-        }
-
-
-        private void Cmb_Enter(object sender, EventArgs e)
-        {
-            FocusColorlineTxt(sender, e);
-            this.Select();
-            SendKeys.Send("%{DOWN}");
-        }
 
  
 
@@ -814,39 +720,20 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
-        private void comboTextField1_DropDownClosed(object sender, EventArgs e)
-        {
-            MessageBox.Show("dropdown");
-        }
-
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Em Breve!");
         }
 
-        private void TabPesquisaMaterial_Click(object sender, EventArgs e)
+
+
+        private void BtnCalculator_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void DgViewConsultar_Resize(object sender, EventArgs e)
-        {
-  
-
+            string ProgramName = "calc";
+            Process.Start(ProgramName);
         }
 
 
-        private void FrmFichasCadastrar_ResizeEnd(object sender, EventArgs e)
-        {
-
-        }
-
-
-     
-        private void FrmFichasCadastrar_Resize(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

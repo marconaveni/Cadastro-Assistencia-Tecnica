@@ -17,7 +17,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
     {
         private readonly MaterialSkinManager materialSkinManager;
 
-        private int tentativas = 0;
         public FrmSenha()
         {
             InitializeComponent();

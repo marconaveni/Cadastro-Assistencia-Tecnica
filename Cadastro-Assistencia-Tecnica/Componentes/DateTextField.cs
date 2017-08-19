@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    public partial class TextField : UserControl    {
+    public partial class DateTextField : UserControl    {
 
         
 
-        public TextField()
+        public DateTextField()
         {
             InitializeComponent();
-
         }
 
         private int aceleration;
@@ -28,42 +27,14 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             Ani.Width = 0;
         }
 
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public event EventHandler TextChangedd
-        {
-            add { Txt.TextChanged += value; }
-            remove { Txt.TextChanged -= value; }
-        }
 
 
-
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
         public override string Text
         {
             get { return Txt.Text; }
             set { Txt.Text = value; }
         }
 
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public bool ReadOnly
-        {
-            get { return Txt.ReadOnly; }
-            set { Txt.ReadOnly = value; }
-        }
-
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public  int MaxLength
-        {
-            get { return Txt.MaxLength; }
-            set { Txt.MaxLength = value; }
-        }
-
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public AutoCompleteStringCollection AutoCompleteCustomSource
-        {
-            get { return Txt.AutoCompleteCustomSource; }
-            set { Txt.AutoCompleteCustomSource = value; }
-        }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
         public Color LineColor
@@ -89,18 +60,18 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             tm.Enabled = false;
         }
 
-        private void Tm_Tick(object sender, EventArgs e)
+        private void tm_Tick(object sender, EventArgs e)
         {
-            if (Ani.Width <= Txt.Width) 
+            if (Ani.Width <= Txt.Width)
             {
-                Ani.Width += aceleration + (Txt.Width /100)-1 ;
+                Ani.Width += aceleration + (Txt.Width / 100) - 1;
                 Ani.Left -= (aceleration / 2) + ((Txt.Width / 100) / 2);
                 aceleration++;
             }
 
         }
 
-        private void Tm2_Tick(object sender, EventArgs e)
+        private void tm2_Tick(object sender, EventArgs e)
         {
             if (Ani.Width > 0)
             {
@@ -111,6 +82,10 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         }
 
-  
+        private void TDEntrada_Click(object sender, EventArgs e)
+        {
+            Txt.Select();
+            SendKeys.Send("%{DOWN}");
+        }
     }
 }

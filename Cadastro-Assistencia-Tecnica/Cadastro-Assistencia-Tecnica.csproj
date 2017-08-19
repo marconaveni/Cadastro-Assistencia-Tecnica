@@ -99,6 +99,24 @@
     <Compile Include="Componentes\ComboTextField.Designer.cs">
       <DependentUpon>ComboTextField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\TextAreaField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\TextAreaField.Designer.cs">
+      <DependentUpon>TextAreaField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\DateTextField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\DateTextField.Designer.cs">
+      <DependentUpon>DateTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\RaisedButtonRipple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\RaisedButtonRipple.Designer.cs">
+      <DependentUpon>RaisedButtonRipple.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\TextFieldValor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,7 +137,6 @@
     <Compile Include="Model\MaterialSchemeColor.cs" />
     <Compile Include="Persistence\ConnectionFactory.cs" />
     <Compile Include="Persistence\FichaDAO.cs" />
-    <Compile Include="Print\DGVPrinter.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\FrmFichasCadastrar.cs">
       <SubType>Form</SubType>
@@ -143,6 +160,15 @@
     </Compile>
     <EmbeddedResource Include="Componentes\ComboTextField.resx">
       <DependentUpon>ComboTextField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\TextAreaField.resx">
+      <DependentUpon>TextAreaField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\DateTextField.resx">
+      <DependentUpon>DateTextField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\RaisedButtonRipple.resx">
+      <DependentUpon>RaisedButtonRipple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\TextFieldValor.resx">
       <DependentUpon>TextFieldValor.cs</DependentUpon>
@@ -265,6 +291,7 @@
     <None Include="Resources\pen1.png" />
     <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
     <None Include="Resources\down.png" />
+    <None Include="Resources\calculator.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

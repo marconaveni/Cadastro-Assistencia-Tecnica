@@ -83,12 +83,12 @@
             // tm
             // 
             this.tm.Interval = 1;
-            this.tm.Tick += new System.EventHandler(this.tm_Tick);
+            this.tm.Tick += new System.EventHandler(this.Tm_Tick);
             // 
             // tm2
             // 
             this.tm2.Interval = 1;
-            this.tm2.Tick += new System.EventHandler(this.tm2_Tick);
+            this.tm2.Tick += new System.EventHandler(this.Tm2_Tick);
             // 
             // TextFieldValor
             // 

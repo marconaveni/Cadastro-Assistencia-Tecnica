@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    public partial class TextField : UserControl    {
+    public partial class TextAreaField : UserControl    {
 
         
 
-        public TextField()
+        public TextAreaField()
         {
             InitializeComponent();
-
         }
 
         private int aceleration;
@@ -36,19 +35,11 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
         }
 
 
-
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
         public override string Text
         {
             get { return Txt.Text; }
             set { Txt.Text = value; }
-        }
-
-        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public bool ReadOnly
-        {
-            get { return Txt.ReadOnly; }
-            set { Txt.ReadOnly = value; }
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
@@ -89,7 +80,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             tm.Enabled = false;
         }
 
-        private void Tm_Tick(object sender, EventArgs e)
+        private void tm_Tick(object sender, EventArgs e)
         {
             if (Ani.Width <= Txt.Width) 
             {
@@ -100,7 +91,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         }
 
-        private void Tm2_Tick(object sender, EventArgs e)
+        private void tm2_Tick(object sender, EventArgs e)
         {
             if (Ani.Width > 0)
             {
