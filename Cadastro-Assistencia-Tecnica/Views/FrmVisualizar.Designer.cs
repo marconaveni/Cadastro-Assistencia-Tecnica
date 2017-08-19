@@ -45,6 +45,7 @@
             this.RchPrint.Size = new System.Drawing.Size(751, 334);
             this.RchPrint.TabIndex = 0;
             this.RchPrint.Text = "";
+            this.RchPrint.Click += new System.EventHandler(this.RchPrint_Click);
             // 
             // BtnVisuImprim
             // 
@@ -78,6 +79,7 @@
             this.printPreviewDialog1.Enabled = true;
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.ShowIcon = false;
             this.printPreviewDialog1.Visible = false;
             this.printPreviewDialog1.Load += new System.EventHandler(this.PrintPreviewDialog1_Load);
             // 

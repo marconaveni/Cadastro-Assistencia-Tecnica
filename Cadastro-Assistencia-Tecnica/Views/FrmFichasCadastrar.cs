@@ -65,41 +65,21 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 CmbEntrega.Items = "Sim";
                 CmbEntrega.SelectedIndex = 0;
 
-                cmbPesquisa.Items = "Número";
-                cmbPesquisa.Items = "Nome";
-                cmbPesquisa.Items = "Telefone";
-                cmbPesquisa.SelectedIndex = 0;
+                CmbPesquisa.Items = "Número";
+                CmbPesquisa.Items = "Nome";
+                CmbPesquisa.Items = "Telefone";
+                CmbPesquisa.SelectedIndex = 0;
 
                 Clear();
 
+                materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
+                StartTheme();
+
                 TabMainMaterial.SelectedTab = TabPesquisaMaterial;
                 TabMainMaterial.SelectedTab = TabCadastroMaterial;
-                materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
-
 
                 GetFichas();
 
-                TxtNumeroFicha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtCliente.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtTelefone.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtEndereco.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtNumeroEndereco.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtAparelho.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtMarca.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtModelo.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                CmbAcessorios.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtEstado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtValor.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                CmbAprovado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                CmbOk.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                CmbEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtConsultar.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                cmbPesquisa.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                TxtDetalhes.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                DtAprovado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                DtOk.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                DtEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
-                DtEntrada.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
 
                 //List<string> fc = new List<string>();
                 //fc.Add("teste");
@@ -113,7 +93,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                     TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
                     TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
                     TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
-                    CmbAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
+                    TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
                     TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
                 }
                 else
@@ -121,7 +101,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                     TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
                     TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
                     TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
-                    CmbAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
+                    TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
                     TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
 
 
@@ -165,13 +145,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 Aparelho1 = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text),
                 Marca = cultureinfo.TextInfo.ToTitleCase(TxtMarca.Text),
                 Modelo = cultureinfo.TextInfo.ToTitleCase(TxtModelo.Text),
-                Acessorios = CmbAcessorios.Text,
+                Acessorios = TxtAcessorios.Text,
                 Estado = cultureinfo.TextInfo.ToTitleCase(TxtEstado.Text)
             };
             if (TxtValor.Text.Equals("")) { TxtValor.Text = "0"; } else { ficha.Valor = Convert.ToDecimal(String.Format("{0:C}", TxtValor.Text)); }
             ficha.Aprovado = CmbAprovado.Text;
             if (ficha.Aprovado.Equals("Sim") || ficha.Aprovado.Equals("Não")) { ficha.DataAprovado = DtAprovado.Text; } else { ficha.DataAprovado = ""; }
-            ficha.Ok = CmbOk.Text; 
+            ficha.Ok = CmbOk.Text;
             if (ficha.Ok.Equals("Sim")) { ficha.DataOk = DtOk.Text; } else { ficha.DataOk = ""; }
             ficha.Entrega = CmbEntrega.Text;
             if (ficha.Entrega.Equals("Sim")) { ficha.DataEntrega = DtEntrega.Text; } else { ficha.DataEntrega = ""; }
@@ -195,7 +175,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtAparelho.Text = ficha.Aparelho1;
             TxtMarca.Text = ficha.Marca;
             TxtModelo.Text = ficha.Modelo;
-            CmbAcessorios.Text = ficha.Acessorios;
+            TxtAcessorios.Text = ficha.Acessorios;
             TxtEstado.Text = ficha.Estado;
             TxtValor.Text = ficha.Valor.ToString();
             CmbAprovado.Text = ficha.Aprovado;
@@ -222,7 +202,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtAparelho.Text = "";
             TxtMarca.Text = "";
             TxtModelo.Text = "";
-            CmbAcessorios.Text = "Não";
+            TxtAcessorios.Text = "Não";
             TxtEstado.Text = "";
             TxtValor.Text = "";
             CmbAprovado.SelectedIndex = 0;
@@ -236,7 +216,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             BtnAlterar.Visible = false;
             BtnExcluir.Visible = false;
-            btnCadastrar.Visible = true;
+            BtnCadastrar.Visible = true;
             BtnAdmin.Enabled = false;
             TxtNumeroFicha.Enabled = true;
             TxtCliente.Enabled = true;
@@ -256,17 +236,17 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 DgViewConsultar.Columns.Clear();
                 Ficha ficha = new Ficha();
-                if (cmbPesquisa.Text.Equals("Nome"))
+                if (CmbPesquisa.Text.Equals("Nome"))
                 {
                     ficha.Cliente = TxtConsultar.Text;
                     DgViewConsultar.DataSource = service.findCliente(ficha);
                 }
-                else if (cmbPesquisa.Text.Equals("Número"))
+                else if (CmbPesquisa.Text.Equals("Número"))
                 {
                     ficha.NroFicha = TxtConsultar.Text;
                     DgViewConsultar.DataSource = service.findNumero(ficha);
                 }
-                else if (cmbPesquisa.Text.Equals("Telefone"))
+                else if (CmbPesquisa.Text.Equals("Telefone"))
                 {
                     ficha.Telefone = TxtConsultar.Text;
                     DgViewConsultar.DataSource = service.findTelefone(ficha);
@@ -367,6 +347,40 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
 
 
+        private void StartTheme(object sender, EventArgs e)
+        {
+            StartTheme();
+        }
+
+        private void StartTheme()
+        {
+            
+
+            TxtNumeroFicha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtCliente.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtTelefone.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtEndereco.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtNumeroEndereco.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtAparelho.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtMarca.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtModelo.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtAcessorios.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtEstado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtValor.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            CmbAprovado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            CmbOk.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            CmbEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtConsultar.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            CmbPesquisa.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtDetalhes.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            DtAprovado.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            DtOk.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            DtEntrega.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            DtEntrada.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+        }
+
+
+
 
         /// <summary>
         /// transição de uma tab para tab cadastro
@@ -385,21 +399,25 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
+            StartTheme();
             try
             {
                 if (string.IsNullOrEmpty(TxtNumeroFicha.Text) && TxtNumeroFicha.Text.Length < 2) // propriedade IsNullOrEmpty não permite que a textbox receba um valor nulo ou que o mesmo fique vazio.
                 {
                     MessageBox.Show("Informe o Número da ficha!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TxtNumeroFicha.LineColor = Color.Red;
                     TxtNumeroFicha.Focus();
                 }
                 else if (string.IsNullOrEmpty(TxtCliente.Text) && TxtCliente.Text.Length < 3) // propriedade IsNullOrEmpty não permite que a textbox receba um valor nulo ou que o mesmo fique vazio.
                 {
                     MessageBox.Show("Informe o Nome do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TxtCliente.LineColor = Color.Red;
                     TxtCliente.Focus();
                 }
                 else if (string.IsNullOrEmpty(TxtAparelho.Text) && TxtAparelho.Text.Length < 3) // propriedade IsNullOrEmpty não permite que a textbox receba um valor nulo ou que o mesmo fique vazio.
                 {
                     MessageBox.Show("Informe o Aparelho!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    TxtAparelho.LineColor = Color.Red;
                     TxtAparelho.Focus();
                 }
                 else
@@ -495,7 +513,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         #endregion "botoes"
 
-    
+
 
         #region "eventos"
 
@@ -525,7 +543,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             }
             if (CmbOk.Text.Equals("Sem Defeito"))    //verificação para ativar DtOk  no Formulário
             {
-                TxtDetalhes.Text = "O aparelho não apresentou defeito";    
+                TxtDetalhes.Text = "O aparelho não apresentou defeito";
             }
         }
 
@@ -605,7 +623,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
                 BtnAlterar.Visible = true;
                 BtnExcluir.Enabled = true;
-                btnCadastrar.Visible = false;
+                BtnCadastrar.Visible = false;
                 BtnAdmin.Enabled = true;
                 BtnExcluir.Visible = false;
                 TxtNumeroFicha.Enabled = false;
@@ -625,7 +643,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             }
         }
 
-  
+
 
         #endregion "eventos"
 
@@ -703,11 +721,12 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void BtnThemeMaterial_Click(object sender, EventArgs e)
         {
             materialSkinManager.ColorScheme = MaterialSchemeColor.ChangeColor();
+            StartTheme();
             TxtNumeroFicha.Focus();
         }
 
 
- 
+
 
         /// <summary>
         /// evento txtconsultar para fazer pesquisa dinamica
@@ -719,10 +738,23 @@ namespace Cadastro_Assistencia_Tecnica.Views
             GetFichas();
         }
 
+        private void BtnOpcoes_Load(object sender, EventArgs e)
+        {
 
+        }
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Em Breve!");
+            //MessageBox.Show("Em Breve!");
+
+            //foreach (Control ctrl in TabCadastroMaterial.Controls)
+            //{
+            //    //MessageBox.Show(ctrl.Name);
+            //}
+            //foreach (Control ctrl in TabPesquisaMaterial.Controls)
+            //{
+            //    MessageBox.Show(ctrl.Name);
+            //}
+
         }
 
 

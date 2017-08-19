@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PrintFicha = new System.Windows.Forms.PrintDialog();
@@ -47,13 +48,13 @@
             this.DtOk = new Cadastro_Assistencia_Tecnica.Componentes.DateTextField();
             this.DtAprovado = new Cadastro_Assistencia_Tecnica.Componentes.DateTextField();
             this.TxtDetalhes = new Cadastro_Assistencia_Tecnica.Componentes.TextAreaField();
-            this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
+            this.LinhaDivisoraTbCad = new MaterialSkin.Controls.MaterialDivider();
             this.CmbEntrega = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
             this.CmbOk = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
             this.CmbAprovado = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
             this.TxtValor = new Cadastro_Assistencia_Tecnica.Componentes.TextFieldValor();
             this.TxtEstado = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
-            this.CmbAcessorios = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
+            this.TxtAcessorios = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtModelo = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtMarca = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtAparelho = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
@@ -63,7 +64,7 @@
             this.TxtNumeroFicha = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.BtnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnAdmin = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BtnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnNovo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnAlterar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.LblEntrega = new MaterialSkin.Controls.MaterialLabel();
@@ -88,10 +89,11 @@
             this.TxtConsultar = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.LblTipoPesquisa = new MaterialSkin.Controls.MaterialLabel();
             this.LblPesquisa = new MaterialSkin.Controls.MaterialLabel();
-            this.cmbPesquisa = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.CmbPesquisa = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
+            this.LinhaDivisoraTbPesq = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.Description = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgViewConsultar)).BeginInit();
             this.MSDataGrid.SuspendLayout();
             this.TabMainMaterial.SuspendLayout();
@@ -126,6 +128,7 @@
             this.DgViewConsultar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgViewConsultar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgViewConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DgViewConsultar.ContextMenuStrip = this.MSDataGrid;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,13 +212,13 @@
             this.TabCadastroMaterial.Controls.Add(this.DtOk);
             this.TabCadastroMaterial.Controls.Add(this.DtAprovado);
             this.TabCadastroMaterial.Controls.Add(this.TxtDetalhes);
-            this.TabCadastroMaterial.Controls.Add(this.materialDivider3);
+            this.TabCadastroMaterial.Controls.Add(this.LinhaDivisoraTbCad);
             this.TabCadastroMaterial.Controls.Add(this.CmbEntrega);
             this.TabCadastroMaterial.Controls.Add(this.CmbOk);
             this.TabCadastroMaterial.Controls.Add(this.CmbAprovado);
             this.TabCadastroMaterial.Controls.Add(this.TxtValor);
             this.TabCadastroMaterial.Controls.Add(this.TxtEstado);
-            this.TabCadastroMaterial.Controls.Add(this.CmbAcessorios);
+            this.TabCadastroMaterial.Controls.Add(this.TxtAcessorios);
             this.TabCadastroMaterial.Controls.Add(this.TxtModelo);
             this.TabCadastroMaterial.Controls.Add(this.TxtMarca);
             this.TabCadastroMaterial.Controls.Add(this.TxtAparelho);
@@ -225,7 +228,7 @@
             this.TabCadastroMaterial.Controls.Add(this.TxtNumeroFicha);
             this.TabCadastroMaterial.Controls.Add(this.BtnExcluir);
             this.TabCadastroMaterial.Controls.Add(this.BtnAdmin);
-            this.TabCadastroMaterial.Controls.Add(this.btnCadastrar);
+            this.TabCadastroMaterial.Controls.Add(this.BtnCadastrar);
             this.TabCadastroMaterial.Controls.Add(this.BtnNovo);
             this.TabCadastroMaterial.Controls.Add(this.BtnAlterar);
             this.TabCadastroMaterial.Controls.Add(this.LblEntrega);
@@ -279,6 +282,7 @@
             this.BtnOpcoes.Size = new System.Drawing.Size(125, 50);
             this.BtnOpcoes.TabIndex = 24;
             this.BtnOpcoes.Clicked += new System.EventHandler(this.BtnOpcoes_Click);
+            this.BtnOpcoes.Load += new System.EventHandler(this.BtnOpcoes_Load);
             // 
             // BtnCalculator
             // 
@@ -294,6 +298,8 @@
             this.BtnCalculator.Primary = false;
             this.BtnCalculator.Size = new System.Drawing.Size(44, 36);
             this.BtnCalculator.TabIndex = 12;
+            this.BtnCalculator.Tag = "";
+            this.Description.SetToolTip(this.BtnCalculator, "Abrir Calculadora");
             this.BtnCalculator.UseVisualStyleBackColor = true;
             this.BtnCalculator.Click += new System.EventHandler(this.BtnCalculator_Click);
             // 
@@ -358,19 +364,19 @@
             this.TxtDetalhes.Size = new System.Drawing.Size(283, 117);
             this.TxtDetalhes.TabIndex = 15;
             // 
-            // materialDivider3
+            // LinhaDivisoraTbCad
             // 
-            this.materialDivider3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.LinhaDivisoraTbCad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialDivider3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider3.Depth = 0;
-            this.materialDivider3.Location = new System.Drawing.Point(-9, 439);
-            this.materialDivider3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.materialDivider3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider3.Name = "materialDivider3";
-            this.materialDivider3.Size = new System.Drawing.Size(885, 1);
-            this.materialDivider3.TabIndex = 36;
-            this.materialDivider3.Text = "materialDivider3";
+            this.LinhaDivisoraTbCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LinhaDivisoraTbCad.Depth = 0;
+            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-9, 439);
+            this.LinhaDivisoraTbCad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.LinhaDivisoraTbCad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
+            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(885, 1);
+            this.LinhaDivisoraTbCad.TabIndex = 36;
+            this.LinhaDivisoraTbCad.Text = "materialDivider3";
             // 
             // CmbEntrega
             // 
@@ -441,19 +447,19 @@
             this.TxtEstado.Size = new System.Drawing.Size(282, 30);
             this.TxtEstado.TabIndex = 10;
             // 
-            // CmbAcessorios
+            // TxtAcessorios
             // 
-            this.CmbAcessorios.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbAcessorios.LineColor = System.Drawing.Color.LightGray;
-            this.CmbAcessorios.Location = new System.Drawing.Point(524, 230);
-            this.CmbAcessorios.Margin = new System.Windows.Forms.Padding(1);
-            this.CmbAcessorios.MaximumSize = new System.Drawing.Size(282, 30);
-            this.CmbAcessorios.MaxLength = 20;
-            this.CmbAcessorios.MinimumSize = new System.Drawing.Size(135, 30);
-            this.CmbAcessorios.Name = "CmbAcessorios";
-            this.CmbAcessorios.ReadOnly = false;
-            this.CmbAcessorios.Size = new System.Drawing.Size(282, 30);
-            this.CmbAcessorios.TabIndex = 9;
+            this.TxtAcessorios.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAcessorios.LineColor = System.Drawing.Color.LightGray;
+            this.TxtAcessorios.Location = new System.Drawing.Point(524, 230);
+            this.TxtAcessorios.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtAcessorios.MaximumSize = new System.Drawing.Size(282, 30);
+            this.TxtAcessorios.MaxLength = 20;
+            this.TxtAcessorios.MinimumSize = new System.Drawing.Size(135, 30);
+            this.TxtAcessorios.Name = "TxtAcessorios";
+            this.TxtAcessorios.ReadOnly = false;
+            this.TxtAcessorios.Size = new System.Drawing.Size(282, 30);
+            this.TxtAcessorios.TabIndex = 9;
             // 
             // TxtModelo
             // 
@@ -496,6 +502,7 @@
             this.TxtAparelho.ReadOnly = false;
             this.TxtAparelho.Size = new System.Drawing.Size(282, 30);
             this.TxtAparelho.TabIndex = 6;
+            this.TxtAparelho.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // TxtTelefone
             // 
@@ -538,6 +545,7 @@
             this.TxtCliente.ReadOnly = false;
             this.TxtCliente.Size = new System.Drawing.Size(282, 30);
             this.TxtCliente.TabIndex = 2;
+            this.TxtCliente.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // TxtNumeroFicha
             // 
@@ -552,6 +560,7 @@
             this.TxtNumeroFicha.ReadOnly = false;
             this.TxtNumeroFicha.Size = new System.Drawing.Size(135, 30);
             this.TxtNumeroFicha.TabIndex = 0;
+            this.TxtNumeroFicha.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // BtnExcluir
             // 
@@ -592,24 +601,24 @@
             this.BtnAdmin.UseVisualStyleBackColor = true;
             this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
-            // btnCadastrar
+            // BtnCadastrar
             // 
-            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastrar.AutoSize = true;
-            this.btnCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Depth = 0;
-            this.btnCadastrar.Icon = null;
-            this.btnCadastrar.Location = new System.Drawing.Point(32, 460);
-            this.btnCadastrar.MinimumSize = new System.Drawing.Size(109, 36);
-            this.btnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Primary = true;
-            this.btnCadastrar.Size = new System.Drawing.Size(109, 36);
-            this.btnCadastrar.TabIndex = 20;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            this.BtnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCadastrar.AutoSize = true;
+            this.BtnCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCadastrar.Depth = 0;
+            this.BtnCadastrar.Icon = null;
+            this.BtnCadastrar.Location = new System.Drawing.Point(32, 460);
+            this.BtnCadastrar.MinimumSize = new System.Drawing.Size(109, 36);
+            this.BtnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnCadastrar.Name = "BtnCadastrar";
+            this.BtnCadastrar.Primary = true;
+            this.BtnCadastrar.Size = new System.Drawing.Size(109, 36);
+            this.BtnCadastrar.TabIndex = 20;
+            this.BtnCadastrar.Text = "Cadastrar";
+            this.BtnCadastrar.UseVisualStyleBackColor = true;
+            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // BtnNovo
             // 
@@ -908,8 +917,8 @@
             this.TabPesquisaMaterial.Controls.Add(this.TxtConsultar);
             this.TabPesquisaMaterial.Controls.Add(this.LblTipoPesquisa);
             this.TabPesquisaMaterial.Controls.Add(this.LblPesquisa);
-            this.TabPesquisaMaterial.Controls.Add(this.cmbPesquisa);
-            this.TabPesquisaMaterial.Controls.Add(this.materialDivider2);
+            this.TabPesquisaMaterial.Controls.Add(this.CmbPesquisa);
+            this.TabPesquisaMaterial.Controls.Add(this.LinhaDivisoraTbPesq);
             this.TabPesquisaMaterial.Controls.Add(this.DgViewConsultar);
             this.TabPesquisaMaterial.Location = new System.Drawing.Point(4, 26);
             this.TabPesquisaMaterial.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -962,32 +971,32 @@
             this.LblPesquisa.TabIndex = 4;
             this.LblPesquisa.Text = "Buscar Fichas";
             // 
-            // cmbPesquisa
+            // CmbPesquisa
             // 
-            this.cmbPesquisa.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPesquisa.LineColor = System.Drawing.Color.LightGray;
-            this.cmbPesquisa.Location = new System.Drawing.Point(332, 20);
-            this.cmbPesquisa.Margin = new System.Windows.Forms.Padding(1);
-            this.cmbPesquisa.MaximumSize = new System.Drawing.Size(1920, 30);
-            this.cmbPesquisa.MinimumSize = new System.Drawing.Size(135, 40);
-            this.cmbPesquisa.Name = "cmbPesquisa";
-            this.cmbPesquisa.SelectedIndex = -1;
-            this.cmbPesquisa.Size = new System.Drawing.Size(135, 40);
-            this.cmbPesquisa.TabIndex = 1;
-            this.cmbPesquisa.DropDownClosed += new System.EventHandler(this.CmbPesquisa_DropDownClosed);
+            this.CmbPesquisa.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbPesquisa.LineColor = System.Drawing.Color.LightGray;
+            this.CmbPesquisa.Location = new System.Drawing.Point(332, 20);
+            this.CmbPesquisa.Margin = new System.Windows.Forms.Padding(1);
+            this.CmbPesquisa.MaximumSize = new System.Drawing.Size(1920, 30);
+            this.CmbPesquisa.MinimumSize = new System.Drawing.Size(135, 40);
+            this.CmbPesquisa.Name = "CmbPesquisa";
+            this.CmbPesquisa.SelectedIndex = -1;
+            this.CmbPesquisa.Size = new System.Drawing.Size(135, 40);
+            this.CmbPesquisa.TabIndex = 1;
+            this.CmbPesquisa.DropDownClosed += new System.EventHandler(this.CmbPesquisa_DropDownClosed);
             // 
-            // materialDivider2
+            // LinhaDivisoraTbPesq
             // 
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(0, 66);
-            this.materialDivider2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.materialDivider2.MinimumSize = new System.Drawing.Size(870, 1);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(870, 1);
-            this.materialDivider2.TabIndex = 3;
-            this.materialDivider2.Text = "materialDivider2";
+            this.LinhaDivisoraTbPesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LinhaDivisoraTbPesq.Depth = 0;
+            this.LinhaDivisoraTbPesq.Location = new System.Drawing.Point(0, 66);
+            this.LinhaDivisoraTbPesq.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.LinhaDivisoraTbPesq.MinimumSize = new System.Drawing.Size(870, 1);
+            this.LinhaDivisoraTbPesq.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LinhaDivisoraTbPesq.Name = "LinhaDivisoraTbPesq";
+            this.LinhaDivisoraTbPesq.Size = new System.Drawing.Size(870, 1);
+            this.LinhaDivisoraTbPesq.TabIndex = 3;
+            this.LinhaDivisoraTbPesq.Text = "materialDivider2";
             // 
             // materialTabSelector1
             // 
@@ -1061,11 +1070,11 @@
         private MaterialSkin.Controls.MaterialContextMenuStrip MSDataGrid;
         private System.Windows.Forms.ToolStripMenuItem IMSAlterarFicha;
         private System.Windows.Forms.ToolStripMenuItem visualizarFichaToolStripMenuItem;
-        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private MaterialSkin.Controls.MaterialDivider LinhaDivisoraTbPesq;
         private System.Windows.Forms.TabPage TabCadastroMaterial;
         private MaterialSkin.Controls.MaterialRaisedButton BtnExcluir;
         private MaterialSkin.Controls.MaterialRaisedButton BtnAdmin;
-        private MaterialSkin.Controls.MaterialRaisedButton btnCadastrar;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnCadastrar;
         private MaterialSkin.Controls.MaterialRaisedButton BtnNovo;
         private MaterialSkin.Controls.MaterialRaisedButton BtnAlterar;
         private MaterialSkin.Controls.MaterialLabel LblEntrega;
@@ -1092,7 +1101,7 @@
         private Componentes.TextField TxtNumeroEndereco;
         private Componentes.TextField TxtAparelho;
         private Componentes.TextField TxtEstado;
-        private Componentes.TextField CmbAcessorios;
+        private Componentes.TextField TxtAcessorios;
         private Componentes.TextField TxtModelo;
         private Componentes.TextField TxtMarca;
         private Componentes.TextFieldValor TxtValor;
@@ -1100,9 +1109,9 @@
         private Componentes.ComboTextField CmbAprovado;
         private Componentes.ComboTextField CmbOk;
         private Componentes.ComboTextField CmbEntrega;
-        private Componentes.ComboTextField cmbPesquisa;
+        private Componentes.ComboTextField CmbPesquisa;
         private System.Windows.Forms.PictureBox pictureBox27;
-        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private MaterialSkin.Controls.MaterialDivider LinhaDivisoraTbCad;
         private Componentes.TextAreaField TxtDetalhes;
         private Componentes.DateTextField DtEntrega;
         private Componentes.DateTextField DtEntrada;
@@ -1111,5 +1120,6 @@
         private MaterialSkin.Controls.MaterialFlatButton BtnCalculator;
         private Componentes.RaisedButtonRipple BtnOpcoes;
         private Componentes.RaisedButtonRipple BtnThemeMaterial;
+        private System.Windows.Forms.ToolTip Description;
     }
 }
