@@ -16,6 +16,7 @@ using MaterialSkin.Controls;
 using Cadastro_Assistencia_Tecnica.Properties;
 using System.Configuration;
 using System.Diagnostics;
+using Cadastro_Assistencia_Tecnica.Save;
 
 namespace Cadastro_Assistencia_Tecnica.Views
 {
@@ -744,6 +745,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
+
+            FichaPDF fichapdf = new FichaPDF();
+            fichapdf.save();
+            Process.Start("output.pdf");
             //MessageBox.Show("Em Breve!");
 
             //foreach (Control ctrl in TabCadastroMaterial.Controls)

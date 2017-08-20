@@ -57,7 +57,7 @@
             this.TxtSenha.Depth = 0;
             this.TxtSenha.Hint = "";
             this.TxtSenha.Location = new System.Drawing.Point(171, 125);
-            this.TxtSenha.MaxLength = 32;
+            //this.TxtSenha.MaxLength = 32;
             this.TxtSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '•';
@@ -75,7 +75,6 @@
             this.BtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnOk.Depth = 0;
-            this.BtnOk.Icon = null;
             this.BtnOk.Location = new System.Drawing.Point(184, 206);
             this.BtnOk.MinimumSize = new System.Drawing.Size(109, 36);
             this.BtnOk.MouseState = MaterialSkin.MouseState.HOVER;
@@ -93,7 +92,6 @@
             this.BtnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancelar.Depth = 0;
-            this.BtnCancelar.Icon = null;
             this.BtnCancelar.Location = new System.Drawing.Point(53, 206);
             this.BtnCancelar.MinimumSize = new System.Drawing.Size(109, 36);
             this.BtnCancelar.MouseState = MaterialSkin.MouseState.HOVER;

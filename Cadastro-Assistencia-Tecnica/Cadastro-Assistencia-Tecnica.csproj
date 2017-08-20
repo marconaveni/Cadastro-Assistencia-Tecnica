@@ -32,14 +32,14 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>1</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -71,16 +71,14 @@
     <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="MaterialSkin">
-      <HintPath>C:\Users\marco\Desktop\MaterialSkin-master\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -137,15 +135,15 @@
     <Compile Include="Model\MaterialSchemeColor.cs" />
     <Compile Include="Persistence\ConnectionFactory.cs" />
     <Compile Include="Persistence\FichaDAO.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Save\FichaPDF.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FrmFichasCadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FrmFichasCadastrar.Designer.cs">
       <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FrmSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +174,6 @@
     <EmbeddedResource Include="Componentes\TextField.resx">
       <DependentUpon>TextField.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FrmFichasCadastrar.resx">
-      <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -189,6 +184,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\FrmFichasCadastrar.resx">
+      <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmSenha.resx">
       <DependentUpon>FrmSenha.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,8 +196,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Fonts\Roboto-Medium.ttf" />
-    <None Include="Fonts\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,51 +206,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_16x16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ok_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pesquisa_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ImagemFrmMain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Assistencia_técnica-eletrodomésticos2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Assistencia_técnica-eletrodomésticos2.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_add_64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_editar_64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\editar_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_pesquisa_64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exit.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -279,32 +230,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
     <None Include="Resources\toolslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pen.png" />
     <None Include="Resources\shadow.png" />
-    <None Include="Resources\ic_view_module_black_24dp_1x.png" />
     <None Include="Resources\calendar.png" />
-    <None Include="Resources\pen1.bmp" />
-    <None Include="Resources\pen2.png" />
-    <None Include="Resources\pen1.png" />
-    <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
     <None Include="Resources\down.png" />
     <None Include="Resources\calculator.png" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\shadow-left.png" />
+    <None Include="Resources\shadow-right.png" />
+    <None Include="Resources\shadow-top.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
     <Content Include="tools.ico" />
   </ItemGroup>
   <ItemGroup />

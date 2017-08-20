@@ -1,0 +1,19 @@
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Metro.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.pdb
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\CadastroAssistenciaTecnica.csprojResolveAssemblyReference.cache
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\MaterialSkinExample.MainForm.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\CadastroAssistenciaTecnica.csproj.GenerateResource.Cache
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb

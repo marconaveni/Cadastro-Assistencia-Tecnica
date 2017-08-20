@@ -1,0 +1,206 @@
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.exe
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.pdb
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmCadastroFichas.resources
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.FrmPrincipal.resources
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.pdb
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmConsulta.resources
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmCarregamento.resources
+C:\Documents and Settings\marco.XP01\Desktop\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSobre.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.pdb
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.exe
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.pdb
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmCadastroFichas.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSplash.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.FrmPrincipal.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSobre.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmEditar.resources
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.exe.manifest
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.application
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe.manifest
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.application
+C:\Users\Marco\Desktop\c sharp\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.pdb
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.exe.manifest
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.application
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.exe
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro-Assistencia-Tecnica.pdb
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSplash.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe.manifest
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.application
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+D:\Projeto da loja\dev main\projeto para loja\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+D:\Documentos\Dropbox\Projetos\Projeto da loja\versões\3 - Alpha\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.exe
+D:\Documentos\Dropbox\Projetos\Projeto da loja\versões\3 - Alpha\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.pdb
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSplash.resources
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+C:\Users\Marco\Desktop\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+C:\Users\Marco\Desktop\Nova pasta\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\projetos\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\MaterialSkinExample.MainForm.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\MaterialSkinExample.MainForm.resources
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+F:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.pdb
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Microsoft.SqlServer.Types.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.dll
+J:\Alpha 1.9.6\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Microsoft.SqlServer.Types.dll
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextField.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextField.resources
+F:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextFieldValor.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.ComboTextField.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.ComboTextField.resources
+J:\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextFieldValor.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextAreaField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.DateTextField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache

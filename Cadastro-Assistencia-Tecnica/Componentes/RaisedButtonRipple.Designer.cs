@@ -47,7 +47,6 @@
             this.Btn.AutoSize = true;
             this.Btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Btn.Depth = 0;
-            this.Btn.Icon = null;
             this.Btn.Location = new System.Drawing.Point(9, 6);
             this.Btn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Btn.MaximumSize = new System.Drawing.Size(109, 36);
@@ -126,7 +125,7 @@
             this.MaximumSize = new System.Drawing.Size(118, 46);
             this.MinimumSize = new System.Drawing.Size(125, 50);
             this.Name = "RaisedButtonRipple";
-            this.Size = new System.Drawing.Size(128, 50);
+            this.Size = new System.Drawing.Size(125, 50);
             this.Load += new System.EventHandler(this.TextField_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
