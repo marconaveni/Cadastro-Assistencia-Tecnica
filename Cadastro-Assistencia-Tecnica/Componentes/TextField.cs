@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    public partial class TextField : UserControl    {
+    public partial class TextField : UserControl
+    {
 
-        
+
 
         public TextField()
         {
@@ -44,6 +45,8 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             set { Txt.Text = value; }
         }
 
+
+
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
         public bool ReadOnly
         {
@@ -52,7 +55,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
-        public  int MaxLength
+        public int MaxLength
         {
             get { return Txt.MaxLength; }
             set { Txt.MaxLength = value; }
@@ -70,6 +73,26 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
         {
             get { return Ani.BackColor; }
             set { Ani.BackColor = value; }
+        }
+
+        public void EnableTextField(bool enable)
+        {
+            if (enable == true)
+            {
+                this.Enabled = true;
+                Background.Visible = false;
+                // LblText.Visible = false;
+                LblText.Text = "";
+
+            }
+            else
+            {
+                this.Enabled = false;
+                Background.Visible = true;
+                //  LblText.Visible = true;
+                LblText.Text = Txt.Text;
+            }
+
         }
 
 
@@ -91,11 +114,11 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         private void Tm_Tick(object sender, EventArgs e)
         {
-            if (Ani.Width <= Txt.Width) 
+            if (Ani.Width <= Txt.Width + 2)
             {
-                Ani.Width += aceleration + (Txt.Width /100)-1 ;
+                Ani.Width += aceleration + (Txt.Width / 100);
                 Ani.Left -= (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration++;
+                aceleration = aceleration + 1 * 2;
             }
 
         }
@@ -104,13 +127,16 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
         {
             if (Ani.Width > 0)
             {
-                Ani.Width -= aceleration + (Txt.Width / 100) - 1;
+                Ani.Width -= aceleration + (Txt.Width / 100);
                 Ani.Left += (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration--;
+                aceleration = aceleration - 1 * 2;
             }
 
         }
 
-  
+        private void Txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

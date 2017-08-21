@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cadastro_Assistencia_Tecnica.Views;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
@@ -23,6 +24,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         private void TextField_Load(object sender, EventArgs e)
         {
+            Txt.CalendarForeColor =  Color.Blue;
             Ani.Left = this.Width / 2;
             Ani.Width = 0;
         }
@@ -60,32 +62,84 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             tm.Enabled = false;
         }
 
-        private void tm_Tick(object sender, EventArgs e)
+        private void Tm_Tick(object sender, EventArgs e)
         {
-            if (Ani.Width <= Txt.Width)
+            if (Ani.Width <= Txt.Width + 2)
             {
-                Ani.Width += aceleration + (Txt.Width / 100) - 1;
+                Ani.Width += aceleration + (Txt.Width / 100);
                 Ani.Left -= (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration++;
+                aceleration = aceleration + 1 * 2;
             }
 
         }
 
-        private void tm2_Tick(object sender, EventArgs e)
+        private void Tm2_Tick(object sender, EventArgs e)
         {
             if (Ani.Width > 0)
             {
-                Ani.Width -= aceleration + (Txt.Width / 100) - 1;
+                Ani.Width -= aceleration + (Txt.Width / 100);
                 Ani.Left += (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration--;
+                aceleration = aceleration - 1 * 2;
             }
 
         }
 
         private void TDEntrada_Click(object sender, EventArgs e)
         {
-            Txt.Select();
-            SendKeys.Send("%{DOWN}");
+            MenuStrip.Show(Cursor.Position);
+            Txt.Focus();
+            MenuStrip.AutoClose = false;
+            
+        }
+
+        private void MenuStrip_MouseLeave(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = true;
+        }
+
+
+        private void TSNextDay_Click(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = false;
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(Txt.Text);
+            date = date.AddDays(1);
+            Txt.Text = date.ToString();
+
+        }
+
+        private void TSPrevoiusDay_Click(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = false;
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(Txt.Text);
+            date = date.AddDays(-1);
+            Txt.Text = date.ToString();
+        }
+
+
+        private void TSNextMouth_Click(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = false;
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(Txt.Text);
+            date = date.AddMonths(1);
+            Txt.Text = date.ToString();
+        }
+
+        private void TSPreviousMouth_Click(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = false;
+            DateTime date = new DateTime();
+            date = Convert.ToDateTime(Txt.Text);
+            date = date.AddMonths(-1);
+            Txt.Text = date.ToString();
+        }
+
+        private void TSToday_Click(object sender, EventArgs e)
+        {
+            MenuStrip.AutoClose = false;
+            Txt.Text = DateTime.Now.ToString();
         }
     }
 }

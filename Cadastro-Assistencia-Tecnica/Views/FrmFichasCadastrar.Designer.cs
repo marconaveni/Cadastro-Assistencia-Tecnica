@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.PrintFicha = new System.Windows.Forms.PrintDialog();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             this.DgViewConsultar = new System.Windows.Forms.DataGridView();
             this.MSDataGrid = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.IMSAlterarFicha = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IMSVisualizarFicha = new System.Windows.Forms.ToolStripMenuItem();
             this.TabMainMaterial = new MaterialSkin.Controls.MaterialTabControl();
             this.TabCadastroMaterial = new System.Windows.Forms.TabPage();
+            this.BtnAdmin = new MaterialSkin.Controls.MaterialFlatButton();
+            this.BtnImprimir = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
+            this.BtnNovo = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
+            this.BtnCadastrar = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
+            this.BtnAlterar = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.BtnThemeMaterial = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
             this.BtnOpcoes = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
             this.BtnCalculator = new MaterialSkin.Controls.MaterialFlatButton();
@@ -62,11 +64,6 @@
             this.TxtEndereco = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtCliente = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtNumeroFicha = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
-            this.BtnExcluir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnAdmin = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnCadastrar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnNovo = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnAlterar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.LblEntrega = new MaterialSkin.Controls.MaterialLabel();
             this.LblDetalhes = new MaterialSkin.Controls.MaterialLabel();
             this.LblOk = new MaterialSkin.Controls.MaterialLabel();
@@ -85,15 +82,17 @@
             this.LblNumero = new MaterialSkin.Controls.MaterialLabel();
             this.LblTexto = new System.Windows.Forms.Label();
             this.TxtNumeroEndereco = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
+            this.BtnExcluir = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.TabPesquisaMaterial = new System.Windows.Forms.TabPage();
+            this.BtnLimparPesquisa = new MaterialSkin.Controls.MaterialFlatButton();
             this.TxtConsultar = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.LblTipoPesquisa = new MaterialSkin.Controls.MaterialLabel();
             this.LblPesquisa = new MaterialSkin.Controls.MaterialLabel();
             this.CmbPesquisa = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
             this.LinhaDivisoraTbPesq = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.Description = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgViewConsultar)).BeginInit();
             this.MSDataGrid.SuspendLayout();
             this.TabMainMaterial.SuspendLayout();
@@ -101,21 +100,6 @@
             this.TabPesquisaMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PrintFicha
-            // 
-            this.PrintFicha.UseEXDialog = true;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.ShowIcon = false;
-            this.printPreviewDialog1.Visible = false;
             // 
             // DgViewConsultar
             // 
@@ -128,7 +112,6 @@
             this.DgViewConsultar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgViewConsultar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgViewConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DgViewConsultar.ContextMenuStrip = this.MSDataGrid;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,7 +134,7 @@
             this.DgViewConsultar.RowHeadersVisible = false;
             this.DgViewConsultar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgViewConsultar.Size = new System.Drawing.Size(836, 445);
-            this.DgViewConsultar.TabIndex = 2;
+            this.DgViewConsultar.TabIndex = 3;
             this.DgViewConsultar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgViewConsultar_CellClick);
             this.DgViewConsultar.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgViewConsultar_CellMouseEnter);
             this.DgViewConsultar.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgViewConsultar_CellMouseLeave);
@@ -163,7 +146,7 @@
             this.MSDataGrid.Depth = 0;
             this.MSDataGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.IMSAlterarFicha,
-            this.visualizarFichaToolStripMenuItem});
+            this.IMSVisualizarFicha});
             this.MSDataGrid.MouseState = MaterialSkin.MouseState.HOVER;
             this.MSDataGrid.Name = "materialContextMenuStrip1";
             this.MSDataGrid.Size = new System.Drawing.Size(155, 76);
@@ -176,13 +159,13 @@
             this.IMSAlterarFicha.Text = "Alterar Ficha";
             this.IMSAlterarFicha.Click += new System.EventHandler(this.IMSAlterarFicha_Click);
             // 
-            // visualizarFichaToolStripMenuItem
+            // IMSVisualizarFicha
             // 
-            this.visualizarFichaToolStripMenuItem.Name = "visualizarFichaToolStripMenuItem";
-            this.visualizarFichaToolStripMenuItem.Padding = new System.Windows.Forms.Padding(1, 8, 1, 8);
-            this.visualizarFichaToolStripMenuItem.Size = new System.Drawing.Size(156, 36);
-            this.visualizarFichaToolStripMenuItem.Text = "Visualizar Ficha";
-            this.visualizarFichaToolStripMenuItem.Click += new System.EventHandler(this.VisualizarFichaToolStripMenuItem_Click);
+            this.IMSVisualizarFicha.Name = "IMSVisualizarFicha";
+            this.IMSVisualizarFicha.Padding = new System.Windows.Forms.Padding(1, 8, 1, 8);
+            this.IMSVisualizarFicha.Size = new System.Drawing.Size(156, 36);
+            this.IMSVisualizarFicha.Text = "Visualizar Ficha";
+            this.IMSVisualizarFicha.Click += new System.EventHandler(this.IMSVisualizarFicha_Click);
             // 
             // TabMainMaterial
             // 
@@ -199,11 +182,16 @@
             this.TabMainMaterial.Name = "TabMainMaterial";
             this.TabMainMaterial.SelectedIndex = 0;
             this.TabMainMaterial.Size = new System.Drawing.Size(878, 544);
-            this.TabMainMaterial.TabIndex = 1;
+            this.TabMainMaterial.TabIndex = 0;
             // 
             // TabCadastroMaterial
             // 
             this.TabCadastroMaterial.BackColor = System.Drawing.SystemColors.Control;
+            this.TabCadastroMaterial.Controls.Add(this.BtnAdmin);
+            this.TabCadastroMaterial.Controls.Add(this.BtnImprimir);
+            this.TabCadastroMaterial.Controls.Add(this.BtnNovo);
+            this.TabCadastroMaterial.Controls.Add(this.BtnCadastrar);
+            this.TabCadastroMaterial.Controls.Add(this.BtnAlterar);
             this.TabCadastroMaterial.Controls.Add(this.BtnThemeMaterial);
             this.TabCadastroMaterial.Controls.Add(this.BtnOpcoes);
             this.TabCadastroMaterial.Controls.Add(this.BtnCalculator);
@@ -226,11 +214,6 @@
             this.TabCadastroMaterial.Controls.Add(this.TxtEndereco);
             this.TabCadastroMaterial.Controls.Add(this.TxtCliente);
             this.TabCadastroMaterial.Controls.Add(this.TxtNumeroFicha);
-            this.TabCadastroMaterial.Controls.Add(this.BtnExcluir);
-            this.TabCadastroMaterial.Controls.Add(this.BtnAdmin);
-            this.TabCadastroMaterial.Controls.Add(this.BtnCadastrar);
-            this.TabCadastroMaterial.Controls.Add(this.BtnNovo);
-            this.TabCadastroMaterial.Controls.Add(this.BtnAlterar);
             this.TabCadastroMaterial.Controls.Add(this.LblEntrega);
             this.TabCadastroMaterial.Controls.Add(this.LblDetalhes);
             this.TabCadastroMaterial.Controls.Add(this.LblOk);
@@ -249,6 +232,7 @@
             this.TabCadastroMaterial.Controls.Add(this.LblNumero);
             this.TabCadastroMaterial.Controls.Add(this.LblTexto);
             this.TabCadastroMaterial.Controls.Add(this.TxtNumeroEndereco);
+            this.TabCadastroMaterial.Controls.Add(this.BtnExcluir);
             this.TabCadastroMaterial.Location = new System.Drawing.Point(4, 26);
             this.TabCadastroMaterial.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TabCadastroMaterial.Name = "TabCadastroMaterial";
@@ -257,30 +241,108 @@
             this.TabCadastroMaterial.TabIndex = 0;
             this.TabCadastroMaterial.Text = "Cadastro de Ficha";
             // 
+            // BtnAdmin
+            // 
+            this.BtnAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnAdmin.AutoSize = true;
+            this.BtnAdmin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnAdmin.Depth = 0;
+            this.BtnAdmin.Icon = global::Cadastro_Assistencia_Tecnica.Properties.Resources._lock;
+            this.BtnAdmin.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.calculator;
+            this.BtnAdmin.Location = new System.Drawing.Point(543, 457);
+            this.BtnAdmin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnAdmin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnAdmin.Name = "BtnAdmin";
+            this.BtnAdmin.Primary = false;
+            this.BtnAdmin.Size = new System.Drawing.Size(44, 36);
+            this.BtnAdmin.TabIndex = 24;
+            this.BtnAdmin.Tag = "";
+            this.Description.SetToolTip(this.BtnAdmin, "Logar como administrador para pode excluir\r\nregistros e editar campos não editave" +
+        "is.");
+            this.BtnAdmin.UseVisualStyleBackColor = true;
+            this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
+            // 
+            // BtnImprimir
+            // 
+            this.BtnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnImprimir.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnImprimir.Location = new System.Drawing.Point(283, 452);
+            this.BtnImprimir.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnImprimir.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnImprimir.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(125, 50);
+            this.BtnImprimir.TabIndex = 22;
+            this.Description.SetToolTip(this.BtnImprimir, "Vizualizar Ficha onde o usuário pode salvar\r\n arquivo em PDF e Imprimir uma 2ª vi" +
+        "a.\r\n\r\n");
+            this.BtnImprimir.Clicked += new System.EventHandler(this.IMSVisualizarFicha_Click);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnNovo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.Location = new System.Drawing.Point(162, 452);
+            this.BtnNovo.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnNovo.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnNovo.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(125, 50);
+            this.BtnNovo.TabIndex = 21;
+            this.Description.SetToolTip(this.BtnNovo, "Limpar formulário e cadastrar nova ficha.\r\n");
+            this.BtnNovo.Clicked += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // BtnCadastrar
+            // 
+            this.BtnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnCadastrar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadastrar.Location = new System.Drawing.Point(41, 452);
+            this.BtnCadastrar.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnCadastrar.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnCadastrar.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnCadastrar.Name = "BtnCadastrar";
+            this.BtnCadastrar.Size = new System.Drawing.Size(125, 50);
+            this.BtnCadastrar.TabIndex = 19;
+            this.Description.SetToolTip(this.BtnCadastrar, "Cadastrar ficha");
+            this.BtnCadastrar.Clicked += new System.EventHandler(this.BtnCadastrar_Click);
+            // 
+            // BtnAlterar
+            // 
+            this.BtnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnAlterar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlterar.Location = new System.Drawing.Point(41, 452);
+            this.BtnAlterar.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnAlterar.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnAlterar.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnAlterar.Name = "BtnAlterar";
+            this.BtnAlterar.Size = new System.Drawing.Size(125, 50);
+            this.BtnAlterar.TabIndex = 20;
+            this.Description.SetToolTip(this.BtnAlterar, "Alterar ficha");
+            this.BtnAlterar.Clicked += new System.EventHandler(this.BtnAlterar_Click);
+            // 
             // BtnThemeMaterial
             // 
             this.BtnThemeMaterial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnThemeMaterial.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnThemeMaterial.Location = new System.Drawing.Point(717, 453);
+            this.BtnThemeMaterial.Location = new System.Drawing.Point(724, 453);
             this.BtnThemeMaterial.Margin = new System.Windows.Forms.Padding(1);
             this.BtnThemeMaterial.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnThemeMaterial.MinimumSize = new System.Drawing.Size(125, 50);
             this.BtnThemeMaterial.Name = "BtnThemeMaterial";
             this.BtnThemeMaterial.Size = new System.Drawing.Size(125, 50);
-            this.BtnThemeMaterial.TabIndex = 25;
+            this.BtnThemeMaterial.TabIndex = 26;
             this.BtnThemeMaterial.Clicked += new System.EventHandler(this.BtnThemeMaterial_Click);
             // 
             // BtnOpcoes
             // 
             this.BtnOpcoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnOpcoes.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOpcoes.Location = new System.Drawing.Point(592, 453);
+            this.BtnOpcoes.Location = new System.Drawing.Point(599, 453);
             this.BtnOpcoes.Margin = new System.Windows.Forms.Padding(1);
             this.BtnOpcoes.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnOpcoes.MinimumSize = new System.Drawing.Size(125, 50);
             this.BtnOpcoes.Name = "BtnOpcoes";
             this.BtnOpcoes.Size = new System.Drawing.Size(125, 50);
-            this.BtnOpcoes.TabIndex = 24;
+            this.BtnOpcoes.TabIndex = 25;
             this.BtnOpcoes.Clicked += new System.EventHandler(this.BtnOpcoes_Click);
             this.BtnOpcoes.Load += new System.EventHandler(this.BtnOpcoes_Load);
             // 
@@ -291,13 +353,13 @@
             this.BtnCalculator.Depth = 0;
             this.BtnCalculator.Icon = global::Cadastro_Assistencia_Tecnica.Properties.Resources.calculator;
             this.BtnCalculator.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.calculator;
-            this.BtnCalculator.Location = new System.Drawing.Point(664, 263);
+            this.BtnCalculator.Location = new System.Drawing.Point(664, 264);
             this.BtnCalculator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.BtnCalculator.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnCalculator.Name = "BtnCalculator";
             this.BtnCalculator.Primary = false;
             this.BtnCalculator.Size = new System.Drawing.Size(44, 36);
-            this.BtnCalculator.TabIndex = 12;
+            this.BtnCalculator.TabIndex = 27;
             this.BtnCalculator.Tag = "";
             this.Description.SetToolTip(this.BtnCalculator, "Abrir Calculadora");
             this.BtnCalculator.UseVisualStyleBackColor = true;
@@ -307,13 +369,13 @@
             // 
             this.DtEntrega.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtEntrega.LineColor = System.Drawing.Color.LightGray;
-            this.DtEntrega.Location = new System.Drawing.Point(283, 391);
+            this.DtEntrega.Location = new System.Drawing.Point(283, 398);
             this.DtEntrega.Margin = new System.Windows.Forms.Padding(1);
             this.DtEntrega.MaximumSize = new System.Drawing.Size(1920, 30);
             this.DtEntrega.MinimumSize = new System.Drawing.Size(112, 30);
             this.DtEntrega.Name = "DtEntrega";
             this.DtEntrega.Size = new System.Drawing.Size(122, 30);
-            this.DtEntrega.TabIndex = 19;
+            this.DtEntrega.TabIndex = 18;
             // 
             // DtEntrada
             // 
@@ -331,38 +393,38 @@
             // 
             this.DtOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtOk.LineColor = System.Drawing.Color.LightGray;
-            this.DtOk.Location = new System.Drawing.Point(283, 351);
+            this.DtOk.Location = new System.Drawing.Point(283, 356);
             this.DtOk.Margin = new System.Windows.Forms.Padding(1);
             this.DtOk.MaximumSize = new System.Drawing.Size(1920, 30);
             this.DtOk.MinimumSize = new System.Drawing.Size(112, 30);
             this.DtOk.Name = "DtOk";
             this.DtOk.Size = new System.Drawing.Size(122, 30);
-            this.DtOk.TabIndex = 17;
+            this.DtOk.TabIndex = 16;
             // 
             // DtAprovado
             // 
             this.DtAprovado.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtAprovado.LineColor = System.Drawing.Color.LightGray;
-            this.DtAprovado.Location = new System.Drawing.Point(283, 311);
+            this.DtAprovado.Location = new System.Drawing.Point(283, 314);
             this.DtAprovado.Margin = new System.Windows.Forms.Padding(1);
             this.DtAprovado.MaximumSize = new System.Drawing.Size(1920, 30);
             this.DtAprovado.MinimumSize = new System.Drawing.Size(112, 30);
             this.DtAprovado.Name = "DtAprovado";
             this.DtAprovado.Size = new System.Drawing.Size(122, 30);
-            this.DtAprovado.TabIndex = 14;
+            this.DtAprovado.TabIndex = 13;
             // 
             // TxtDetalhes
             // 
             this.TxtDetalhes.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDetalhes.LineColor = System.Drawing.Color.LightGray;
-            this.TxtDetalhes.Location = new System.Drawing.Point(525, 306);
+            this.TxtDetalhes.Location = new System.Drawing.Point(525, 313);
             this.TxtDetalhes.Margin = new System.Windows.Forms.Padding(1);
             this.TxtDetalhes.MaximumSize = new System.Drawing.Size(1920, 117);
             this.TxtDetalhes.MaxLength = 188;
             this.TxtDetalhes.MinimumSize = new System.Drawing.Size(283, 117);
             this.TxtDetalhes.Name = "TxtDetalhes";
             this.TxtDetalhes.Size = new System.Drawing.Size(283, 117);
-            this.TxtDetalhes.TabIndex = 15;
+            this.TxtDetalhes.TabIndex = 14;
             // 
             // LinhaDivisoraTbCad
             // 
@@ -370,61 +432,61 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LinhaDivisoraTbCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LinhaDivisoraTbCad.Depth = 0;
-            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-9, 439);
+            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-11, 439);
             this.LinhaDivisoraTbCad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LinhaDivisoraTbCad.MouseState = MaterialSkin.MouseState.HOVER;
             this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
-            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(885, 1);
-            this.LinhaDivisoraTbCad.TabIndex = 36;
+            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(890, 1);
+            this.LinhaDivisoraTbCad.TabIndex = 38;
             this.LinhaDivisoraTbCad.Text = "materialDivider3";
             // 
             // CmbEntrega
             // 
             this.CmbEntrega.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbEntrega.LineColor = System.Drawing.Color.LightGray;
-            this.CmbEntrega.Location = new System.Drawing.Point(121, 384);
+            this.CmbEntrega.Location = new System.Drawing.Point(121, 391);
             this.CmbEntrega.Margin = new System.Windows.Forms.Padding(1);
             this.CmbEntrega.MaximumSize = new System.Drawing.Size(1920, 30);
             this.CmbEntrega.MinimumSize = new System.Drawing.Size(135, 40);
             this.CmbEntrega.Name = "CmbEntrega";
             this.CmbEntrega.SelectedIndex = -1;
             this.CmbEntrega.Size = new System.Drawing.Size(147, 40);
-            this.CmbEntrega.TabIndex = 18;
+            this.CmbEntrega.TabIndex = 17;
             this.CmbEntrega.SelectedIndexChanged += new System.EventHandler(this.CmbEntrega_SelectedIndexChanged);
             // 
             // CmbOk
             // 
             this.CmbOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbOk.LineColor = System.Drawing.Color.LightGray;
-            this.CmbOk.Location = new System.Drawing.Point(121, 344);
+            this.CmbOk.Location = new System.Drawing.Point(121, 349);
             this.CmbOk.Margin = new System.Windows.Forms.Padding(1);
             this.CmbOk.MaximumSize = new System.Drawing.Size(1920, 30);
             this.CmbOk.MinimumSize = new System.Drawing.Size(135, 40);
             this.CmbOk.Name = "CmbOk";
             this.CmbOk.SelectedIndex = -1;
             this.CmbOk.Size = new System.Drawing.Size(147, 40);
-            this.CmbOk.TabIndex = 16;
+            this.CmbOk.TabIndex = 15;
             this.CmbOk.SelectedIndexChanged += new System.EventHandler(this.CmbOk_SelectedIndexChanged);
             // 
             // CmbAprovado
             // 
             this.CmbAprovado.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbAprovado.LineColor = System.Drawing.Color.LightGray;
-            this.CmbAprovado.Location = new System.Drawing.Point(121, 304);
+            this.CmbAprovado.Location = new System.Drawing.Point(121, 307);
             this.CmbAprovado.Margin = new System.Windows.Forms.Padding(1);
             this.CmbAprovado.MaximumSize = new System.Drawing.Size(1920, 30);
             this.CmbAprovado.MinimumSize = new System.Drawing.Size(135, 40);
             this.CmbAprovado.Name = "CmbAprovado";
             this.CmbAprovado.SelectedIndex = -1;
             this.CmbAprovado.Size = new System.Drawing.Size(147, 40);
-            this.CmbAprovado.TabIndex = 13;
+            this.CmbAprovado.TabIndex = 12;
             this.CmbAprovado.SelectedIndexChanged += new System.EventHandler(this.CmbAprovado_SelectedIndexChanged);
             // 
             // TxtValor
             // 
             this.TxtValor.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtValor.LineColor = System.Drawing.Color.LightGray;
-            this.TxtValor.Location = new System.Drawing.Point(524, 267);
+            this.TxtValor.Location = new System.Drawing.Point(524, 269);
             this.TxtValor.Margin = new System.Windows.Forms.Padding(1);
             this.TxtValor.MaximumSize = new System.Drawing.Size(135, 30);
             this.TxtValor.MaxLength = 7;
@@ -437,7 +499,7 @@
             // 
             this.TxtEstado.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEstado.LineColor = System.Drawing.Color.LightGray;
-            this.TxtEstado.Location = new System.Drawing.Point(123, 267);
+            this.TxtEstado.Location = new System.Drawing.Point(123, 269);
             this.TxtEstado.Margin = new System.Windows.Forms.Padding(1);
             this.TxtEstado.MaximumSize = new System.Drawing.Size(282, 30);
             this.TxtEstado.MaxLength = 40;
@@ -451,7 +513,7 @@
             // 
             this.TxtAcessorios.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAcessorios.LineColor = System.Drawing.Color.LightGray;
-            this.TxtAcessorios.Location = new System.Drawing.Point(524, 230);
+            this.TxtAcessorios.Location = new System.Drawing.Point(524, 228);
             this.TxtAcessorios.Margin = new System.Windows.Forms.Padding(1);
             this.TxtAcessorios.MaximumSize = new System.Drawing.Size(282, 30);
             this.TxtAcessorios.MaxLength = 20;
@@ -465,7 +527,7 @@
             // 
             this.TxtModelo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtModelo.LineColor = System.Drawing.Color.LightGray;
-            this.TxtModelo.Location = new System.Drawing.Point(123, 227);
+            this.TxtModelo.Location = new System.Drawing.Point(123, 228);
             this.TxtModelo.Margin = new System.Windows.Forms.Padding(1);
             this.TxtModelo.MaximumSize = new System.Drawing.Size(282, 30);
             this.TxtModelo.MaxLength = 25;
@@ -479,7 +541,7 @@
             // 
             this.TxtMarca.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMarca.LineColor = System.Drawing.Color.LightGray;
-            this.TxtMarca.Location = new System.Drawing.Point(525, 187);
+            this.TxtMarca.Location = new System.Drawing.Point(524, 187);
             this.TxtMarca.Margin = new System.Windows.Forms.Padding(1);
             this.TxtMarca.MaximumSize = new System.Drawing.Size(282, 30);
             this.TxtMarca.MaxLength = 40;
@@ -562,114 +624,18 @@
             this.TxtNumeroFicha.TabIndex = 0;
             this.TxtNumeroFicha.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
-            // BtnExcluir
-            // 
-            this.BtnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnExcluir.AutoSize = true;
-            this.BtnExcluir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExcluir.Depth = 0;
-            this.BtnExcluir.Icon = null;
-            this.BtnExcluir.Location = new System.Drawing.Point(415, 460);
-            this.BtnExcluir.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnExcluir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnExcluir.Name = "BtnExcluir";
-            this.BtnExcluir.Primary = true;
-            this.BtnExcluir.Size = new System.Drawing.Size(109, 36);
-            this.BtnExcluir.TabIndex = 23;
-            this.BtnExcluir.Text = "Excluir";
-            this.BtnExcluir.UseVisualStyleBackColor = true;
-            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
-            // 
-            // BtnAdmin
-            // 
-            this.BtnAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnAdmin.AutoSize = true;
-            this.BtnAdmin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnAdmin.Depth = 0;
-            this.BtnAdmin.Enabled = false;
-            this.BtnAdmin.Icon = null;
-            this.BtnAdmin.Location = new System.Drawing.Point(285, 460);
-            this.BtnAdmin.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnAdmin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnAdmin.Name = "BtnAdmin";
-            this.BtnAdmin.Primary = true;
-            this.BtnAdmin.Size = new System.Drawing.Size(109, 36);
-            this.BtnAdmin.TabIndex = 22;
-            this.BtnAdmin.Text = "Admin";
-            this.BtnAdmin.UseVisualStyleBackColor = true;
-            this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
-            // 
-            // BtnCadastrar
-            // 
-            this.BtnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnCadastrar.AutoSize = true;
-            this.BtnCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCadastrar.Depth = 0;
-            this.BtnCadastrar.Icon = null;
-            this.BtnCadastrar.Location = new System.Drawing.Point(32, 460);
-            this.BtnCadastrar.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnCadastrar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnCadastrar.Name = "BtnCadastrar";
-            this.BtnCadastrar.Primary = true;
-            this.BtnCadastrar.Size = new System.Drawing.Size(109, 36);
-            this.BtnCadastrar.TabIndex = 20;
-            this.BtnCadastrar.Text = "Cadastrar";
-            this.BtnCadastrar.UseVisualStyleBackColor = true;
-            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
-            // 
-            // BtnNovo
-            // 
-            this.BtnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnNovo.AutoSize = true;
-            this.BtnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNovo.Depth = 0;
-            this.BtnNovo.Icon = null;
-            this.BtnNovo.Location = new System.Drawing.Point(158, 460);
-            this.BtnNovo.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnNovo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Primary = true;
-            this.BtnNovo.Size = new System.Drawing.Size(109, 36);
-            this.BtnNovo.TabIndex = 21;
-            this.BtnNovo.Text = "Novo";
-            this.BtnNovo.UseVisualStyleBackColor = true;
-            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
-            // BtnAlterar
-            // 
-            this.BtnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnAlterar.AutoSize = true;
-            this.BtnAlterar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnAlterar.Depth = 0;
-            this.BtnAlterar.Icon = null;
-            this.BtnAlterar.Location = new System.Drawing.Point(32, 460);
-            this.BtnAlterar.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnAlterar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnAlterar.Name = "BtnAlterar";
-            this.BtnAlterar.Primary = true;
-            this.BtnAlterar.Size = new System.Drawing.Size(109, 36);
-            this.BtnAlterar.TabIndex = 37;
-            this.BtnAlterar.Text = "Alterar";
-            this.BtnAlterar.UseVisualStyleBackColor = true;
-            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
-            // 
             // LblEntrega
             // 
             this.LblEntrega.AutoSize = true;
             this.LblEntrega.Depth = 0;
             this.LblEntrega.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblEntrega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblEntrega.Location = new System.Drawing.Point(43, 393);
+            this.LblEntrega.Location = new System.Drawing.Point(50, 400);
             this.LblEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEntrega.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblEntrega.Name = "LblEntrega";
             this.LblEntrega.Size = new System.Drawing.Size(68, 19);
-            this.LblEntrega.TabIndex = 35;
+            this.LblEntrega.TabIndex = 37;
             this.LblEntrega.Text = "Entregue";
             // 
             // LblDetalhes
@@ -678,12 +644,12 @@
             this.LblDetalhes.Depth = 0;
             this.LblDetalhes.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblDetalhes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblDetalhes.Location = new System.Drawing.Point(429, 309);
+            this.LblDetalhes.Location = new System.Drawing.Point(430, 316);
             this.LblDetalhes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDetalhes.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblDetalhes.Name = "LblDetalhes";
             this.LblDetalhes.Size = new System.Drawing.Size(68, 19);
-            this.LblDetalhes.TabIndex = 43;
+            this.LblDetalhes.TabIndex = 45;
             this.LblDetalhes.Text = "Detalhes";
             // 
             // LblOk
@@ -692,12 +658,12 @@
             this.LblOk.Depth = 0;
             this.LblOk.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblOk.Location = new System.Drawing.Point(43, 353);
+            this.LblOk.Location = new System.Drawing.Point(50, 358);
             this.LblOk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblOk.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblOk.Name = "LblOk";
             this.LblOk.Size = new System.Drawing.Size(27, 19);
-            this.LblOk.TabIndex = 34;
+            this.LblOk.TabIndex = 36;
             this.LblOk.Text = "Ok";
             // 
             // LblAprovado
@@ -706,12 +672,12 @@
             this.LblAprovado.Depth = 0;
             this.LblAprovado.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblAprovado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblAprovado.Location = new System.Drawing.Point(43, 313);
+            this.LblAprovado.Location = new System.Drawing.Point(50, 316);
             this.LblAprovado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAprovado.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblAprovado.Name = "LblAprovado";
             this.LblAprovado.Size = new System.Drawing.Size(73, 19);
-            this.LblAprovado.TabIndex = 33;
+            this.LblAprovado.TabIndex = 35;
             this.LblAprovado.Text = "Aprovado";
             // 
             // LblValor
@@ -720,12 +686,12 @@
             this.LblValor.Depth = 0;
             this.LblValor.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblValor.Location = new System.Drawing.Point(429, 273);
+            this.LblValor.Location = new System.Drawing.Point(430, 271);
             this.LblValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblValor.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblValor.Name = "LblValor";
             this.LblValor.Size = new System.Drawing.Size(82, 19);
-            this.LblValor.TabIndex = 42;
+            this.LblValor.TabIndex = 44;
             this.LblValor.Text = "Valor     R$";
             // 
             // LblDefeito
@@ -734,12 +700,12 @@
             this.LblDefeito.Depth = 0;
             this.LblDefeito.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblDefeito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblDefeito.Location = new System.Drawing.Point(46, 273);
+            this.LblDefeito.Location = new System.Drawing.Point(50, 271);
             this.LblDefeito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDefeito.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblDefeito.Name = "LblDefeito";
             this.LblDefeito.Size = new System.Drawing.Size(58, 19);
-            this.LblDefeito.TabIndex = 32;
+            this.LblDefeito.TabIndex = 34;
             this.LblDefeito.Text = "Defeito";
             // 
             // LblAcessorios
@@ -748,12 +714,12 @@
             this.LblAcessorios.Depth = 0;
             this.LblAcessorios.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblAcessorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblAcessorios.Location = new System.Drawing.Point(429, 230);
+            this.LblAcessorios.Location = new System.Drawing.Point(430, 230);
             this.LblAcessorios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAcessorios.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblAcessorios.Name = "LblAcessorios";
             this.LblAcessorios.Size = new System.Drawing.Size(86, 19);
-            this.LblAcessorios.TabIndex = 41;
+            this.LblAcessorios.TabIndex = 43;
             this.LblAcessorios.Text = "Acessórios";
             // 
             // LblModelo
@@ -762,12 +728,12 @@
             this.LblModelo.Depth = 0;
             this.LblModelo.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblModelo.Location = new System.Drawing.Point(46, 230);
+            this.LblModelo.Location = new System.Drawing.Point(50, 230);
             this.LblModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblModelo.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblModelo.Name = "LblModelo";
             this.LblModelo.Size = new System.Drawing.Size(60, 19);
-            this.LblModelo.TabIndex = 31;
+            this.LblModelo.TabIndex = 33;
             this.LblModelo.Text = "Modelo";
             // 
             // LblMarca
@@ -776,12 +742,12 @@
             this.LblMarca.Depth = 0;
             this.LblMarca.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblMarca.Location = new System.Drawing.Point(429, 193);
+            this.LblMarca.Location = new System.Drawing.Point(430, 189);
             this.LblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMarca.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblMarca.Name = "LblMarca";
             this.LblMarca.Size = new System.Drawing.Size(51, 19);
-            this.LblMarca.TabIndex = 40;
+            this.LblMarca.TabIndex = 42;
             this.LblMarca.Text = "Marca";
             // 
             // LblAparelho
@@ -790,12 +756,12 @@
             this.LblAparelho.Depth = 0;
             this.LblAparelho.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblAparelho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblAparelho.Location = new System.Drawing.Point(46, 193);
+            this.LblAparelho.Location = new System.Drawing.Point(50, 189);
             this.LblAparelho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAparelho.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblAparelho.Name = "LblAparelho";
             this.LblAparelho.Size = new System.Drawing.Size(69, 19);
-            this.LblAparelho.TabIndex = 30;
+            this.LblAparelho.TabIndex = 32;
             this.LblAparelho.Text = "Aparelho";
             // 
             // LblNumeroEndereco
@@ -804,12 +770,12 @@
             this.LblNumeroEndereco.Depth = 0;
             this.LblNumeroEndereco.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblNumeroEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblNumeroEndereco.Location = new System.Drawing.Point(429, 158);
+            this.LblNumeroEndereco.Location = new System.Drawing.Point(430, 149);
             this.LblNumeroEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumeroEndereco.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblNumeroEndereco.Name = "LblNumeroEndereco";
             this.LblNumeroEndereco.Size = new System.Drawing.Size(94, 19);
-            this.LblNumeroEndereco.TabIndex = 39;
+            this.LblNumeroEndereco.TabIndex = 41;
             this.LblNumeroEndereco.Text = "Nº Endereço";
             // 
             // lblTelefone
@@ -818,12 +784,12 @@
             this.lblTelefone.Depth = 0;
             this.lblTelefone.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefone.Location = new System.Drawing.Point(429, 109);
+            this.lblTelefone.Location = new System.Drawing.Point(430, 109);
             this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(68, 19);
-            this.lblTelefone.TabIndex = 38;
+            this.lblTelefone.TabIndex = 40;
             this.lblTelefone.Text = "Telefone";
             // 
             // LblEndereco
@@ -832,12 +798,12 @@
             this.LblEndereco.Depth = 0;
             this.LblEndereco.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblEndereco.Location = new System.Drawing.Point(47, 150);
+            this.LblEndereco.Location = new System.Drawing.Point(50, 149);
             this.LblEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEndereco.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblEndereco.Name = "LblEndereco";
             this.LblEndereco.Size = new System.Drawing.Size(72, 19);
-            this.LblEndereco.TabIndex = 29;
+            this.LblEndereco.TabIndex = 31;
             this.LblEndereco.Text = "Endereço";
             // 
             // LblCliente
@@ -847,12 +813,12 @@
             this.LblCliente.Depth = 0;
             this.LblCliente.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblCliente.Location = new System.Drawing.Point(46, 109);
+            this.LblCliente.Location = new System.Drawing.Point(50, 109);
             this.LblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblCliente.Name = "LblCliente";
             this.LblCliente.Size = new System.Drawing.Size(56, 19);
-            this.LblCliente.TabIndex = 28;
+            this.LblCliente.TabIndex = 30;
             this.LblCliente.Text = "Cliente";
             // 
             // LblEntradaMaterial
@@ -862,12 +828,12 @@
             this.LblEntradaMaterial.Depth = 0;
             this.LblEntradaMaterial.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblEntradaMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblEntradaMaterial.Location = new System.Drawing.Point(429, 69);
+            this.LblEntradaMaterial.Location = new System.Drawing.Point(430, 69);
             this.LblEntradaMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEntradaMaterial.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblEntradaMaterial.Name = "LblEntradaMaterial";
             this.LblEntradaMaterial.Size = new System.Drawing.Size(60, 19);
-            this.LblEntradaMaterial.TabIndex = 37;
+            this.LblEntradaMaterial.TabIndex = 39;
             this.LblEntradaMaterial.Text = "Entrada";
             // 
             // LblNumero
@@ -876,12 +842,12 @@
             this.LblNumero.Depth = 0;
             this.LblNumero.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblNumero.Location = new System.Drawing.Point(46, 69);
+            this.LblNumero.Location = new System.Drawing.Point(50, 69);
             this.LblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumero.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblNumero.Name = "LblNumero";
             this.LblNumero.Size = new System.Drawing.Size(63, 19);
-            this.LblNumero.TabIndex = 27;
+            this.LblNumero.TabIndex = 29;
             this.LblNumero.Text = "Número";
             // 
             // LblTexto
@@ -894,7 +860,7 @@
             this.LblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTexto.Name = "LblTexto";
             this.LblTexto.Size = new System.Drawing.Size(270, 29);
-            this.LblTexto.TabIndex = 26;
+            this.LblTexto.TabIndex = 28;
             this.LblTexto.Text = "Cadastro de Nova Ficha";
             // 
             // TxtNumeroEndereco
@@ -911,9 +877,24 @@
             this.TxtNumeroEndereco.Size = new System.Drawing.Size(282, 30);
             this.TxtNumeroEndereco.TabIndex = 5;
             // 
+            // BtnExcluir
+            // 
+            this.BtnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnExcluir.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExcluir.Location = new System.Drawing.Point(404, 452);
+            this.BtnExcluir.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnExcluir.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnExcluir.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(125, 50);
+            this.BtnExcluir.TabIndex = 23;
+            this.Description.SetToolTip(this.BtnExcluir, "Excluir Registro ");
+            this.BtnExcluir.Clicked += new System.EventHandler(this.BtnExcluir_Click);
+            // 
             // TabPesquisaMaterial
             // 
             this.TabPesquisaMaterial.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TabPesquisaMaterial.Controls.Add(this.BtnLimparPesquisa);
             this.TabPesquisaMaterial.Controls.Add(this.TxtConsultar);
             this.TabPesquisaMaterial.Controls.Add(this.LblTipoPesquisa);
             this.TabPesquisaMaterial.Controls.Add(this.LblPesquisa);
@@ -928,6 +909,24 @@
             this.TabPesquisaMaterial.TabIndex = 1;
             this.TabPesquisaMaterial.Text = "Pesquisa e Impressão";
             // 
+            // BtnLimparPesquisa
+            // 
+            this.BtnLimparPesquisa.AutoSize = true;
+            this.BtnLimparPesquisa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnLimparPesquisa.Depth = 0;
+            this.BtnLimparPesquisa.Icon = global::Cadastro_Assistencia_Tecnica.Properties.Resources.magnify;
+            this.BtnLimparPesquisa.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.magnify;
+            this.BtnLimparPesquisa.Location = new System.Drawing.Point(270, 20);
+            this.BtnLimparPesquisa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnLimparPesquisa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnLimparPesquisa.Name = "BtnLimparPesquisa";
+            this.BtnLimparPesquisa.Primary = false;
+            this.BtnLimparPesquisa.Size = new System.Drawing.Size(44, 36);
+            this.BtnLimparPesquisa.TabIndex = 1;
+            this.BtnLimparPesquisa.Tag = "";
+            this.BtnLimparPesquisa.UseVisualStyleBackColor = true;
+            this.BtnLimparPesquisa.Click += new System.EventHandler(this.BtnLimparPesquisa_Click);
+            // 
             // TxtConsultar
             // 
             this.TxtConsultar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -939,7 +938,7 @@
             this.TxtConsultar.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtConsultar.Name = "TxtConsultar";
             this.TxtConsultar.ReadOnly = false;
-            this.TxtConsultar.Size = new System.Drawing.Size(282, 30);
+            this.TxtConsultar.Size = new System.Drawing.Size(242, 30);
             this.TxtConsultar.TabIndex = 0;
             this.TxtConsultar.TextChangedd += new System.EventHandler(this.TxtConsultar_TextChangedd);
             // 
@@ -982,20 +981,20 @@
             this.CmbPesquisa.Name = "CmbPesquisa";
             this.CmbPesquisa.SelectedIndex = -1;
             this.CmbPesquisa.Size = new System.Drawing.Size(135, 40);
-            this.CmbPesquisa.TabIndex = 1;
+            this.CmbPesquisa.TabIndex = 2;
             this.CmbPesquisa.DropDownClosed += new System.EventHandler(this.CmbPesquisa_DropDownClosed);
             // 
             // LinhaDivisoraTbPesq
             // 
             this.LinhaDivisoraTbPesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LinhaDivisoraTbPesq.Depth = 0;
-            this.LinhaDivisoraTbPesq.Location = new System.Drawing.Point(0, 66);
+            this.LinhaDivisoraTbPesq.Location = new System.Drawing.Point(-6, 66);
             this.LinhaDivisoraTbPesq.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.LinhaDivisoraTbPesq.MinimumSize = new System.Drawing.Size(870, 1);
+            this.LinhaDivisoraTbPesq.MinimumSize = new System.Drawing.Size(885, 1);
             this.LinhaDivisoraTbPesq.MouseState = MaterialSkin.MouseState.HOVER;
             this.LinhaDivisoraTbPesq.Name = "LinhaDivisoraTbPesq";
-            this.LinhaDivisoraTbPesq.Size = new System.Drawing.Size(870, 1);
-            this.LinhaDivisoraTbPesq.TabIndex = 3;
+            this.LinhaDivisoraTbPesq.Size = new System.Drawing.Size(885, 1);
+            this.LinhaDivisoraTbPesq.TabIndex = 4;
             this.LinhaDivisoraTbPesq.Text = "materialDivider2";
             // 
             // materialTabSelector1
@@ -1019,7 +1018,7 @@
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
             this.pictureBox27.Location = new System.Drawing.Point(1, 109);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(884, 20);
+            this.pictureBox27.Size = new System.Drawing.Size(880, 20);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 156;
             this.pictureBox27.TabStop = false;
@@ -1057,10 +1056,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PrintDialog PrintFicha;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DataGridView DgViewConsultar;
         private MaterialSkin.Controls.MaterialTabControl TabMainMaterial;
         private System.Windows.Forms.TabPage TabPesquisaMaterial;
@@ -1069,14 +1064,9 @@
         private MaterialSkin.Controls.MaterialLabel LblPesquisa;
         private MaterialSkin.Controls.MaterialContextMenuStrip MSDataGrid;
         private System.Windows.Forms.ToolStripMenuItem IMSAlterarFicha;
-        private System.Windows.Forms.ToolStripMenuItem visualizarFichaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem IMSVisualizarFicha;
         private MaterialSkin.Controls.MaterialDivider LinhaDivisoraTbPesq;
         private System.Windows.Forms.TabPage TabCadastroMaterial;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnExcluir;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnAdmin;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnCadastrar;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnNovo;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnAlterar;
         private MaterialSkin.Controls.MaterialLabel LblEntrega;
         private MaterialSkin.Controls.MaterialLabel LblDetalhes;
         private MaterialSkin.Controls.MaterialLabel LblOk;
@@ -1121,5 +1111,12 @@
         private Componentes.RaisedButtonRipple BtnOpcoes;
         private Componentes.RaisedButtonRipple BtnThemeMaterial;
         private System.Windows.Forms.ToolTip Description;
+        private Componentes.ColoredButton BtnCadastrar;
+        private Componentes.ColoredButton BtnNovo;
+        private Componentes.ColoredButton BtnAlterar;
+        private Componentes.ColoredButton BtnImprimir;
+        private MaterialSkin.Controls.MaterialFlatButton BtnAdmin;
+        private Componentes.ColoredButton BtnExcluir;
+        private MaterialSkin.Controls.MaterialFlatButton BtnLimparPesquisa;
     }
 }

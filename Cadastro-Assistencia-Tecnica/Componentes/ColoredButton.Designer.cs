@@ -1,6 +1,6 @@
 ﻿namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    partial class RaisedButtonRipple
+    partial class ColoredButton
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RaisedButtonRipple));
-            this.Btn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoredButton));
+            this.Btn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.ShadowLeft = new System.Windows.Forms.PictureBox();
             this.ShadowRight = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.ShadowTop = new System.Windows.Forms.PictureBox();
             this.ShadowBottom = new System.Windows.Forms.PictureBox();
+            this.TM1 = new System.Windows.Forms.Timer(this.components);
+            this.TM2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ShadowLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowRight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowBottom)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn
             // 
+            this.Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn.AutoSize = true;
             this.Btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn.Depth = 0;
             this.Btn.Icon = null;
             this.Btn.Location = new System.Drawing.Point(9, 6);
-            this.Btn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Btn.MaximumSize = new System.Drawing.Size(109, 36);
             this.Btn.MinimumSize = new System.Drawing.Size(109, 36);
             this.Btn.MouseState = MaterialSkin.MouseState.HOVER;
             this.Btn.Name = "Btn";
-            this.Btn.Primary = false;
+            this.Btn.Primary = true;
             this.Btn.Size = new System.Drawing.Size(109, 36);
-            this.Btn.TabIndex = 181;
-            this.Btn.Text = "RaisedButtonRipple";
+            this.Btn.TabIndex = 187;
+            this.Btn.Text = "Btn";
             this.Btn.UseVisualStyleBackColor = true;
             this.Btn.MouseEnter += new System.EventHandler(this.RaisedButtonRipple_Enter);
             this.Btn.MouseLeave += new System.EventHandler(this.RaisedButtonRipple_Leave);
@@ -75,23 +76,12 @@
             // ShadowRight
             // 
             this.ShadowRight.Image = ((System.Drawing.Image)(resources.GetObject("ShadowRight.Image")));
-            this.ShadowRight.Location = new System.Drawing.Point(117, 6);
+            this.ShadowRight.Location = new System.Drawing.Point(116, 6);
             this.ShadowRight.Name = "ShadowRight";
             this.ShadowRight.Size = new System.Drawing.Size(20, 36);
             this.ShadowRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShadowRight.TabIndex = 185;
             this.ShadowRight.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(122, 10);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(21, 36);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 182;
-            this.pictureBox20.TabStop = false;
             // 
             // ShadowTop
             // 
@@ -106,35 +96,43 @@
             // ShadowBottom
             // 
             this.ShadowBottom.Image = ((System.Drawing.Image)(resources.GetObject("ShadowBottom.Image")));
-            this.ShadowBottom.Location = new System.Drawing.Point(9, 42);
+            this.ShadowBottom.Location = new System.Drawing.Point(9, 41);
             this.ShadowBottom.Name = "ShadowBottom";
             this.ShadowBottom.Size = new System.Drawing.Size(109, 31);
             this.ShadowBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShadowBottom.TabIndex = 183;
             this.ShadowBottom.TabStop = false;
             // 
-            // RaisedButtonRipple
+            // TM1
+            // 
+            this.TM1.Interval = 1;
+            this.TM1.Tick += new System.EventHandler(this.TM1_Tick);
+            // 
+            // TM2
+            // 
+            this.TM2.Interval = 1;
+            this.TM2.Tick += new System.EventHandler(this.TM2_Tick);
+            // 
+            // ColoredButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Btn);
             this.Controls.Add(this.ShadowLeft);
-            this.Controls.Add(this.ShadowRight);
-            this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.ShadowTop);
             this.Controls.Add(this.ShadowBottom);
+            this.Controls.Add(this.ShadowRight);
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximumSize = new System.Drawing.Size(118, 46);
             this.MinimumSize = new System.Drawing.Size(125, 50);
-            this.Name = "RaisedButtonRipple";
+            this.Name = "ColoredButton";
             this.Size = new System.Drawing.Size(125, 50);
             this.Load += new System.EventHandler(this.TextField_Load);
             this.Enter += new System.EventHandler(this.RaisedButtonRipple_Enter);
             this.Leave += new System.EventHandler(this.RaisedButtonRipple_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.ShadowLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowRight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShadowBottom)).EndInit();
             this.ResumeLayout(false);
@@ -143,12 +141,12 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialFlatButton Btn;
         private System.Windows.Forms.PictureBox ShadowLeft;
         private System.Windows.Forms.PictureBox ShadowRight;
-        private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox ShadowTop;
         private System.Windows.Forms.PictureBox ShadowBottom;
+        private MaterialSkin.Controls.MaterialRaisedButton Btn;
+        private System.Windows.Forms.Timer TM1;
+        private System.Windows.Forms.Timer TM2;
     }
 }

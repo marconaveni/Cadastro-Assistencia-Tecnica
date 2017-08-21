@@ -38,8 +38,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            this.Height = 640;
+            materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
+            //materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
 
@@ -47,6 +47,12 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             try
             {
+                BtnCadastrar.Text = "Cadastrar";
+                BtnAlterar.Text = "Alterar";
+                BtnNovo.Text = "Novo";
+                BtnImprimir.Text = "Visualizar";
+                BtnExcluir.Text = "Excluir";
+
                 BtnOpcoes.Text = "Opções";
                 BtnThemeMaterial.Text = "Mudar Tema";
 
@@ -73,7 +79,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
                 Clear();
 
-                materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
+
                 StartTheme();
 
                 TabMainMaterial.SelectedTab = TabPesquisaMaterial;
@@ -218,12 +224,14 @@ namespace Cadastro_Assistencia_Tecnica.Views
             BtnAlterar.Visible = false;
             BtnExcluir.Visible = false;
             BtnCadastrar.Visible = true;
-            BtnAdmin.Enabled = false;
-            TxtNumeroFicha.Enabled = true;
-            TxtCliente.Enabled = true;
+            BtnAdmin.Visible = false;
+            BtnImprimir.Visible = false;
+            TxtNumeroFicha.EnableTextField(true);
+            TxtCliente.EnableTextField(true);
             DtEntrada.Enabled = true;
-            TxtAparelho.Enabled = true;
+            TxtAparelho.EnableTextField(true);
             LblTexto.Text = "Cadastro de Nova Ficha";
+            BtnAdmin.Icon = Resources._lock;
 
             TxtNumeroFicha.Focus();
         }
@@ -274,7 +282,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 ImageLayout = DataGridViewImageCellLayout.Normal
             };
-            object O = Resources.ResourceManager.GetObject("pen1");
+            object O = Resources.ResourceManager.GetObject("pencil");
             Image image = (Image)O;
             img.Image = image;
             DgViewConsultar.Columns.Add(img);
@@ -355,7 +363,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void StartTheme()
         {
-            
+
 
             TxtNumeroFicha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtCliente.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
@@ -500,10 +508,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
             if (fr.Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
             {
                 BtnExcluir.Visible = true;
-                TxtNumeroFicha.Enabled = true;
-                TxtCliente.Enabled = true;
+                TxtNumeroFicha.EnableTextField(true);
+                TxtCliente.EnableTextField(true);
                 DtEntrada.Enabled = true;
-                TxtAparelho.Enabled = true;
+                TxtAparelho.EnableTextField(true);
+                BtnAdmin.Icon = Resources.lockopen;
             }
 
         }
@@ -542,9 +551,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 DtOk.Visible = false;
             }
-            if (CmbOk.Text.Equals("Sem Defeito"))    //verificação para ativar DtOk  no Formulário
+            if (CmbOk.Text.Equals("Sem Defeito") && (TxtDetalhes.Text == "" || TxtDetalhes.Text == "Devolução"))    //verificação para ativar DtOk  no Formulário
             {
                 TxtDetalhes.Text = "O aparelho não apresentou defeito";
+            }
+            else if (CmbOk.Text.Equals("Devolução") && (TxtDetalhes.Text == "" || TxtDetalhes.Text == "O aparelho não apresentou defeito"))    //verificação para ativar DtOk  no Formulário
+            {
+                TxtDetalhes.Text = "Devolução";
             }
         }
 
@@ -590,10 +603,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 if (DgViewConsultar.Columns[e.ColumnIndex].Name == "img" && e.RowIndex != -1)
                 {
-                    Point p = PointToClient(Control.MousePosition);
-                    p.X = p.X + 280;
-                    p.Y = p.Y + 110;
-                    MSDataGrid.Show(p);
+                    MSDataGrid.Show(Cursor.Position);
                 }
 
                 Ficha ficha = new Ficha()
@@ -622,15 +632,16 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 texto = ficha.DoExibir();
                 SetForm(ficha);
 
+                BtnImprimir.Visible = true;
                 BtnAlterar.Visible = true;
                 BtnExcluir.Enabled = true;
                 BtnCadastrar.Visible = false;
-                BtnAdmin.Enabled = true;
+                BtnAdmin.Visible = true;
                 BtnExcluir.Visible = false;
-                TxtNumeroFicha.Enabled = false;
-                TxtCliente.Enabled = false;
+                TxtNumeroFicha.EnableTextField(false);
+                TxtCliente.EnableTextField(false);
                 DtEntrada.Enabled = false;
-                TxtAparelho.Enabled = false;
+                TxtAparelho.EnableTextField(false);
                 LblTexto.Text = "Alterar a ficha nº " + ficha.NroFicha;
 
             }
@@ -674,11 +685,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
-        private void VisualizarFichaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmVisualizar vs = new FrmVisualizar(texto);
-            vs.Show();
-        }
+
 
         private void DgViewConsultar_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -736,6 +743,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
         /// <param name="e"></param>
         private void TxtConsultar_TextChangedd(object sender, EventArgs e)
         {
+            if (TxtConsultar.Text == "")
+                BtnLimparPesquisa.Icon = Resources.magnify;
+            else
+                BtnLimparPesquisa.Icon = Resources.close;
+
             GetFichas();
         }
 
@@ -749,16 +761,37 @@ namespace Cadastro_Assistencia_Tecnica.Views
             FichaPDF fichapdf = new FichaPDF();
             fichapdf.save();
             Process.Start("output.pdf");
-            //MessageBox.Show("Em Breve!");
 
-            //foreach (Control ctrl in TabCadastroMaterial.Controls)
+            //try
             //{
-            //    //MessageBox.Show(ctrl.Name);
+            //    string processFilename = Microsoft.Win32.Registry.LocalMachine
+            //    .OpenSubKey("Software")
+            //    .OpenSubKey("Microsoft")
+            //    .OpenSubKey("Windows")
+            //    .OpenSubKey("CurrentVersion")
+            //    .OpenSubKey("App Paths")
+            //    .OpenSubKey("AcroRd32.exe")
+            //    .GetValue(String.Empty).ToString();
+
+            //    ProcessStartInfo info = new ProcessStartInfo();
+            //    info.Verb = "print";
+            //    info.FileName = processFilename;
+            //    info.Arguments = String.Format("/p /h {0}", "output.pdf");
+            //    info.CreateNoWindow = true;
+            //    info.WindowStyle = ProcessWindowStyle.Hidden;
+            //    //(It won't be hidden anyway... thanks Adobe!)
+            //    info.UseShellExecute = false;
+
+            //    Process p = Process.Start(info);
+            //    p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             //}
-            //foreach (Control ctrl in TabPesquisaMaterial.Controls)
-            //{
-            //    MessageBox.Show(ctrl.Name);
+            //catch (Exception)
+            //{             
+            //    MessageBox.Show("Adobe não está instalado");
             //}
+
+
+
 
         }
 
@@ -771,6 +804,19 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
+        private void IMSVisualizarFicha_Click(object sender, EventArgs e)
+        {
+            FrmVisualizar vs = new FrmVisualizar(texto);
+            vs.Show();
+        }
+
+        private void BtnLimparPesquisa_Click(object sender, EventArgs e)
+        {
+            if (TxtConsultar.Text != "")
+                TxtConsultar.Text = "";
+
+            TxtConsultar.Focus();
+        }
     }
 
 }

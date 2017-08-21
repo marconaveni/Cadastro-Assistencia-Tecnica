@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSenha));
             this.Lblsenha = new MaterialSkin.Controls.MaterialLabel();
             this.TxtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.BtnOk = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.BtnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.BtnCancelar = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
+            this.BtnOk = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
+            this.MenuStrip = new MaterialSkin.Controls.MaterialContextMenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,11 @@
             // TxtSenha
             // 
             this.TxtSenha.AllowDrop = true;
+            this.TxtSenha.ContextMenuStrip = this.MenuStrip;
             this.TxtSenha.Depth = 0;
             this.TxtSenha.Hint = "";
             this.TxtSenha.Location = new System.Drawing.Point(171, 125);
-            //this.TxtSenha.MaxLength = 32;
+            this.TxtSenha.MaxLength = 16;
             this.TxtSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '•';
@@ -68,40 +70,6 @@
             this.TxtSenha.TabIndex = 4;
             this.TxtSenha.TabStop = false;
             this.TxtSenha.UseSystemPasswordChar = false;
-            // 
-            // BtnOk
-            // 
-            this.BtnOk.AutoSize = true;
-            this.BtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnOk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnOk.Depth = 0;
-            this.BtnOk.Location = new System.Drawing.Point(184, 206);
-            this.BtnOk.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnOk.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnOk.Name = "BtnOk";
-            this.BtnOk.Primary = true;
-            this.BtnOk.Size = new System.Drawing.Size(109, 36);
-            this.BtnOk.TabIndex = 40;
-            this.BtnOk.Text = "Login";
-            this.BtnOk.UseVisualStyleBackColor = true;
-            this.BtnOk.Click += new System.EventHandler(this.BtnOk_Click_1);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.AutoSize = true;
-            this.BtnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar.Depth = 0;
-            this.BtnCancelar.Location = new System.Drawing.Point(53, 206);
-            this.BtnCancelar.MinimumSize = new System.Drawing.Size(109, 36);
-            this.BtnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Primary = true;
-            this.BtnCancelar.Size = new System.Drawing.Size(109, 36);
-            this.BtnCancelar.TabIndex = 41;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // materialDivider1
             // 
@@ -124,6 +92,38 @@
             this.pictureBox5.TabIndex = 156;
             this.pictureBox5.TabStop = false;
             // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.Location = new System.Drawing.Point(97, 201);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnCancelar.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnCancelar.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(125, 50);
+            this.BtnCancelar.TabIndex = 157;
+            this.BtnCancelar.Clicked += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnOk
+            // 
+            this.BtnOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOk.Location = new System.Drawing.Point(224, 201);
+            this.BtnOk.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnOk.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnOk.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnOk.Name = "BtnOk";
+            this.BtnOk.Size = new System.Drawing.Size(125, 50);
+            this.BtnOk.TabIndex = 158;
+            this.BtnOk.Clicked += new System.EventHandler(this.BtnOk_Click_1);
+            // 
+            // MenuStrip
+            // 
+            this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MenuStrip.Depth = 0;
+            this.MenuStrip.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Size = new System.Drawing.Size(61, 4);
+            // 
             // FrmSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -131,10 +131,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(466, 261);
             this.ControlBox = false;
+            this.Controls.Add(this.BtnOk);
+            this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.materialDivider1);
-            this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.BtnOk);
             this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.Lblsenha);
             this.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,9 +160,10 @@
         #endregion
         private MaterialSkin.Controls.MaterialLabel Lblsenha;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtSenha;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnOk;
-        private MaterialSkin.Controls.MaterialRaisedButton BtnCancelar;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private MaterialSkin.Controls.MaterialContextMenuStrip MenuStrip;
+        private Componentes.ColoredButton BtnCancelar;
+        private Componentes.ColoredButton BtnOk;
     }
 }

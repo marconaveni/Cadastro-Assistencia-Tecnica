@@ -42,7 +42,7 @@
             // 
             this.Ani.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Ani.BackColor = System.Drawing.Color.LightGray;
-            this.Ani.Location = new System.Drawing.Point(68, 25);
+            this.Ani.Location = new System.Drawing.Point(68, 23);
             this.Ani.Margin = new System.Windows.Forms.Padding(1);
             this.Ani.Name = "Ani";
             this.Ani.Size = new System.Drawing.Size(2, 3);
@@ -53,8 +53,8 @@
             // 
             this.line.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.line.BackColor = System.Drawing.Color.LightGray;
-            this.line.Location = new System.Drawing.Point(1, 25);
+            this.line.BackColor = System.Drawing.Color.Gainsboro;
+            this.line.Location = new System.Drawing.Point(1, 23);
             this.line.Margin = new System.Windows.Forms.Padding(1);
             this.line.Name = "line";
             this.line.Size = new System.Drawing.Size(134, 1);

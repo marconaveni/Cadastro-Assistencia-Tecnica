@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Componentes
 {
-    public partial class RaisedButtonRipple : UserControl    {
+    public partial class ColoredButton : UserControl
+    {
 
-        
 
-        public RaisedButtonRipple()
+
+        public ColoredButton()
         {
             InitializeComponent();
         }
@@ -22,7 +23,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         private void TextField_Load(object sender, EventArgs e)
         {
-   
+
         }
 
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
@@ -47,23 +48,39 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             set { Btn.Text = value; }
         }
 
-
+        private int contador;
         private void RaisedButtonRipple_Enter(object sender, EventArgs e)
         {
-            ShadowBottom.Height = ShadowBottom.Height + 15;
-            ShadowBottom.Width = ShadowBottom.Width + 1;
+            //ShadowBottom.Height = ShadowBottom.Height + 40;
+            TM1.Enabled = true;
+            TM2.Enabled = false;
 
-            ShadowRight.Width = ShadowRight.Width + 10;
-            ShadowRight.Height = ShadowRight.Height + 1;
         }
 
         private void RaisedButtonRipple_Leave(object sender, EventArgs e)
         {
-            ShadowBottom.Height = ShadowBottom.Height - 15;
-            ShadowBottom.Width = ShadowBottom.Width - 1;
+            //ShadowBottom.Height = ShadowBottom.Height - 40;
+            TM1.Enabled = false;
+            TM2.Enabled = true;
+        }
 
-            ShadowRight.Width = ShadowRight.Width - 10;
-            ShadowRight.Height = ShadowRight.Height - 1;
+        private void TM1_Tick(object sender, EventArgs e)
+        {
+            if (contador < 15)
+            {
+                ShadowBottom.Height = ShadowBottom.Height + 1 * 2;
+                contador++;
+            }
+
+        }
+
+        private void TM2_Tick(object sender, EventArgs e)
+        {
+            if (contador > 1)
+            {
+                ShadowBottom.Height = ShadowBottom.Height - 1 * 2;
+                contador--;
+            }
         }
     }
 }

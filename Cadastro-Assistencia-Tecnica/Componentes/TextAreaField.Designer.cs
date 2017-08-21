@@ -61,18 +61,18 @@
             // tm
             // 
             this.tm.Interval = 1;
-            this.tm.Tick += new System.EventHandler(this.tm_Tick);
+            this.tm.Tick += new System.EventHandler(this.Tm_Tick);
             // 
             // tm2
             // 
             this.tm2.Interval = 1;
-            this.tm2.Tick += new System.EventHandler(this.tm2_Tick);
+            this.tm2.Tick += new System.EventHandler(this.Tm2_Tick);
             // 
             // Ani
             // 
             this.Ani.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Ani.BackColor = System.Drawing.Color.LightGray;
-            this.Ani.Location = new System.Drawing.Point(142, 110);
+            this.Ani.Location = new System.Drawing.Point(142, 108);
             this.Ani.Margin = new System.Windows.Forms.Padding(1);
             this.Ani.Name = "Ani";
             this.Ani.Size = new System.Drawing.Size(2, 3);
@@ -83,8 +83,8 @@
             // 
             this.line.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.line.BackColor = System.Drawing.Color.LightGray;
-            this.line.Location = new System.Drawing.Point(1, 110);
+            this.line.BackColor = System.Drawing.Color.Gainsboro;
+            this.line.Location = new System.Drawing.Point(1, 108);
             this.line.Margin = new System.Windows.Forms.Padding(1);
             this.line.Name = "line";
             this.line.Size = new System.Drawing.Size(281, 1);

@@ -30,6 +30,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
             TxtSenha.Focus();
+            BtnCancelar.Text = "Cancelar";
+            BtnOk.Text = "Login";
         }
 
 

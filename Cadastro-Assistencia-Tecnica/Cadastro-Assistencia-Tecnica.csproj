@@ -89,13 +89,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\IFichaService.cs" />
-    <Compile Include="Business\Impl\FichaService.cs" />
+    <Compile Include="Componentes\Business\IFichaService.cs" />
+    <Compile Include="Componentes\Business\Impl\FichaService.cs" />
     <Compile Include="Componentes\ComboTextField.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Componentes\ComboTextField.Designer.cs">
       <DependentUpon>ComboTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\ColoredButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\ColoredButton.Designer.cs">
+      <DependentUpon>ColoredButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\TextAreaField.cs">
       <SubType>UserControl</SubType>
@@ -127,6 +133,7 @@
     <Compile Include="Componentes\TextField.Designer.cs">
       <DependentUpon>TextField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums\AlignEnum.cs" />
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\DataBaseNotFoundException.cs" />
     <Compile Include="Exceptions\OperacaoDAOException.cs" />
@@ -135,6 +142,11 @@
     <Compile Include="Model\MaterialSchemeColor.cs" />
     <Compile Include="Persistence\ConnectionFactory.cs" />
     <Compile Include="Persistence\FichaDAO.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Save\FichaPDF.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +171,9 @@
     <EmbeddedResource Include="Componentes\ComboTextField.resx">
       <DependentUpon>ComboTextField.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\ColoredButton.resx">
+      <DependentUpon>ColoredButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\TextAreaField.resx">
       <DependentUpon>TextAreaField.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,14 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Views\FrmFichasCadastrar.resx">
       <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,7 +240,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Roboto-Medium.ttf" />
     <None Include="Resources\Roboto-Regular.ttf" />
     <None Include="Resources\toolslogo.png" />
   </ItemGroup>
@@ -244,9 +253,33 @@
     <None Include="Resources\shadow-top.png" />
     <None Include="Resources\edit.png" />
     <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\lockopen.png" />
+    <None Include="Resources\calendar_.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\magnify.png" />
+    <None Include="Resources\close.png" />
     <Content Include="tools.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

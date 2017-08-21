@@ -80,28 +80,28 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             tm.Enabled = false;
         }
 
-        private void tm_Tick(object sender, EventArgs e)
+        private void Tm_Tick(object sender, EventArgs e)
         {
-            if (Ani.Width <= Txt.Width) 
+            if (Ani.Width <= Txt.Width + 2)
             {
-                Ani.Width += aceleration + (Txt.Width /100)-1 ;
+                Ani.Width += aceleration + (Txt.Width / 100);
                 Ani.Left -= (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration++;
+                aceleration = aceleration + 1 * 2;
             }
 
         }
 
-        private void tm2_Tick(object sender, EventArgs e)
+        private void Tm2_Tick(object sender, EventArgs e)
         {
             if (Ani.Width > 0)
             {
-                Ani.Width -= aceleration + (Txt.Width / 100) - 1;
+                Ani.Width -= aceleration + (Txt.Width / 100);
                 Ani.Left += (aceleration / 2) + ((Txt.Width / 100) / 2);
-                aceleration--;
+                aceleration = aceleration - 1 * 2;
             }
 
         }
 
-  
+
     }
 }

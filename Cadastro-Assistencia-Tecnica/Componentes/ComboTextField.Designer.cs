@@ -29,78 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Ani = new System.Windows.Forms.PictureBox();
-            this.line = new System.Windows.Forms.PictureBox();
             this.tm = new System.Windows.Forms.Timer(this.components);
             this.tm2 = new System.Windows.Forms.Timer(this.components);
-            this.DWAprovado = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Txt = new System.Windows.Forms.ComboBox();
             this.lblTxt = new MaterialSkin.Controls.MaterialLabel();
+            this.Ani = new System.Windows.Forms.PictureBox();
+            this.line = new System.Windows.Forms.PictureBox();
+            this.DWAprovado = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Ani)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DWAprovado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // Ani
-            // 
-            this.Ani.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Ani.BackColor = System.Drawing.Color.LightGray;
-            this.Ani.Location = new System.Drawing.Point(68, 32);
-            this.Ani.Margin = new System.Windows.Forms.Padding(0);
-            this.Ani.Name = "Ani";
-            this.Ani.Size = new System.Drawing.Size(2, 3);
-            this.Ani.TabIndex = 169;
-            this.Ani.TabStop = false;
-            // 
-            // line
-            // 
-            this.line.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.line.BackColor = System.Drawing.Color.LightGray;
-            this.line.Location = new System.Drawing.Point(3, 32);
-            this.line.Margin = new System.Windows.Forms.Padding(0);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(135, 1);
-            this.line.TabIndex = 168;
-            this.line.TabStop = false;
-            // 
             // tm
             // 
             this.tm.Interval = 1;
-            this.tm.Tick += new System.EventHandler(this.tm_Tick);
+            this.tm.Tick += new System.EventHandler(this.Tm_Tick);
             // 
             // tm2
             // 
             this.tm2.Interval = 1;
-            this.tm2.Tick += new System.EventHandler(this.tm2_Tick);
-            // 
-            // DWAprovado
-            // 
-            this.DWAprovado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DWAprovado.BackColor = System.Drawing.Color.Transparent;
-            this.DWAprovado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DWAprovado.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.down;
-            this.DWAprovado.Location = new System.Drawing.Point(106, 9);
-            this.DWAprovado.Margin = new System.Windows.Forms.Padding(0);
-            this.DWAprovado.Name = "DWAprovado";
-            this.DWAprovado.Size = new System.Drawing.Size(26, 24);
-            this.DWAprovado.TabIndex = 188;
-            this.DWAprovado.TabStop = false;
-            this.DWAprovado.Click += new System.EventHandler(this.DWAprovado_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Location = new System.Drawing.Point(0, -6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(136, 34);
-            this.pictureBox6.TabIndex = 187;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.DWAprovado_Click);
+            this.tm2.Tick += new System.EventHandler(this.Tm2_Tick);
             // 
             // Txt
             // 
@@ -134,6 +85,55 @@
             this.lblTxt.Text = "Lbl";
             this.lblTxt.Click += new System.EventHandler(this.DWAprovado_Click);
             this.lblTxt.Enter += new System.EventHandler(this.DWAprovado_Click);
+            // 
+            // Ani
+            // 
+            this.Ani.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Ani.BackColor = System.Drawing.Color.LightGray;
+            this.Ani.Location = new System.Drawing.Point(68, 30);
+            this.Ani.Margin = new System.Windows.Forms.Padding(0);
+            this.Ani.Name = "Ani";
+            this.Ani.Size = new System.Drawing.Size(2, 3);
+            this.Ani.TabIndex = 169;
+            this.Ani.TabStop = false;
+            // 
+            // line
+            // 
+            this.line.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.line.BackColor = System.Drawing.Color.Gainsboro;
+            this.line.Location = new System.Drawing.Point(3, 30);
+            this.line.Margin = new System.Windows.Forms.Padding(0);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(135, 1);
+            this.line.TabIndex = 168;
+            this.line.TabStop = false;
+            // 
+            // DWAprovado
+            // 
+            this.DWAprovado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DWAprovado.BackColor = System.Drawing.Color.Transparent;
+            this.DWAprovado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DWAprovado.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.down;
+            this.DWAprovado.Location = new System.Drawing.Point(106, 9);
+            this.DWAprovado.Margin = new System.Windows.Forms.Padding(0);
+            this.DWAprovado.Name = "DWAprovado";
+            this.DWAprovado.Size = new System.Drawing.Size(26, 24);
+            this.DWAprovado.TabIndex = 188;
+            this.DWAprovado.TabStop = false;
+            this.DWAprovado.Click += new System.EventHandler(this.DWAprovado_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.Location = new System.Drawing.Point(0, -6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(136, 34);
+            this.pictureBox6.TabIndex = 187;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.DWAprovado_Click);
             // 
             // ComboTextField
             // 
