@@ -210,3 +210,33 @@ D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\C
 D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\AxInterop.AcroPDFLib.dll
 D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.ResolveComReference.cache
 D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.ColoredButton.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.config
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.application
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.exe
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Cadastro Assistencia Tecnica.pdb
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\MaterialSkin.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Interop.AcroPDFLib.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.ResolveComReference.cache
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.ComboTextField.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.ColoredButton.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextAreaField.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.DateTextField.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextFieldValor.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Componentes.TextField.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe.manifest
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.application
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.exe
+D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro Assistencia Tecnica.pdb
