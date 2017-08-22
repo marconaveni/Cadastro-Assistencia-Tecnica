@@ -153,7 +153,7 @@
     <Compile Include="Views\FrmFichasCadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FrmFichasCadastrar.Designer.cs">
+    <Compile Include="Views\FrmFichasCadastrar.designer.cs">
       <DependentUpon>FrmFichasCadastrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmSenha.cs">

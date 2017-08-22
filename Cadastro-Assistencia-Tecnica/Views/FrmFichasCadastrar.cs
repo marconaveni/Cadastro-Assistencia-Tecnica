@@ -817,6 +817,25 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             TxtConsultar.Focus();
         }
+
+        private void FrmFichasCadastrar_KeyUp(object sender, KeyEventArgs e)
+        {
+
+
+            Control ctl;
+            ctl = (Control)sender;
+            if (e.KeyCode == Keys.LControlKey)
+            {
+                ctl.SelectNextControl(ActiveControl, true, true, true, true);
+            }
+            else if (e.KeyCode == Keys.ControlKey)
+            {
+                // MessageBox.Show(this.ActiveControl.Name);
+                ctl.SelectNextControl(ActiveControl, false, true, true, true);
+            }
+
+
+        }
     }
 
 }

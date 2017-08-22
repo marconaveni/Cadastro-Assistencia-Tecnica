@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             this.DgViewConsultar = new System.Windows.Forms.DataGridView();
             this.MSDataGrid = new MaterialSkin.Controls.MaterialContextMenuStrip();
@@ -112,15 +112,15 @@
             this.DgViewConsultar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgViewConsultar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgViewConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgViewConsultar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgViewConsultar.EnableHeadersVisualStyles = false;
             this.DgViewConsultar.GridColor = System.Drawing.Color.LightGray;
@@ -256,6 +256,7 @@
             this.BtnAdmin.Primary = false;
             this.BtnAdmin.Size = new System.Drawing.Size(44, 36);
             this.BtnAdmin.TabIndex = 24;
+            this.BtnAdmin.TabStop = false;
             this.BtnAdmin.Tag = "";
             this.Description.SetToolTip(this.BtnAdmin, "Logar como administrador para pode excluir\r\nregistros e editar campos não editave" +
         "is.");
@@ -360,6 +361,7 @@
             this.BtnCalculator.Primary = false;
             this.BtnCalculator.Size = new System.Drawing.Size(44, 36);
             this.BtnCalculator.TabIndex = 27;
+            this.BtnCalculator.TabStop = false;
             this.BtnCalculator.Tag = "";
             this.Description.SetToolTip(this.BtnCalculator, "Abrir Calculadora");
             this.BtnCalculator.UseVisualStyleBackColor = true;
@@ -438,7 +440,7 @@
             this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
             this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(890, 1);
             this.LinhaDivisoraTbCad.TabIndex = 38;
-            this.LinhaDivisoraTbCad.Text = "materialDivider3";
+            this.LinhaDivisoraTbCad.TabStop = false;
             // 
             // CmbEntrega
             // 
@@ -1009,6 +1011,7 @@
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.Size = new System.Drawing.Size(885, 57);
             this.materialTabSelector1.TabIndex = 0;
+            this.materialTabSelector1.TabStop = false;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
             // pictureBox27
@@ -1043,6 +1046,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Fichas";
             this.Load += new System.EventHandler(this.FrmConsultar_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmFichasCadastrar_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.DgViewConsultar)).EndInit();
             this.MSDataGrid.ResumeLayout(false);
             this.TabMainMaterial.ResumeLayout(false);
