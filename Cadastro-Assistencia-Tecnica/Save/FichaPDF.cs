@@ -14,8 +14,6 @@ namespace Cadastro_Assistencia_Tecnica.Save
     class FichaPDF
     {
 
-
-
         public PdfPCell GenerateCells(String print, PdfPCell cell, int colspan, int border, AlignEnum Align, float right, float top, float bottom, float fixe)
         {
             bool bold = false;

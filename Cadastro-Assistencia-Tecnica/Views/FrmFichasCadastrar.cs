@@ -751,10 +751,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             GetFichas();
         }
 
-        private void BtnOpcoes_Load(object sender, EventArgs e)
-        {
 
-        }
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
 
@@ -824,16 +821,21 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             Control ctl;
             ctl = (Control)sender;
-            if (e.KeyCode == Keys.LControlKey)
+            if (e.KeyCode == Keys.BrowserForward)
             {
                 ctl.SelectNextControl(ActiveControl, true, true, true, true);
             }
-            else if (e.KeyCode == Keys.ControlKey)
+            else if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.BrowserBack)
             {
                 // MessageBox.Show(this.ActiveControl.Name);
                 ctl.SelectNextControl(ActiveControl, false, true, true, true);
             }
 
+
+        }
+
+        private void BtnOpcoes_Load(object sender, EventArgs e)
+        {
 
         }
     }
