@@ -29,7 +29,7 @@ namespace Cadastro_Assistencia_Tecnica.Persistence
                 cmd.Parameters.Add(new SqlParameter("@telefone", ficha.Telefone));
                 cmd.Parameters.Add(new SqlParameter("@endereco", ficha.Endereco));
                 cmd.Parameters.Add(new SqlParameter("@nroendereco", ficha.NroEndereco));
-                cmd.Parameters.Add(new SqlParameter("@aparelho", ficha.Aparelho1));
+                cmd.Parameters.Add(new SqlParameter("@aparelho", ficha.Aparelho));
                 cmd.Parameters.Add(new SqlParameter("@marca", ficha.Marca));
                 cmd.Parameters.Add(new SqlParameter("@modelo", ficha.Modelo));
                 cmd.Parameters.Add(new SqlParameter("@acessorios", ficha.Acessorios));
@@ -70,7 +70,7 @@ namespace Cadastro_Assistencia_Tecnica.Persistence
                 cmd.Parameters.Add(new SqlParameter("@telefone", ficha.Telefone));
                 cmd.Parameters.Add(new SqlParameter("@endereco", ficha.Endereco));
                 cmd.Parameters.Add(new SqlParameter("@nroendereco", ficha.NroEndereco));
-                cmd.Parameters.Add(new SqlParameter("@aparelho", ficha.Aparelho1));
+                cmd.Parameters.Add(new SqlParameter("@aparelho", ficha.Aparelho));
                 cmd.Parameters.Add(new SqlParameter("@marca", ficha.Marca));
                 cmd.Parameters.Add(new SqlParameter("@modelo", ficha.Modelo));
                 cmd.Parameters.Add(new SqlParameter("@acessorios", ficha.Acessorios));

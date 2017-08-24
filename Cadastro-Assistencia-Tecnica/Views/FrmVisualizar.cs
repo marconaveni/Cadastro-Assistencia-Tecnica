@@ -22,7 +22,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
 
 
-        public FrmVisualizar(String texto)
+        public FrmVisualizar()
         {
             InitializeComponent();
             materialSkinManager = MaterialSkinManager.Instance;
@@ -33,31 +33,9 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void FrmVisualizar_Load(object sender, EventArgs e)
         {         
-
             PDFView.src = filename;
         }
 
-
-
-
-
-
-
-        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            
-        
-        }
-
-        private void PrintPreviewDialog1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RchPrint_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

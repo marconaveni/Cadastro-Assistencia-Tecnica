@@ -149,7 +149,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 Telefone = TxtTelefone.Text,
                 Endereco = cultureinfo.TextInfo.ToTitleCase(TxtEndereco.Text),
                 NroEndereco = TxtNumeroEndereco.Text,
-                Aparelho1 = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text),
+                Aparelho = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text),
                 Marca = cultureinfo.TextInfo.ToTitleCase(TxtMarca.Text),
                 Modelo = cultureinfo.TextInfo.ToTitleCase(TxtModelo.Text),
                 Acessorios = TxtAcessorios.Text,
@@ -179,7 +179,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtTelefone.Text = ficha.Telefone;
             TxtEndereco.Text = ficha.Endereco;
             TxtNumeroEndereco.Text = ficha.NroEndereco;
-            TxtAparelho.Text = ficha.Aparelho1;
+            TxtAparelho.Text = ficha.Aparelho;
             TxtMarca.Text = ficha.Marca;
             TxtModelo.Text = ficha.Modelo;
             TxtAcessorios.Text = ficha.Acessorios;
@@ -615,7 +615,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                     Telefone = DgViewConsultar.CurrentRow.Cells[4].Value.ToString(),
                     Endereco = DgViewConsultar.CurrentRow.Cells[5].Value.ToString(),
                     NroEndereco = DgViewConsultar.CurrentRow.Cells[6].Value.ToString(),
-                    Aparelho1 = DgViewConsultar.CurrentRow.Cells[7].Value.ToString(),
+                    Aparelho = DgViewConsultar.CurrentRow.Cells[7].Value.ToString(),
                     Marca = DgViewConsultar.CurrentRow.Cells[8].Value.ToString(),
                     Modelo = DgViewConsultar.CurrentRow.Cells[9].Value.ToString(),
                     Acessorios = DgViewConsultar.CurrentRow.Cells[10].Value.ToString(),
@@ -756,8 +756,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
 
             FichaPDF fichapdf = new FichaPDF();
-            fichapdf.save();
-            Process.Start("output.pdf");
+            Ficha ficha = GetForm();
+            fichapdf.save(ficha);
+            FrmVisualizar vs = new FrmVisualizar();
+            vs.Show();
 
             //try
             //{
@@ -803,7 +805,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void IMSVisualizarFicha_Click(object sender, EventArgs e)
         {
-            FrmVisualizar vs = new FrmVisualizar(texto);
+            FichaPDF fichapdf = new FichaPDF();
+            Ficha ficha = GetForm();
+            fichapdf.save(ficha);
+            FrmVisualizar vs = new FrmVisualizar();
             vs.Show();
         }
 
@@ -825,7 +830,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 ctl.SelectNextControl(ActiveControl, true, true, true, true);
             }
-            else if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.BrowserBack)
+            else if (e.KeyCode == Keys.BrowserBack)
             {
                 // MessageBox.Show(this.ActiveControl.Name);
                 ctl.SelectNextControl(ActiveControl, false, true, true, true);

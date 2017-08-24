@@ -67,12 +67,12 @@ namespace Cadastro_Assistencia_Tecnica.Model
             set { nroEndereco = value; }
         }
 
-        private String Aparelho;
+        private String aparelho;
 
-        public String Aparelho1
+        public String Aparelho
         {
-            get { return Aparelho; }
-            set { Aparelho = value; }
+            get { return aparelho; }
+            set { aparelho = value; }
         }
 
         private String marca;
@@ -206,7 +206,7 @@ namespace Cadastro_Assistencia_Tecnica.Model
             stb.Append(NroEndereco);
 
             stb.Append("\n\n                     Aparelho: ");
-            stb.Append(Aparelho1);
+            stb.Append(Aparelho);
             stb.Append("      Marca: ");
             stb.Append(Marca);
 
@@ -238,7 +238,7 @@ namespace Cadastro_Assistencia_Tecnica.Model
             stb.Append(NroFicha);
 
             stb.Append("\n\n                     Aparelho: ");
-            stb.Append(Aparelho1);
+            stb.Append(Aparelho);
             stb.Append("      Marca: ");
             stb.Append(Marca);
 
