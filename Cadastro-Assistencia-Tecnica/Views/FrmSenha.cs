@@ -16,6 +16,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
     public partial class FrmSenha : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
+        private int nroTentativas = 3;
 
         public FrmSenha()
         {
@@ -48,26 +49,43 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            TxtSenha.Text = "";
+            this.Close();
         }
 
         private void DoValidarSenha() {
             if (Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
             {
                 MessageBox.Show("Logado como Administrador", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                this.Close();
             }
             else
-            {
-                MessageBox.Show("Senha Errada", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {              
+                nroTentativas--;
+                if (nroTentativas < 1)
+                {
+                    MessageBox.Show("Senha errada, número de tentativas excedido", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    BtnOk.Enabled = false;
+                    TxtSenha.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Senha errada, só mais " + nroTentativas + " tentativa(s)", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                TxtSenha.Text = "";
             }
         
         }
 
         private void FrmSenha_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter){
-                DoValidarSenha();
+            if (nroTentativas > 0)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    DoValidarSenha();
+                }
             }
 
             if (e.KeyCode == Keys.F4)

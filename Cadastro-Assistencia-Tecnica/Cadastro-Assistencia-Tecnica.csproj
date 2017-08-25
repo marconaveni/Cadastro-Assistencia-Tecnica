@@ -252,13 +252,13 @@
     <None Include="Resources\shadow-right.png" />
     <None Include="Resources\shadow-top.png" />
     <None Include="Resources\edit.png" />
-    <None Include="Resources\ic_mode_edit_black_24dp_1x.png" />
     <None Include="Resources\lock.png" />
     <None Include="Resources\lockopen.png" />
     <None Include="Resources\calendar_.png" />
     <None Include="Resources\pencil.png" />
     <None Include="Resources\magnify.png" />
     <None Include="Resources\close.png" />
+    <Content Include="Resources\bg.png" />
     <Content Include="tools.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +279,9 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

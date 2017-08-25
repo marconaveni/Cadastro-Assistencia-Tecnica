@@ -82,6 +82,7 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         private void Txt_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             String[] substrings = Txt.Text.Split(',');
             int i = 0;
             int c = 0;
@@ -91,7 +92,9 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
                 c++;
             }
 
-            if ((i > 1) && (c > 1) && (!char.IsControl(e.KeyChar)))
+            //&& Txt.SelectionLength == Txt.Text.Length
+
+            if ((i > 1) && (c > 1) && (!char.IsControl(e.KeyChar)) && Txt.SelectedText != Txt.Text)
             {
                 e.Handled = true;
             }
@@ -109,6 +112,9 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
                 }
 
             }
+
+
+
         }
 
         private void Tm_Tick(object sender, EventArgs e)
@@ -133,6 +139,21 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
 
         }
 
+        private void Txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
 
+        private void Txt_Click(object sender, EventArgs e)
+        {
+            
+            if (Txt.Text != "" && Txt.Text != ",")
+            {
+                double valor = Convert.ToDouble(Txt.Text);
+                Txt.Text = String.Format("{0:N}", valor);
+            }
+
+            Txt.SelectAll();
+        }
     }
 }

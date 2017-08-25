@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hMlEClu3l+0kv0tPh6Zz3MTThQjRLnURffPTpFHQ+x8=</dsig:DigestValue>
+        <dsig:DigestValue>C79g3RlPNOWQmCrl7yv//H8tl0V8EPX3aT+AEXjr2oQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="645632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="329216">
       <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q3Za1hzBFMz6wFHUS2kzgHrgrw8wy84Q9nCiOamX/v8=</dsig:DigestValue>
+        <dsig:DigestValue>9E+7ZQFcE5thXqkx88x7PkrAdKLEX2/d1QGvTtFkIV4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UicU5Z9RLY+OOH/UQVcwyPYbFuyUd8jMaqer5SW6Rzw=</dsig:DigestValue>
+        <dsig:DigestValue>cFCvU31LDDdTrT/pEHuv7fC9j0j2EFBeKxmp0AlYBuE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,6 +109,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>g1Dz5reTsi+RIDYxl+VSVFcYLCb0BR1oSxjvL5RswO0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\bg.png" size="18286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fDcdo7KZ0QbaIpw6qJO0tmixbK0k0rnhPxTn/5Yf8Gw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="tools.ico" size="4286">

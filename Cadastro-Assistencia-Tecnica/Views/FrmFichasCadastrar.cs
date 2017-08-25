@@ -232,6 +232,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtAparelho.EnableTextField(true);
             LblTexto.Text = "Cadastro de Nova Ficha";
             BtnAdmin.Icon = Resources._lock;
+            BtnAdmin.Enabled = true;
 
             TxtNumeroFicha.Focus();
         }
@@ -513,6 +514,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 DtEntrada.Enabled = true;
                 TxtAparelho.EnableTextField(true);
                 BtnAdmin.Icon = Resources.lockopen;
+                BtnAdmin.Enabled = false;
             }
 
         }
@@ -642,6 +644,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 TxtCliente.EnableTextField(false);
                 DtEntrada.Enabled = false;
                 TxtAparelho.EnableTextField(false);
+                BtnAdmin.Icon = Resources._lock;
+                BtnAdmin.Enabled = true;
                 LblTexto.Text = "Alterar a ficha nº " + ficha.NroFicha;
 
             }
@@ -757,9 +761,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             FichaPDF fichapdf = new FichaPDF();
             Ficha ficha = GetForm();
-            fichapdf.save(ficha);
-            FrmVisualizar vs = new FrmVisualizar();
-            vs.Show();
+            bool gerou = fichapdf.save(ficha);
+            if (gerou)
+            {
+                FrmVisualizar vs = new FrmVisualizar();
+                vs.Show();
+            }
+
 
             //try
             //{
@@ -807,9 +815,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             FichaPDF fichapdf = new FichaPDF();
             Ficha ficha = GetForm();
-            fichapdf.save(ficha);
-            FrmVisualizar vs = new FrmVisualizar();
-            vs.Show();
+            bool gerou = fichapdf.save(ficha);
+            if (gerou)
+            {
+                FrmVisualizar vs = new FrmVisualizar();
+                vs.Show();
+            }
+
         }
 
         private void BtnLimparPesquisa_Click(object sender, EventArgs e)

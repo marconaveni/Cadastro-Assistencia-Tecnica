@@ -85,21 +85,21 @@
             this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.MenuStrip.Depth = 0;
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSNextDay,
             this.TSPrevoiusDay,
-            this.TSNextMouth,
+            this.TSNextDay,
             this.TSPreviousMouth,
+            this.TSNextMouth,
             this.TSToday});
             this.MenuStrip.MouseState = MaterialSkin.MouseState.HOVER;
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(144, 174);
+            this.MenuStrip.Size = new System.Drawing.Size(153, 196);
             this.MenuStrip.MouseLeave += new System.EventHandler(this.MenuStrip_MouseLeave);
             // 
             // TSNextDay
             // 
             this.TSNextDay.Name = "TSNextDay";
             this.TSNextDay.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TSNextDay.Size = new System.Drawing.Size(151, 34);
+            this.TSNextDay.Size = new System.Drawing.Size(160, 34);
             this.TSNextDay.Text = "Próximo Dia";
             this.TSNextDay.Click += new System.EventHandler(this.TSNextDay_Click);
             // 
@@ -107,7 +107,7 @@
             // 
             this.TSPrevoiusDay.Name = "TSPrevoiusDay";
             this.TSPrevoiusDay.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TSPrevoiusDay.Size = new System.Drawing.Size(151, 34);
+            this.TSPrevoiusDay.Size = new System.Drawing.Size(160, 34);
             this.TSPrevoiusDay.Text = "Dia Anterior";
             this.TSPrevoiusDay.Click += new System.EventHandler(this.TSPrevoiusDay_Click);
             // 
@@ -115,7 +115,7 @@
             // 
             this.TSNextMouth.Name = "TSNextMouth";
             this.TSNextMouth.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TSNextMouth.Size = new System.Drawing.Size(151, 34);
+            this.TSNextMouth.Size = new System.Drawing.Size(160, 34);
             this.TSNextMouth.Text = "Próximo Mês";
             this.TSNextMouth.Click += new System.EventHandler(this.TSNextMouth_Click);
             // 
@@ -123,7 +123,7 @@
             // 
             this.TSPreviousMouth.Name = "TSPreviousMouth";
             this.TSPreviousMouth.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TSPreviousMouth.Size = new System.Drawing.Size(151, 34);
+            this.TSPreviousMouth.Size = new System.Drawing.Size(160, 34);
             this.TSPreviousMouth.Text = "Mês Anterior";
             this.TSPreviousMouth.Click += new System.EventHandler(this.TSPreviousMouth_Click);
             // 
@@ -131,7 +131,7 @@
             // 
             this.TSToday.Name = "TSToday";
             this.TSToday.Padding = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TSToday.Size = new System.Drawing.Size(151, 34);
+            this.TSToday.Size = new System.Drawing.Size(160, 34);
             this.TSToday.Text = "Hoje";
             this.TSToday.Click += new System.EventHandler(this.TSToday_Click);
             // 

@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Cadastro_Assistencia_Tecnica.Save
 {
@@ -46,12 +48,17 @@ namespace Cadastro_Assistencia_Tecnica.Save
                 Roboto = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10, FontColour);
             }
 
-            if (print.Length > 19 && fixe == 1f)
+            if (print.Length > 17 && fixe == 1f)
+            {
+                Roboto = FontFactory.GetFont(FontFactory.HELVETICA, 8, FontColour);
+            }
+
+            if (print.Length > 21 && fixe == 1f)
             {
                 Roboto = FontFactory.GetFont(FontFactory.HELVETICA, 7, FontColour);
             }
 
-            if (print.Length > 30 && fixe == 1f)
+            if (print.Length > 25 && fixe == 1f)
             {
                 Roboto = FontFactory.GetFont(FontFactory.HELVETICA, 6, FontColour);
             }
@@ -87,7 +94,7 @@ namespace Cadastro_Assistencia_Tecnica.Save
 
 
 
-        public void save(Ficha ficha)
+        public bool save(Ficha ficha)
         {
             string valor = "";
             if (ficha.Valor > 0 && ficha.Aprovado != "Não") valor = ficha.Valor.ToString();
@@ -109,238 +116,259 @@ namespace Cadastro_Assistencia_Tecnica.Save
             int border = 0;
             string print;
 
-
-
-            //Create a standard .Net FileStream for the file, setting various flags
-            using (FileStream fs = new FileStream(@".\output.pdf", FileMode.Create))
+            try
             {
-                //Create a new PDF document setting the size to A4
-                using (Document doc = new Document(PageSize.A4.Rotate()))
-                {
 
-                    using (PdfWriter w = PdfWriter.GetInstance(doc, fs))   //Bind the PDF document to the FileStream using an iTextSharp PdfWriter
+
+
+                //Create a standard .Net FileStream for the file, setting various flags
+                using (FileStream fs = new FileStream(@".\output.pdf", FileMode.Create))
+                {
+                    //Create a new PDF document setting the size to A4
+                    using (Document doc = new Document(PageSize.A4.Rotate()))
                     {
 
-                        doc.Open();       //Open the document for writing
+                        using (PdfWriter w = PdfWriter.GetInstance(doc, fs))   //Bind the PDF document to the FileStream using an iTextSharp PdfWriter
+                        {
 
-                        //string imageURL = @"D:\Documentos\Dropbox\Fotos\Wallpapers\Need for speed\Need For Speed The Run.jpg";
-                        //iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(imageURL);
-                        ////Resize image depend upon your need
-                        //jpg.ScaleAbsoluteWidth(800f);   // ScaleToFit(1222f, 2f);
-                        //jpg.ScaleAbsoluteHeight(400f);
-                        ////Give space before image
-                        //jpg.SpacingBefore = -10f;
-                        ////Give some space after the image
-                        //jpg.SpacingAfter = -100f;
-                        //jpg.SetAbsolutePosition(100f, 100f);
-                        //jpg.Alignment = Element.ALIGN_LEFT;
+                            doc.Open();       //Open the document for writing
 
-                        //doc.Add(jpg);
+                            string imageURL = System.AppDomain.CurrentDomain.BaseDirectory + "bg.png";
 
-                        PdfPTable table = new PdfPTable(4) { WidthPercentage = 39, RunDirection = PdfWriter.RUN_DIRECTION_LTR, ExtendLastRow = false };
+                            iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(@"" + imageURL);
+                            //Resize image depend upon your need
+                            jpg.ScaleAbsoluteWidth(350f);   // ScaleToFit(1222f, 2f);
+                            jpg.ScaleAbsoluteHeight(550f);
+                            //Give space before image
+                            //jpg.SpacingBefore = -10f;
+                            //Give some space after the image
+                            //jpg.SpacingAfter = -100f;
+                            jpg.SetAbsolutePosition(245f, 35f);
+                            jpg.Alignment = Element.ALIGN_CENTER;
 
-                        float[] widths = new float[] { 25f, 40f, 25f, 40f };
-                        table.SetWidths(widths);
+                            doc.Add(jpg);
 
+                            PdfPTable table = new PdfPTable(4) { WidthPercentage = 39, RunDirection = PdfWriter.RUN_DIRECTION_LTR, ExtendLastRow = false };
 
-                        PdfPCell cell = new PdfPCell();
+                            float[] widths = new float[] { 23f, 40f, 25f, 40f };
+                            table.SetWidths(widths);
 
-                        print = "ASSISTÊNCIA TÉCNICA SANTOS";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 0f, 6f, 0f, true));
 
-                        print = "Ferro Elétrico, Liquidificador, Aspirador de pó, Secador, Batedeira,";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
+                            PdfPCell cell = new PdfPCell();
 
-                        print = "Cafeteira, Ventilador, Chapinha e Ferramentas Elétricas em Geral.";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
+                            print = "ASSISTÊNCIA TÉCNICA SANTOS";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 0f, 6f, 0f, true));
 
-                        print = "TV, Som e Microondas.";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
+                            print = "Ferro Elétrico, Liquidificador, Aspirador de pó, Secador, Batedeira,";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
 
-                        print = "Orçamento sem Compromisso";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 7f, 7f, 0f, true));
+                            print = "Cafeteira, Ventilador, Chapinha e Ferramentas Elétricas em Geral.";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
 
-                        print = "Av. Júlio Buono, 1563 – Vila Gustavo";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f, 0f, true));
+                            print = "TV, Som e Microondas.";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f));
 
-                        print = "2212-0986";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 4f, 0f, true));
+                            print = "Orçamento sem Compromisso";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 7f, 7f, 0f, true));
 
-                        print = "Entrada:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Av. Júlio Buono, 1563 – Vila Gustavo";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 2f, 0f, true));
 
-                        print = entrada;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "2212-0986";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 4f, 0f, true));
 
-                        print = "Nº";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom, 0f , true));
+                            print = "Entrada:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.NroFicha;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 0f, true));
+                            print = entrada;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Cliente:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Nº";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom, 0f, true));
 
-                        print = ficha.Cliente;
-                        table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.NroFicha;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 0f, true));
 
-                        print = "Aparelho:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Cliente:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Aparelho;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom ,1f));
+                            print = ficha.Cliente;
+                            table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Marca";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Aparelho:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Marca;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Aparelho;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Modelo";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Marca:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Modelo;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Marca;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Acessórios:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Modelo:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Acessorios;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Modelo;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Estado:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Acessórios:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Estado;
-                        table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Acessorios;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Valor RS:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Estado:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = valor;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Estado;
+                            table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Entrega:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Valor RS:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.DataEntrega;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = valor;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Obs.: Os aparelhos prontos não retirados no prazo de 60 dias";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 8f, 2f));
+                            print = "Entrega:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = "serão vendidos para o pagamento do conserto.";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 7f));
+                            print = ficha.DataEntrega;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "GARANTIA DE 90 DIAS";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 7f, 0f, true));
+                            print = "Obs.: Os aparelhos prontos não retirados no prazo de 60 dias";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 8f, 2f));
 
-                        print = "ASSISTÊNCIA TÉCNICA SANTOS";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 5f, 7f, 0f, true));
+                            print = "serão vendidos para o pagamento do conserto.";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 7f));
 
-                        print = "São Paulo,";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "GARANTIA DE 90 DIAS";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 2f, 7f, 0f, true));
 
-                        print = entrada;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "ASSISTÊNCIA TÉCNICA SANTOS";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.center, 0f, 5f, 7f, 0f, true));
 
-                        print = "Nº";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom, 0f , true));
+                            print = "São Paulo,";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.NroFicha;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 0f , true));
+                            print = entrada;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Cliente";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Nº";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom, 0f, true));
 
-                        print = ficha.Cliente;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f ));
+                            print = ficha.NroFicha;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 0f, true));
 
-                        print = "Telefone";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Cliente:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Telefone;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Cliente;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Endereço:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Telefone:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.NroEndereco;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Telefone;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Nº";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Endereço:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.NroEndereco;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Endereco;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Aparelho";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Nº";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Aparelho;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.NroEndereco;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Marca:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Aparelho:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Marca;  //print = "f333333333 3333333333334444444444444444";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Aparelho;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Modelo:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Marca:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Modelo;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Marca;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Acessórios:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Modelo:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Acessorios;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
+                            print = ficha.Modelo;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Defeito";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Acessórios:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ficha.Estado;
-                        table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Acessorios;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom, 1f));
 
-                        print = "Aprovado";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Defeito:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = aprovado;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ficha.Estado;
+                            table.AddCell(GenerateCells(print, cell, 3, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Valor:R$";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Aprovado:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = valor;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = aprovado;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Ok:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Valor R$";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
-                        print = ok;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = valor;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Entrega:";
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
+                            print = "Ok";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = entrega;
-                        table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = ok;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        print = "Ass:";
-                        table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
+                            print = "Entrega:";
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.right, paddindright, paddingTopBottom, paddingTopBottom));
 
+                            print = entrega;
+                            table.AddCell(GenerateCells(print, cell, 0, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        doc.Add(table);
+                            print = "Ass:";
+                            table.AddCell(GenerateCells(print, cell, 4, border, AlignEnum.left, 0f, paddingTopBottom, paddingTopBottom));
 
-                        doc.Close();
+
+                            doc.Add(table);
+
+                            doc.Close();
+
+
+                            return true;
+                        }
+
+
 
                     }
+
                 }
 
             }
+            catch (IOException ex)
+            {
 
+                MessageBox.Show("o arquivo 'output.pdf' não pode ser gravado ");
+                return false;
+            }
+            catch (WebException ex)
+            {
+                MessageBox.Show("o arquivo 'bg.png' não pode ser aberto ou localizado");
+                return false;
+            }
 
 
         }
