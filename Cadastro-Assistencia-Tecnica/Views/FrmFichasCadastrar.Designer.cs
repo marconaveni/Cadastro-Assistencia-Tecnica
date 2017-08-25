@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             this.DgViewConsultar = new System.Windows.Forms.DataGridView();
             this.MSDataGrid = new MaterialSkin.Controls.MaterialContextMenuStrip();
@@ -112,15 +112,15 @@
             this.DgViewConsultar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgViewConsultar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgViewConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgViewConsultar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgViewConsultar.EnableHeadersVisualStyles = false;
             this.DgViewConsultar.GridColor = System.Drawing.Color.LightGray;
@@ -378,6 +378,7 @@
             this.DtEntrega.Name = "DtEntrega";
             this.DtEntrega.Size = new System.Drawing.Size(122, 30);
             this.DtEntrega.TabIndex = 18;
+            this.Description.SetToolTip(this.DtEntrega, "Data de entrega do aparelho");
             // 
             // DtEntrada
             // 
@@ -390,6 +391,7 @@
             this.DtEntrada.Name = "DtEntrada";
             this.DtEntrada.Size = new System.Drawing.Size(122, 30);
             this.DtEntrada.TabIndex = 1;
+            this.Description.SetToolTip(this.DtEntrada, "Data de entrada do aparelho");
             // 
             // DtOk
             // 
@@ -402,6 +404,7 @@
             this.DtOk.Name = "DtOk";
             this.DtOk.Size = new System.Drawing.Size(122, 30);
             this.DtOk.TabIndex = 16;
+            this.Description.SetToolTip(this.DtOk, "Data quando ficou pronto");
             // 
             // DtAprovado
             // 
@@ -414,6 +417,7 @@
             this.DtAprovado.Name = "DtAprovado";
             this.DtAprovado.Size = new System.Drawing.Size(122, 30);
             this.DtAprovado.TabIndex = 13;
+            this.Description.SetToolTip(this.DtAprovado, "Data de aprovado");
             // 
             // TxtDetalhes
             // 
@@ -427,6 +431,7 @@
             this.TxtDetalhes.Name = "TxtDetalhes";
             this.TxtDetalhes.Size = new System.Drawing.Size(283, 117);
             this.TxtDetalhes.TabIndex = 14;
+            this.Description.SetToolTip(this.TxtDetalhes, "Informações adicionais");
             // 
             // LinhaDivisoraTbCad
             // 
@@ -454,6 +459,7 @@
             this.CmbEntrega.SelectedIndex = -1;
             this.CmbEntrega.Size = new System.Drawing.Size(147, 40);
             this.CmbEntrega.TabIndex = 17;
+            this.Description.SetToolTip(this.CmbEntrega, "Informe se foi entregue");
             this.CmbEntrega.SelectedIndexChanged += new System.EventHandler(this.CmbEntrega_SelectedIndexChanged);
             // 
             // CmbOk
@@ -468,6 +474,7 @@
             this.CmbOk.SelectedIndex = -1;
             this.CmbOk.Size = new System.Drawing.Size(147, 40);
             this.CmbOk.TabIndex = 15;
+            this.Description.SetToolTip(this.CmbOk, "Informe se ficou pronto");
             this.CmbOk.SelectedIndexChanged += new System.EventHandler(this.CmbOk_SelectedIndexChanged);
             // 
             // CmbAprovado
@@ -482,6 +489,7 @@
             this.CmbAprovado.SelectedIndex = -1;
             this.CmbAprovado.Size = new System.Drawing.Size(147, 40);
             this.CmbAprovado.TabIndex = 12;
+            this.Description.SetToolTip(this.CmbAprovado, "Informe se foi aprovado");
             this.CmbAprovado.SelectedIndexChanged += new System.EventHandler(this.CmbAprovado_SelectedIndexChanged);
             // 
             // TxtValor
@@ -496,6 +504,7 @@
             this.TxtValor.Name = "TxtValor";
             this.TxtValor.Size = new System.Drawing.Size(135, 30);
             this.TxtValor.TabIndex = 11;
+            this.Description.SetToolTip(this.TxtValor, "Informe o valor do orçamento");
             // 
             // TxtEstado
             // 
@@ -510,6 +519,7 @@
             this.TxtEstado.ReadOnly = false;
             this.TxtEstado.Size = new System.Drawing.Size(282, 30);
             this.TxtEstado.TabIndex = 10;
+            this.Description.SetToolTip(this.TxtEstado, "informe o defeito");
             // 
             // TxtAcessorios
             // 
@@ -524,6 +534,7 @@
             this.TxtAcessorios.ReadOnly = false;
             this.TxtAcessorios.Size = new System.Drawing.Size(282, 30);
             this.TxtAcessorios.TabIndex = 9;
+            this.Description.SetToolTip(this.TxtAcessorios, "informe se veio com algum acessório");
             // 
             // TxtModelo
             // 
@@ -538,6 +549,7 @@
             this.TxtModelo.ReadOnly = false;
             this.TxtModelo.Size = new System.Drawing.Size(282, 30);
             this.TxtModelo.TabIndex = 8;
+            this.Description.SetToolTip(this.TxtModelo, "Informe o modelo");
             // 
             // TxtMarca
             // 
@@ -552,6 +564,7 @@
             this.TxtMarca.ReadOnly = false;
             this.TxtMarca.Size = new System.Drawing.Size(282, 30);
             this.TxtMarca.TabIndex = 7;
+            this.Description.SetToolTip(this.TxtMarca, "informe a marca");
             // 
             // TxtAparelho
             // 
@@ -566,6 +579,7 @@
             this.TxtAparelho.ReadOnly = false;
             this.TxtAparelho.Size = new System.Drawing.Size(282, 30);
             this.TxtAparelho.TabIndex = 6;
+            this.Description.SetToolTip(this.TxtAparelho, "Informe o aparelho ");
             this.TxtAparelho.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // TxtTelefone
@@ -581,6 +595,7 @@
             this.TxtTelefone.ReadOnly = false;
             this.TxtTelefone.Size = new System.Drawing.Size(282, 30);
             this.TxtTelefone.TabIndex = 3;
+            this.Description.SetToolTip(this.TxtTelefone, "Telefones para contato");
             // 
             // TxtEndereco
             // 
@@ -595,6 +610,7 @@
             this.TxtEndereco.ReadOnly = false;
             this.TxtEndereco.Size = new System.Drawing.Size(282, 30);
             this.TxtEndereco.TabIndex = 4;
+            this.Description.SetToolTip(this.TxtEndereco, "Informe o endereço");
             // 
             // TxtCliente
             // 
@@ -609,6 +625,7 @@
             this.TxtCliente.ReadOnly = false;
             this.TxtCliente.Size = new System.Drawing.Size(282, 30);
             this.TxtCliente.TabIndex = 2;
+            this.Description.SetToolTip(this.TxtCliente, "Nome do cliente");
             this.TxtCliente.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // TxtNumeroFicha
@@ -624,6 +641,7 @@
             this.TxtNumeroFicha.ReadOnly = false;
             this.TxtNumeroFicha.Size = new System.Drawing.Size(135, 30);
             this.TxtNumeroFicha.TabIndex = 0;
+            this.Description.SetToolTip(this.TxtNumeroFicha, "Informe número da ficha");
             this.TxtNumeroFicha.TextChangedd += new System.EventHandler(this.StartTheme);
             // 
             // LblEntrega
@@ -878,6 +896,7 @@
             this.TxtNumeroEndereco.ReadOnly = false;
             this.TxtNumeroEndereco.Size = new System.Drawing.Size(282, 30);
             this.TxtNumeroEndereco.TabIndex = 5;
+            this.Description.SetToolTip(this.TxtNumeroEndereco, "número do endereço e complemento");
             // 
             // BtnExcluir
             // 
@@ -942,6 +961,7 @@
             this.TxtConsultar.ReadOnly = false;
             this.TxtConsultar.Size = new System.Drawing.Size(242, 30);
             this.TxtConsultar.TabIndex = 0;
+            this.Description.SetToolTip(this.TxtConsultar, "Campo de pesquisa");
             this.TxtConsultar.TextChangedd += new System.EventHandler(this.TxtConsultar_TextChangedd);
             // 
             // LblTipoPesquisa
@@ -984,6 +1004,7 @@
             this.CmbPesquisa.SelectedIndex = -1;
             this.CmbPesquisa.Size = new System.Drawing.Size(135, 40);
             this.CmbPesquisa.TabIndex = 2;
+            this.Description.SetToolTip(this.CmbPesquisa, "Filtro da pesquisa");
             this.CmbPesquisa.DropDownClosed += new System.EventHandler(this.CmbPesquisa_DropDownClosed);
             // 
             // LinhaDivisoraTbPesq

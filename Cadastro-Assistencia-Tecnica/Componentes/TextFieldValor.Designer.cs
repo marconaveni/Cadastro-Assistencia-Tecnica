@@ -76,6 +76,7 @@
             this.Txt.Name = "Txt";
             this.Txt.Size = new System.Drawing.Size(134, 19);
             this.Txt.TabIndex = 167;
+            this.Txt.Click += new System.EventHandler(this.Txt_Click);
             this.Txt.Enter += new System.EventHandler(this.Txt_Enter);
             this.Txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_KeyPress);
             this.Txt.Leave += new System.EventHandler(this.Txt_Leave);
