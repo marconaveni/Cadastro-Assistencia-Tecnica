@@ -35,6 +35,30 @@ namespace Cadastro_Assistencia_Tecnica.Model
             return dadosLista;
         }
 
+
+        public static List<string> LerArquivoList(string archive_name)
+        {
+
+            List<string> dadosLista = new List<string>();
+
+            if (File.Exists(archive_name))
+            {
+                Stream entrada = File.Open(archive_name, FileMode.Open);
+                StreamReader leitor = new StreamReader(entrada, System.Text.Encoding.UTF8);
+                string linha = leitor.ReadLine();
+
+                while (linha != null)
+                {
+                    dadosLista.Add(linha);
+                    linha = leitor.ReadLine();
+                }
+                leitor.Close();
+                entrada.Close();
+            }
+
+            return dadosLista;
+        }
+
         public static void GravarDefaultArquivo(string archive_name)
         {
             Ficha fc = new Ficha();

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="329216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="346624">
       <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1cgwFnsSOr7yB89zP0RrKRM6a9745AUHM/c02pPLSs0=</dsig:DigestValue>
+        <dsig:DigestValue>6aoT2Hgvfv/Exqvj6PCKf719n0JSXu1SpvbFJUapS10=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +102,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Cadastro Assistencia Tecnica.exe.config" size="224">
+  <file name="Cadastro Assistencia Tecnica.exe.config" size="413">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>g1Dz5reTsi+RIDYxl+VSVFcYLCb0BR1oSxjvL5RswO0=</dsig:DigestValue>
+      <dsig:DigestValue>mPXQPeZxPz32MKr1mKJYaHo8G9B9cpnhWZCaVuGrEl0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\bg.png" size="18286">

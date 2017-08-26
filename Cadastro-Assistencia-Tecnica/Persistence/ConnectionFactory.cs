@@ -4,21 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using Cadastro_Assistencia_Tecnica.Model;
+using System.Configuration;
 
-
-namespace pc1_dao.Persistence
+namespace Cadastro_Assistencia_Tecnica.Persistence
 {
     class ConnectionFactory
     {
         private SqlConnection conn;
+        private string nameserver = ConfigurationManager.AppSettings["nameserver"].ToString();
+        private string database = ConfigurationManager.AppSettings["database"].ToString();
+        private string dbuser = ConfigurationManager.AppSettings["dbuser"].ToString();
+        private string dbpassword = ConfigurationManager.AppSettings["dbpassword"].ToString();
 
         public SqlConnection getConnection()
         {
             try
             {
-               conn = new SqlConnection(@"Data Source=.\Workgroup;Initial Catalog=Assistencia;Persist Security Info=True;User ID=Marco;Password=210317111911");
-              //conn = new SqlConnection(@"Data Source=.\WORKGROUP;Initial Catalog=Assistencia;User ID=sa;Password=Wran2103");
-              //conn = new SqlConnection(@"Data Source=.\Workgroup;Initial Catalog=Assistencia;Integrated Security=True");
+                //conn = new SqlConnection(@"Data Source=.\Workgroup;Initial Catalog=Assistencia;Persist Security Info=True;User ID=Marco;Password=210317111911");
+                conn = new SqlConnection(@"Data Source=" + nameserver + ";Initial Catalog=" + database + ";Persist Security Info=True;User ID=" + dbuser + ";Password=" + dbpassword + " ");
                 conn.Open();
                 return conn;
             }

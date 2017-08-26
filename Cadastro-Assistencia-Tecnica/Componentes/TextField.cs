@@ -75,6 +75,15 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             set { Ani.BackColor = value; }
         }
 
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
+        public char PasswordChar
+        {
+            get { return Txt.PasswordChar; }
+            set { Txt.PasswordChar = value; }
+        }
+
+
+
         public void EnableTextField(bool enable)
         {
             if (enable == true)

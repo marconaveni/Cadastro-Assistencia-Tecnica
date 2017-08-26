@@ -39,21 +39,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PDFView.Enabled = true;
-            this.PDFView.Location = new System.Drawing.Point(11, 73);
+            this.PDFView.Location = new System.Drawing.Point(12, 73);
+            this.PDFView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PDFView.Name = "PDFView";
             this.PDFView.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("PDFView.OcxState")));
-            this.PDFView.Size = new System.Drawing.Size(1180, 715);
+            this.PDFView.Size = new System.Drawing.Size(1176, 744);
             this.PDFView.TabIndex = 3;
             // 
             // FrmVisualizar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1200, 830);
             this.Controls.Add(this.PDFView);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimizeBox = false;
             this.Name = "FrmVisualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

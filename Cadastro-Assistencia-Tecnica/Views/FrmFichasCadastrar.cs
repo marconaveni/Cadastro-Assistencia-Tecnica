@@ -759,15 +759,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
 
-            FichaPDF fichapdf = new FichaPDF();
-            Ficha ficha = GetForm();
-            bool gerou = fichapdf.save(ficha);
-            if (gerou)
-            {
-                FrmVisualizar vs = new FrmVisualizar();
-                vs.Show();
-            }
-
+            FrmConfig cf = new FrmConfig();
+            cf.ShowDialog();
 
             //try
             //{
@@ -797,11 +790,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             //    MessageBox.Show("Adobe não está instalado");
             //}
 
-
-
-
         }
-
 
 
         private void BtnCalculator_Click(object sender, EventArgs e)
