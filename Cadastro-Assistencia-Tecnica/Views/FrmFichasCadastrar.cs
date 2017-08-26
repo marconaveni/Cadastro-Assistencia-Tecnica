@@ -94,27 +94,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 //fc.Add("teste3");
                 //fc.Add("teste4");
                 //Autocomplete.GravarArquivo("nome_arquivo.cf",fc);
+                Sugestion();
 
-                if (File.Exists("LIST_APARELHOS.CF") && File.Exists("LIST_MARCAS.CF") && File.Exists("LIST_MODELOS.CF") && File.Exists("LIST_ACESSORIOS.CF") && File.Exists("LIST_DEFEITOS.CF"))
-                {
-                    TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
-                    TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
-                    TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
-                    TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
-                    TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
-                }
-                else
-                {
-                    TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
-                    TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
-                    TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
-                    TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
-                    TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
-
-
-                    MessageBox.Show("Configuração inicial feita, clique ok para reiniciar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Restart();
-                }
 
 
             }
@@ -123,6 +104,30 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void Sugestion()
+        {
+            if (File.Exists("LIST_APARELHOS.CF") && File.Exists("LIST_MARCAS.CF") && File.Exists("LIST_MODELOS.CF") && File.Exists("LIST_ACESSORIOS.CF") && File.Exists("LIST_DEFEITOS.CF"))
+            {
+                TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
+                TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
+                TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
+                TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
+                TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
+            }
+            else
+            {
+                TxtAparelho.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_APARELHOS.CF");
+                TxtMarca.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MARCAS.CF");
+                TxtModelo.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_MODELOS.CF");
+                TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
+                TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
+
+
+                MessageBox.Show("Configuração inicial feita, clique ok para reiniciar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Restart();
+            }
         }
 
 
@@ -761,6 +766,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             FrmConfig cf = new FrmConfig();
             cf.ShowDialog();
+
+            Sugestion();
 
             //try
             //{

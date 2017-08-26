@@ -32,16 +32,23 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.TbConfigs = new MaterialSkin.Controls.MaterialTabControl();
             this.TbSugestion = new System.Windows.Forms.TabPage();
-            this.BtnRemove = new MaterialSkin.Controls.MaterialFlatButton();
-            this.BtnAdd = new MaterialSkin.Controls.MaterialFlatButton();
-            this.BtnMoveDown = new MaterialSkin.Controls.MaterialFlatButton();
-            this.BtnMoveUp = new MaterialSkin.Controls.MaterialFlatButton();
+            this.LblTips = new MaterialSkin.Controls.MaterialLabel();
+            this.BtnMoveUp = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
+            this.BtnMoveDown = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
+            this.BtnRemove = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
+            this.BtnAdd = new Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple();
+            this.LinhaDivisoraTbCad = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.LblTextoo = new System.Windows.Forms.Label();
             this.CmbSugestion = new Cadastro_Assistencia_Tecnica.Componentes.ComboTextField();
             this.LstSugestions = new System.Windows.Forms.ListBox();
             this.BtnDefaut = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.BtnSalvar = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.TxtAddSugestion = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TbConections = new System.Windows.Forms.TabPage();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.LblTexto = new System.Windows.Forms.Label();
             this.BtnTest = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.BtnSalvarDb = new Cadastro_Assistencia_Tecnica.Componentes.ColoredButton();
             this.lblDbPassword = new MaterialSkin.Controls.MaterialLabel();
@@ -53,12 +60,6 @@
             this.TxtDataBase = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtNameSever = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.MTBSelector = new MaterialSkin.Controls.MaterialTabSelector();
-            this.LblTexto = new System.Windows.Forms.Label();
-            this.LblTextoo = new System.Windows.Forms.Label();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.LinhaDivisoraTbCad = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.TbConfigs.SuspendLayout();
             this.TbSugestion.SuspendLayout();
             this.TbConections.SuspendLayout();
@@ -85,20 +86,21 @@
             this.TbConfigs.MouseState = MaterialSkin.MouseState.HOVER;
             this.TbConfigs.Name = "TbConfigs";
             this.TbConfigs.SelectedIndex = 0;
-            this.TbConfigs.Size = new System.Drawing.Size(841, 490);
+            this.TbConfigs.Size = new System.Drawing.Size(841, 505);
             this.TbConfigs.TabIndex = 0;
             // 
             // TbSugestion
             // 
             this.TbSugestion.BackColor = System.Drawing.SystemColors.Control;
+            this.TbSugestion.Controls.Add(this.LblTips);
+            this.TbSugestion.Controls.Add(this.BtnMoveUp);
+            this.TbSugestion.Controls.Add(this.BtnMoveDown);
+            this.TbSugestion.Controls.Add(this.BtnRemove);
+            this.TbSugestion.Controls.Add(this.BtnAdd);
             this.TbSugestion.Controls.Add(this.LinhaDivisoraTbCad);
             this.TbSugestion.Controls.Add(this.materialLabel2);
             this.TbSugestion.Controls.Add(this.materialLabel1);
             this.TbSugestion.Controls.Add(this.LblTextoo);
-            this.TbSugestion.Controls.Add(this.BtnRemove);
-            this.TbSugestion.Controls.Add(this.BtnAdd);
-            this.TbSugestion.Controls.Add(this.BtnMoveDown);
-            this.TbSugestion.Controls.Add(this.BtnMoveUp);
             this.TbSugestion.Controls.Add(this.CmbSugestion);
             this.TbSugestion.Controls.Add(this.LstSugestions);
             this.TbSugestion.Controls.Add(this.BtnDefaut);
@@ -107,82 +109,125 @@
             this.TbSugestion.Location = new System.Drawing.Point(4, 28);
             this.TbSugestion.Name = "TbSugestion";
             this.TbSugestion.Padding = new System.Windows.Forms.Padding(3);
-            this.TbSugestion.Size = new System.Drawing.Size(833, 458);
+            this.TbSugestion.Size = new System.Drawing.Size(833, 473);
             this.TbSugestion.TabIndex = 0;
             this.TbSugestion.Text = "Editar Sugestões";
-            this.TbSugestion.Click += new System.EventHandler(this.TbSugestion_Click);
             // 
-            // BtnRemove
+            // LblTips
             // 
-            this.BtnRemove.AutoSize = true;
-            this.BtnRemove.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnRemove.Depth = 0;
-            this.BtnRemove.Icon = null;
-            this.BtnRemove.Location = new System.Drawing.Point(413, 338);
-            this.BtnRemove.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnRemove.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnRemove.Name = "BtnRemove";
-            this.BtnRemove.Primary = false;
-            this.BtnRemove.Size = new System.Drawing.Size(84, 36);
-            this.BtnRemove.TabIndex = 6;
-            this.BtnRemove.TabStop = false;
-            this.BtnRemove.Text = "Remover";
-            this.BtnRemove.UseVisualStyleBackColor = true;
-            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.AutoSize = true;
-            this.BtnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnAdd.Depth = 0;
-            this.BtnAdd.Icon = null;
-            this.BtnAdd.Location = new System.Drawing.Point(312, 338);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnAdd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Primary = false;
-            this.BtnAdd.Size = new System.Drawing.Size(93, 36);
-            this.BtnAdd.TabIndex = 5;
-            this.BtnAdd.TabStop = false;
-            this.BtnAdd.Text = "Adicionar";
-            this.BtnAdd.UseVisualStyleBackColor = true;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // BtnMoveDown
-            // 
-            this.BtnMoveDown.AutoSize = true;
-            this.BtnMoveDown.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnMoveDown.Depth = 0;
-            this.BtnMoveDown.Icon = null;
-            this.BtnMoveDown.Location = new System.Drawing.Point(505, 338);
-            this.BtnMoveDown.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnMoveDown.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnMoveDown.Name = "BtnMoveDown";
-            this.BtnMoveDown.Primary = false;
-            this.BtnMoveDown.Size = new System.Drawing.Size(111, 36);
-            this.BtnMoveDown.TabIndex = 7;
-            this.BtnMoveDown.TabStop = false;
-            this.BtnMoveDown.Text = "Mover Baixo";
-            this.BtnMoveDown.UseVisualStyleBackColor = true;
-            this.BtnMoveDown.Click += new System.EventHandler(this.BtnMoveDown_Click);
+            this.LblTips.AutoSize = true;
+            this.LblTips.Depth = 0;
+            this.LblTips.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblTips.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblTips.Location = new System.Drawing.Point(308, 285);
+            this.LblTips.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblTips.Name = "LblTips";
+            this.LblTips.Size = new System.Drawing.Size(222, 19);
+            this.LblTips.TabIndex = 17;
+            this.LblTips.Text = "Clique em salvar para modificar\r\n";
+            this.LblTips.Visible = false;
             // 
             // BtnMoveUp
             // 
-            this.BtnMoveUp.AutoSize = true;
-            this.BtnMoveUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnMoveUp.Depth = 0;
-            this.BtnMoveUp.Icon = null;
-            this.BtnMoveUp.Location = new System.Drawing.Point(624, 338);
-            this.BtnMoveUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnMoveUp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnMoveUp.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMoveUp.Location = new System.Drawing.Point(541, 343);
+            this.BtnMoveUp.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnMoveUp.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnMoveUp.MinimumSize = new System.Drawing.Size(125, 50);
             this.BtnMoveUp.Name = "BtnMoveUp";
-            this.BtnMoveUp.Primary = false;
-            this.BtnMoveUp.Size = new System.Drawing.Size(105, 36);
-            this.BtnMoveUp.TabIndex = 8;
-            this.BtnMoveUp.TabStop = false;
-            this.BtnMoveUp.Text = "Mover Cima";
-            this.BtnMoveUp.UseVisualStyleBackColor = true;
-            this.BtnMoveUp.Click += new System.EventHandler(this.MoveUp);
+            this.BtnMoveUp.Size = new System.Drawing.Size(125, 50);
+            this.BtnMoveUp.TabIndex = 16;
+            this.BtnMoveUp.Clicked += new System.EventHandler(this.MoveUp);
+            // 
+            // BtnMoveDown
+            // 
+            this.BtnMoveDown.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMoveDown.Location = new System.Drawing.Point(668, 343);
+            this.BtnMoveDown.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnMoveDown.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnMoveDown.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnMoveDown.Name = "BtnMoveDown";
+            this.BtnMoveDown.Size = new System.Drawing.Size(125, 50);
+            this.BtnMoveDown.TabIndex = 15;
+            this.BtnMoveDown.Clicked += new System.EventHandler(this.BtnMoveDown_Click);
+            // 
+            // BtnRemove
+            // 
+            this.BtnRemove.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRemove.Location = new System.Drawing.Point(414, 343);
+            this.BtnRemove.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnRemove.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnRemove.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Size = new System.Drawing.Size(125, 50);
+            this.BtnRemove.TabIndex = 14;
+            this.BtnRemove.Clicked += new System.EventHandler(this.BtnRemove_Click);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.Location = new System.Drawing.Point(287, 343);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnAdd.MaximumSize = new System.Drawing.Size(118, 46);
+            this.BtnAdd.MinimumSize = new System.Drawing.Size(125, 50);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(125, 50);
+            this.BtnAdd.TabIndex = 13;
+            this.BtnAdd.Clicked += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // LinhaDivisoraTbCad
+            // 
+            this.LinhaDivisoraTbCad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LinhaDivisoraTbCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LinhaDivisoraTbCad.Depth = 0;
+            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-29, 420);
+            this.LinhaDivisoraTbCad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.LinhaDivisoraTbCad.MinimumSize = new System.Drawing.Size(890, 1);
+            this.LinhaDivisoraTbCad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
+            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(890, 1);
+            this.LinhaDivisoraTbCad.TabIndex = 9;
+            this.LinhaDivisoraTbCad.TabStop = false;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(308, 146);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(139, 19);
+            this.materialLabel2.TabIndex = 11;
+            this.materialLabel2.Text = "Adicionar sugestão";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(308, 222);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(143, 19);
+            this.materialLabel1.TabIndex = 12;
+            this.materialLabel1.Text = "Campo de sugestão";
+            // 
+            // LblTextoo
+            // 
+            this.LblTextoo.AutoSize = true;
+            this.LblTextoo.BackColor = System.Drawing.Color.Transparent;
+            this.LblTextoo.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTextoo.ForeColor = System.Drawing.Color.Black;
+            this.LblTextoo.Location = new System.Drawing.Point(44, 20);
+            this.LblTextoo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTextoo.Name = "LblTextoo";
+            this.LblTextoo.Size = new System.Drawing.Size(443, 29);
+            this.LblTextoo.TabIndex = 10;
+            this.LblTextoo.Text = "Configurações de sugestões de campos";
             // 
             // CmbSugestion
             // 
@@ -197,24 +242,26 @@
             this.CmbSugestion.Size = new System.Drawing.Size(316, 40);
             this.CmbSugestion.TabIndex = 1;
             this.CmbSugestion.SelectedIndexChanged += new System.EventHandler(this.CmbSugestion_SelectedIndexChanged);
+            this.CmbSugestion.Click += new System.EventHandler(this.CmbSugestion_Click);
+            this.CmbSugestion.Enter += new System.EventHandler(this.CmbSugestion_Enter);
             // 
             // LstSugestions
             // 
             this.LstSugestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstSugestions.FormattingEnabled = true;
             this.LstSugestions.ItemHeight = 19;
-            this.LstSugestions.Location = new System.Drawing.Point(49, 70);
+            this.LstSugestions.Location = new System.Drawing.Point(49, 86);
             this.LstSugestions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LstSugestions.Name = "LstSugestions";
             this.LstSugestions.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.LstSugestions.Size = new System.Drawing.Size(234, 304);
+            this.LstSugestions.Size = new System.Drawing.Size(234, 323);
             this.LstSugestions.TabIndex = 4;
             // 
             // BtnDefaut
             // 
             this.BtnDefaut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnDefaut.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDefaut.Location = new System.Drawing.Point(146, 402);
+            this.BtnDefaut.Location = new System.Drawing.Point(146, 429);
             this.BtnDefaut.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDefaut.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnDefaut.MinimumSize = new System.Drawing.Size(125, 50);
@@ -227,7 +274,7 @@
             // 
             this.BtnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSalvar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.Location = new System.Drawing.Point(19, 402);
+            this.BtnSalvar.Location = new System.Drawing.Point(19, 429);
             this.BtnSalvar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSalvar.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnSalvar.MinimumSize = new System.Drawing.Size(125, 50);
@@ -269,15 +316,43 @@
             this.TbConections.Location = new System.Drawing.Point(4, 28);
             this.TbConections.Name = "TbConections";
             this.TbConections.Padding = new System.Windows.Forms.Padding(3);
-            this.TbConections.Size = new System.Drawing.Size(833, 458);
+            this.TbConections.Size = new System.Drawing.Size(833, 473);
             this.TbConections.TabIndex = 1;
             this.TbConections.Text = "Conexões com banco de dados";
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(-29, 420);
+            this.materialDivider1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.materialDivider1.MinimumSize = new System.Drawing.Size(890, 1);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(890, 1);
+            this.materialDivider1.TabIndex = 11;
+            this.materialDivider1.TabStop = false;
+            // 
+            // LblTexto
+            // 
+            this.LblTexto.AutoSize = true;
+            this.LblTexto.BackColor = System.Drawing.Color.Transparent;
+            this.LblTexto.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTexto.ForeColor = System.Drawing.Color.Black;
+            this.LblTexto.Location = new System.Drawing.Point(44, 21);
+            this.LblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTexto.Name = "LblTexto";
+            this.LblTexto.Size = new System.Drawing.Size(391, 29);
+            this.LblTexto.TabIndex = 6;
+            this.LblTexto.Text = "Configurações do Banco  de Dados";
             // 
             // BtnTest
             // 
             this.BtnTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnTest.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTest.Location = new System.Drawing.Point(146, 402);
+            this.BtnTest.Location = new System.Drawing.Point(146, 429);
             this.BtnTest.Margin = new System.Windows.Forms.Padding(1);
             this.BtnTest.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnTest.MinimumSize = new System.Drawing.Size(125, 50);
@@ -290,7 +365,7 @@
             // 
             this.BtnSalvarDb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSalvarDb.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvarDb.Location = new System.Drawing.Point(19, 402);
+            this.BtnSalvarDb.Location = new System.Drawing.Point(19, 429);
             this.BtnSalvarDb.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSalvarDb.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnSalvarDb.MinimumSize = new System.Drawing.Size(125, 50);
@@ -425,92 +500,12 @@
             this.MTBSelector.TabStop = false;
             this.MTBSelector.Text = "materialTabSelector2";
             // 
-            // LblTexto
-            // 
-            this.LblTexto.AutoSize = true;
-            this.LblTexto.BackColor = System.Drawing.Color.Transparent;
-            this.LblTexto.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTexto.ForeColor = System.Drawing.Color.Black;
-            this.LblTexto.Location = new System.Drawing.Point(44, 21);
-            this.LblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTexto.Name = "LblTexto";
-            this.LblTexto.Size = new System.Drawing.Size(391, 29);
-            this.LblTexto.TabIndex = 6;
-            this.LblTexto.Text = "Configurações do Banco  de Dados";
-            // 
-            // LblTextoo
-            // 
-            this.LblTextoo.AutoSize = true;
-            this.LblTextoo.BackColor = System.Drawing.Color.Transparent;
-            this.LblTextoo.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTextoo.ForeColor = System.Drawing.Color.Black;
-            this.LblTextoo.Location = new System.Drawing.Point(44, 20);
-            this.LblTextoo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTextoo.Name = "LblTextoo";
-            this.LblTextoo.Size = new System.Drawing.Size(443, 29);
-            this.LblTextoo.TabIndex = 10;
-            this.LblTextoo.Text = "Configurações de sugestões de campos";
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(308, 222);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(143, 19);
-            this.materialLabel1.TabIndex = 12;
-            this.materialLabel1.Text = "Campo de sugestão";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(308, 146);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(139, 19);
-            this.materialLabel2.TabIndex = 11;
-            this.materialLabel2.Text = "Adicionar sugestão";
-            // 
-            // LinhaDivisoraTbCad
-            // 
-            this.LinhaDivisoraTbCad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinhaDivisoraTbCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LinhaDivisoraTbCad.Depth = 0;
-            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-29, 393);
-            this.LinhaDivisoraTbCad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.LinhaDivisoraTbCad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
-            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(890, 1);
-            this.LinhaDivisoraTbCad.TabIndex = 9;
-            this.LinhaDivisoraTbCad.TabStop = false;
-            // 
-            // materialDivider1
-            // 
-            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(-29, 393);
-            this.materialDivider1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(890, 1);
-            this.materialDivider1.TabIndex = 11;
-            this.materialDivider1.TabStop = false;
-            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(852, 606);
+            this.ClientSize = new System.Drawing.Size(852, 632);
             this.Controls.Add(this.MTBSelector);
             this.Controls.Add(this.TbConfigs);
             this.Controls.Add(this.materialTabSelector1);
@@ -545,10 +540,6 @@
         private System.Windows.Forms.TabPage TbConections;
         private MaterialSkin.Controls.MaterialTabSelector MTBSelector;
         private Componentes.ComboTextField CmbSugestion;
-        private MaterialSkin.Controls.MaterialFlatButton BtnMoveDown;
-        private MaterialSkin.Controls.MaterialFlatButton BtnMoveUp;
-        private MaterialSkin.Controls.MaterialFlatButton BtnRemove;
-        private MaterialSkin.Controls.MaterialFlatButton BtnAdd;
         private Componentes.ColoredButton BtnSalvarDb;
         private MaterialSkin.Controls.MaterialLabel lblDbPassword;
         private Componentes.TextField TxtDbPassword;
@@ -565,5 +556,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialDivider LinhaDivisoraTbCad;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private Componentes.RaisedButtonRipple BtnAdd;
+        private Componentes.RaisedButtonRipple BtnMoveUp;
+        private Componentes.RaisedButtonRipple BtnMoveDown;
+        private Componentes.RaisedButtonRipple BtnRemove;
+        private MaterialSkin.Controls.MaterialLabel LblTips;
     }
 }

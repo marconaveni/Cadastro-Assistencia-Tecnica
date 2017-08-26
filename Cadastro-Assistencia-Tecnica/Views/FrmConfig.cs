@@ -46,6 +46,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
             BtnSalvarDb.Text = "Salvar";
             BtnTest.Text = "Testar";
 
+            BtnAdd.Text = "Adicionar";
+            BtnRemove.Text = "Remover";
+            BtnMoveDown.Text = "Mover Baixo";
+            BtnMoveUp.Text = "Mover Cima";
+
+            LblTips.Visible = false;
+
             TxtNameSever.Text = ConfigurationManager.AppSettings["nameserver"].ToString();
             TxtDataBase.Text = ConfigurationManager.AppSettings["database"].ToString();
             TxtDbUser.Text = ConfigurationManager.AppSettings["dbuser"].ToString();
@@ -74,17 +81,27 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void CmbSugestion_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblTips.Visible = false;
             if (CmbSugestion.Text == "Aparelhos")
+            {
                 listname = "LIST_APARELHOS.CF";
+            }
             else if (CmbSugestion.Text == "Marcas")
+            {
                 listname = "LIST_MARCAS.CF";
+            }
             else if (CmbSugestion.Text == "Modelos")
+            {
                 listname = "LIST_MODELOS.CF";
+            }
             else if (CmbSugestion.Text == "Acessórios")
+            {
                 listname = "LIST_ACESSORIOS.CF";
+            }
             else if (CmbSugestion.Text == "Defeitos")
+            {
                 listname = "LIST_DEFEITOS.CF";
+            }
             else
                 return;
 
@@ -94,7 +111,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (TxtAddSugestion.Text.Length > 3)
+            {
                 LstSugestions.Items.Add(TxtAddSugestion.Text);
+                TxtAddSugestion.Text = "";
+            }
+            LblTips.Visible = true;
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -103,46 +124,54 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 LstSugestions.Items.Remove(LstSugestions.SelectedItems[0]);
             }
+            LblTips.Visible = true;
         }
 
         private void BtnSalvar_Clicked(object sender, EventArgs e)
         {
-            List<string> listitems = new List<string>();
-
-            foreach (string item in LstSugestions.Items)
-            {
-                listitems.Add(item);
-            }
-            Autocomplete.GravarArquivo(listname, listitems);
+            Salvar();
         }
 
         private void BtnDefaut_Clicked(object sender, EventArgs e)
         {
-            Autocomplete.GravarDefaultArquivo(listname);
-            LoadListSugestion();
+            DialogResult resp;
+            resp = MessageBox.Show("Deseja restaurar as sugestões padrões de " + CmbSugestion.Text.ToLower() + "? ", "Atenção ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resp == DialogResult.Yes)
+            {
+                Autocomplete.GravarDefaultArquivo(listname);
+                LoadListSugestion();
+                LblTips.Visible = false;
+            }
         }
 
         private void BtnSalvarDb_Clicked(object sender, EventArgs e)
         {
-            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            configuration.AppSettings.Settings["nameserver"].Value = TxtNameSever.Text;
-            configuration.AppSettings.Settings["database"].Value = TxtDataBase.Text;
-            configuration.AppSettings.Settings["dbuser"].Value = TxtDbUser.Text;
-            configuration.AppSettings.Settings["dbpassword"].Value = TxtDbPassword.Text;
+            DialogResult resp;
+            resp = MessageBox.Show("Deseja salvar configurações do banco de dados?", "Atenção ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resp == DialogResult.Yes)
+            {
+                Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                configuration.AppSettings.Settings["nameserver"].Value = TxtNameSever.Text;
+                configuration.AppSettings.Settings["database"].Value = TxtDataBase.Text;
+                configuration.AppSettings.Settings["dbuser"].Value = TxtDbUser.Text;
+                configuration.AppSettings.Settings["dbpassword"].Value = TxtDbPassword.Text;
 
-            configuration.Save();
+                configuration.Save();
 
-            ConfigurationManager.RefreshSection("appSettings");
+                ConfigurationManager.RefreshSection("appSettings");
+            }
         }
 
         private void MoveUp(object sender, EventArgs e)
         {
             MoveItem(-1);
+            LblTips.Visible = true;
         }
 
         private void BtnMoveDown_Click(object sender, EventArgs e)
         {
             MoveItem(1);
+            LblTips.Visible = true;
         }
 
         public void MoveItem(int direction)
@@ -181,9 +210,34 @@ namespace Cadastro_Assistencia_Tecnica.Views
             }
         }
 
-        private void TbSugestion_Click(object sender, EventArgs e)
+        private void Salvar()
         {
+            if (LblTips.Visible == false)
+                return;
+            DialogResult resp;
+            resp = MessageBox.Show("Deseja alterar as sugestões de " + CmbSugestion.Text.ToLower() + "? ", "Atenção ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resp == DialogResult.Yes)
+            {
+                List<string> listitems = new List<string>();
 
+                foreach (string item in LstSugestions.Items)
+                {
+                    listitems.Add(item);
+                }
+                Autocomplete.GravarArquivo(listname, listitems);
+                LblTips.Visible = false;
+            }
+        }
+
+
+        private void CmbSugestion_Enter(object sender, EventArgs e)
+        {
+            Salvar();
+        }
+
+        private void CmbSugestion_Click(object sender, EventArgs e)
+        {
+            Salvar();
         }
     }
 }
