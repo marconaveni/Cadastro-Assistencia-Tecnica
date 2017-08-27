@@ -59,10 +59,20 @@
             this.TxtDbUser = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtDataBase = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
             this.TxtNameSever = new Cadastro_Assistencia_Tecnica.Componentes.TextField();
+            this.TbSobre = new System.Windows.Forms.TabPage();
+            this.LblDateYear = new MaterialSkin.Controls.MaterialLabel();
+            this.LblNumber = new MaterialSkin.Controls.MaterialLabel();
+            this.LblVersion = new MaterialSkin.Controls.MaterialLabel();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.Lblname = new System.Windows.Forms.Label();
             this.MTBSelector = new MaterialSkin.Controls.MaterialTabSelector();
+            this.ShadowTop = new System.Windows.Forms.PictureBox();
             this.TbConfigs.SuspendLayout();
             this.TbSugestion.SuspendLayout();
             this.TbConections.SuspendLayout();
+            this.TbSobre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -81,12 +91,13 @@
             // 
             this.TbConfigs.Controls.Add(this.TbSugestion);
             this.TbConfigs.Controls.Add(this.TbConections);
+            this.TbConfigs.Controls.Add(this.TbSobre);
             this.TbConfigs.Depth = 0;
-            this.TbConfigs.Location = new System.Drawing.Point(5, 111);
+            this.TbConfigs.Location = new System.Drawing.Point(1, 127);
             this.TbConfigs.MouseState = MaterialSkin.MouseState.HOVER;
             this.TbConfigs.Name = "TbConfigs";
             this.TbConfigs.SelectedIndex = 0;
-            this.TbConfigs.Size = new System.Drawing.Size(841, 505);
+            this.TbConfigs.Size = new System.Drawing.Size(849, 502);
             this.TbConfigs.TabIndex = 0;
             // 
             // TbSugestion
@@ -109,7 +120,7 @@
             this.TbSugestion.Location = new System.Drawing.Point(4, 28);
             this.TbSugestion.Name = "TbSugestion";
             this.TbSugestion.Padding = new System.Windows.Forms.Padding(3);
-            this.TbSugestion.Size = new System.Drawing.Size(833, 473);
+            this.TbSugestion.Size = new System.Drawing.Size(841, 470);
             this.TbSugestion.TabIndex = 0;
             this.TbSugestion.Text = "Editar Sugestões";
             // 
@@ -119,7 +130,7 @@
             this.LblTips.Depth = 0;
             this.LblTips.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblTips.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblTips.Location = new System.Drawing.Point(308, 285);
+            this.LblTips.Location = new System.Drawing.Point(308, 280);
             this.LblTips.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblTips.Name = "LblTips";
             this.LblTips.Size = new System.Drawing.Size(222, 19);
@@ -130,7 +141,7 @@
             // BtnMoveUp
             // 
             this.BtnMoveUp.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMoveUp.Location = new System.Drawing.Point(541, 343);
+            this.BtnMoveUp.Location = new System.Drawing.Point(541, 338);
             this.BtnMoveUp.Margin = new System.Windows.Forms.Padding(1);
             this.BtnMoveUp.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnMoveUp.MinimumSize = new System.Drawing.Size(125, 50);
@@ -142,7 +153,7 @@
             // BtnMoveDown
             // 
             this.BtnMoveDown.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMoveDown.Location = new System.Drawing.Point(668, 343);
+            this.BtnMoveDown.Location = new System.Drawing.Point(668, 338);
             this.BtnMoveDown.Margin = new System.Windows.Forms.Padding(1);
             this.BtnMoveDown.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnMoveDown.MinimumSize = new System.Drawing.Size(125, 50);
@@ -154,7 +165,7 @@
             // BtnRemove
             // 
             this.BtnRemove.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRemove.Location = new System.Drawing.Point(414, 343);
+            this.BtnRemove.Location = new System.Drawing.Point(414, 338);
             this.BtnRemove.Margin = new System.Windows.Forms.Padding(1);
             this.BtnRemove.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnRemove.MinimumSize = new System.Drawing.Size(125, 50);
@@ -166,7 +177,7 @@
             // BtnAdd
             // 
             this.BtnAdd.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.Location = new System.Drawing.Point(287, 343);
+            this.BtnAdd.Location = new System.Drawing.Point(287, 338);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(1);
             this.BtnAdd.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnAdd.MinimumSize = new System.Drawing.Size(125, 50);
@@ -177,16 +188,14 @@
             // 
             // LinhaDivisoraTbCad
             // 
-            this.LinhaDivisoraTbCad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LinhaDivisoraTbCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LinhaDivisoraTbCad.Depth = 0;
-            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-29, 420);
+            this.LinhaDivisoraTbCad.Location = new System.Drawing.Point(-29, 430);
             this.LinhaDivisoraTbCad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LinhaDivisoraTbCad.MinimumSize = new System.Drawing.Size(890, 1);
             this.LinhaDivisoraTbCad.MouseState = MaterialSkin.MouseState.HOVER;
             this.LinhaDivisoraTbCad.Name = "LinhaDivisoraTbCad";
-            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(890, 1);
+            this.LinhaDivisoraTbCad.Size = new System.Drawing.Size(901, 1);
             this.LinhaDivisoraTbCad.TabIndex = 9;
             this.LinhaDivisoraTbCad.TabStop = false;
             // 
@@ -196,7 +205,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(308, 146);
+            this.materialLabel2.Location = new System.Drawing.Point(308, 141);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(139, 19);
@@ -209,7 +218,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(308, 222);
+            this.materialLabel1.Location = new System.Drawing.Point(308, 217);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(143, 19);
@@ -222,7 +231,7 @@
             this.LblTextoo.BackColor = System.Drawing.Color.Transparent;
             this.LblTextoo.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTextoo.ForeColor = System.Drawing.Color.Black;
-            this.LblTextoo.Location = new System.Drawing.Point(44, 20);
+            this.LblTextoo.Location = new System.Drawing.Point(44, 10);
             this.LblTextoo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTextoo.Name = "LblTextoo";
             this.LblTextoo.Size = new System.Drawing.Size(443, 29);
@@ -233,7 +242,7 @@
             // 
             this.CmbSugestion.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbSugestion.LineColor = System.Drawing.Color.LightGray;
-            this.CmbSugestion.Location = new System.Drawing.Point(456, 213);
+            this.CmbSugestion.Location = new System.Drawing.Point(456, 208);
             this.CmbSugestion.Margin = new System.Windows.Forms.Padding(1);
             this.CmbSugestion.MaximumSize = new System.Drawing.Size(1920, 30);
             this.CmbSugestion.MinimumSize = new System.Drawing.Size(135, 40);
@@ -250,7 +259,7 @@
             this.LstSugestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstSugestions.FormattingEnabled = true;
             this.LstSugestions.ItemHeight = 19;
-            this.LstSugestions.Location = new System.Drawing.Point(49, 86);
+            this.LstSugestions.Location = new System.Drawing.Point(49, 81);
             this.LstSugestions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LstSugestions.Name = "LstSugestions";
             this.LstSugestions.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -259,9 +268,8 @@
             // 
             // BtnDefaut
             // 
-            this.BtnDefaut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnDefaut.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDefaut.Location = new System.Drawing.Point(146, 429);
+            this.BtnDefaut.Location = new System.Drawing.Point(146, 439);
             this.BtnDefaut.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDefaut.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnDefaut.MinimumSize = new System.Drawing.Size(125, 50);
@@ -272,9 +280,8 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSalvar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.Location = new System.Drawing.Point(19, 429);
+            this.BtnSalvar.Location = new System.Drawing.Point(19, 439);
             this.BtnSalvar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSalvar.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnSalvar.MinimumSize = new System.Drawing.Size(125, 50);
@@ -287,7 +294,7 @@
             // 
             this.TxtAddSugestion.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAddSugestion.LineColor = System.Drawing.Color.LightGray;
-            this.TxtAddSugestion.Location = new System.Drawing.Point(456, 146);
+            this.TxtAddSugestion.Location = new System.Drawing.Point(456, 141);
             this.TxtAddSugestion.Margin = new System.Windows.Forms.Padding(1);
             this.TxtAddSugestion.MaximumSize = new System.Drawing.Size(1920, 30);
             this.TxtAddSugestion.MaxLength = 255;
@@ -316,22 +323,20 @@
             this.TbConections.Location = new System.Drawing.Point(4, 28);
             this.TbConections.Name = "TbConections";
             this.TbConections.Padding = new System.Windows.Forms.Padding(3);
-            this.TbConections.Size = new System.Drawing.Size(833, 473);
+            this.TbConections.Size = new System.Drawing.Size(841, 470);
             this.TbConections.TabIndex = 1;
             this.TbConections.Text = "Conexões com banco de dados";
             // 
             // materialDivider1
             // 
-            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(-29, 420);
+            this.materialDivider1.Location = new System.Drawing.Point(-29, 430);
             this.materialDivider1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.materialDivider1.MinimumSize = new System.Drawing.Size(890, 1);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(890, 1);
+            this.materialDivider1.Size = new System.Drawing.Size(901, 1);
             this.materialDivider1.TabIndex = 11;
             this.materialDivider1.TabStop = false;
             // 
@@ -341,7 +346,7 @@
             this.LblTexto.BackColor = System.Drawing.Color.Transparent;
             this.LblTexto.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTexto.ForeColor = System.Drawing.Color.Black;
-            this.LblTexto.Location = new System.Drawing.Point(44, 21);
+            this.LblTexto.Location = new System.Drawing.Point(44, 10);
             this.LblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTexto.Name = "LblTexto";
             this.LblTexto.Size = new System.Drawing.Size(391, 29);
@@ -350,9 +355,8 @@
             // 
             // BtnTest
             // 
-            this.BtnTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnTest.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTest.Location = new System.Drawing.Point(146, 429);
+            this.BtnTest.Location = new System.Drawing.Point(146, 439);
             this.BtnTest.Margin = new System.Windows.Forms.Padding(1);
             this.BtnTest.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnTest.MinimumSize = new System.Drawing.Size(125, 50);
@@ -363,9 +367,8 @@
             // 
             // BtnSalvarDb
             // 
-            this.BtnSalvarDb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSalvarDb.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvarDb.Location = new System.Drawing.Point(19, 429);
+            this.BtnSalvarDb.Location = new System.Drawing.Point(19, 439);
             this.BtnSalvarDb.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSalvarDb.MaximumSize = new System.Drawing.Size(118, 46);
             this.BtnSalvarDb.MinimumSize = new System.Drawing.Size(125, 50);
@@ -380,7 +383,7 @@
             this.lblDbPassword.Depth = 0;
             this.lblDbPassword.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblDbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDbPassword.Location = new System.Drawing.Point(52, 269);
+            this.lblDbPassword.Location = new System.Drawing.Point(52, 262);
             this.lblDbPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDbPassword.Name = "lblDbPassword";
             this.lblDbPassword.Size = new System.Drawing.Size(50, 19);
@@ -391,7 +394,7 @@
             // 
             this.TxtDbPassword.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDbPassword.LineColor = System.Drawing.Color.LightGray;
-            this.TxtDbPassword.Location = new System.Drawing.Point(232, 269);
+            this.TxtDbPassword.Location = new System.Drawing.Point(232, 262);
             this.TxtDbPassword.Margin = new System.Windows.Forms.Padding(1);
             this.TxtDbPassword.MaximumSize = new System.Drawing.Size(1920, 30);
             this.TxtDbPassword.MaxLength = 150;
@@ -408,7 +411,7 @@
             this.LblDbUser.Depth = 0;
             this.LblDbUser.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblDbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblDbUser.Location = new System.Drawing.Point(52, 222);
+            this.LblDbUser.Location = new System.Drawing.Point(52, 215);
             this.LblDbUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblDbUser.Name = "LblDbUser";
             this.LblDbUser.Size = new System.Drawing.Size(46, 19);
@@ -421,7 +424,7 @@
             this.LblDataBase.Depth = 0;
             this.LblDataBase.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblDataBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblDataBase.Location = new System.Drawing.Point(52, 175);
+            this.LblDataBase.Location = new System.Drawing.Point(52, 168);
             this.LblDataBase.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblDataBase.Name = "LblDataBase";
             this.LblDataBase.Size = new System.Drawing.Size(154, 19);
@@ -434,7 +437,7 @@
             this.lblNameServer.Depth = 0;
             this.lblNameServer.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNameServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNameServer.Location = new System.Drawing.Point(52, 128);
+            this.lblNameServer.Location = new System.Drawing.Point(52, 121);
             this.lblNameServer.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNameServer.Name = "lblNameServer";
             this.lblNameServer.Size = new System.Drawing.Size(130, 19);
@@ -445,7 +448,7 @@
             // 
             this.TxtDbUser.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDbUser.LineColor = System.Drawing.Color.LightGray;
-            this.TxtDbUser.Location = new System.Drawing.Point(232, 222);
+            this.TxtDbUser.Location = new System.Drawing.Point(232, 215);
             this.TxtDbUser.Margin = new System.Windows.Forms.Padding(1);
             this.TxtDbUser.MaximumSize = new System.Drawing.Size(1920, 30);
             this.TxtDbUser.MaxLength = 150;
@@ -460,7 +463,7 @@
             // 
             this.TxtDataBase.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDataBase.LineColor = System.Drawing.Color.LightGray;
-            this.TxtDataBase.Location = new System.Drawing.Point(232, 175);
+            this.TxtDataBase.Location = new System.Drawing.Point(232, 168);
             this.TxtDataBase.Margin = new System.Windows.Forms.Padding(1);
             this.TxtDataBase.MaximumSize = new System.Drawing.Size(1920, 30);
             this.TxtDataBase.MaxLength = 150;
@@ -475,7 +478,7 @@
             // 
             this.TxtNameSever.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNameSever.LineColor = System.Drawing.Color.LightGray;
-            this.TxtNameSever.Location = new System.Drawing.Point(232, 128);
+            this.TxtNameSever.Location = new System.Drawing.Point(232, 121);
             this.TxtNameSever.Margin = new System.Windows.Forms.Padding(1);
             this.TxtNameSever.MaximumSize = new System.Drawing.Size(1920, 30);
             this.TxtNameSever.MaxLength = 150;
@@ -485,6 +488,82 @@
             this.TxtNameSever.ReadOnly = false;
             this.TxtNameSever.Size = new System.Drawing.Size(467, 30);
             this.TxtNameSever.TabIndex = 0;
+            // 
+            // TbSobre
+            // 
+            this.TbSobre.BackColor = System.Drawing.SystemColors.Control;
+            this.TbSobre.Controls.Add(this.LblDateYear);
+            this.TbSobre.Controls.Add(this.LblNumber);
+            this.TbSobre.Controls.Add(this.LblVersion);
+            this.TbSobre.Controls.Add(this.Logo);
+            this.TbSobre.Controls.Add(this.Lblname);
+            this.TbSobre.Location = new System.Drawing.Point(4, 28);
+            this.TbSobre.Name = "TbSobre";
+            this.TbSobre.Size = new System.Drawing.Size(841, 470);
+            this.TbSobre.TabIndex = 2;
+            this.TbSobre.Text = "Sobre Cadastro de Ficha";
+            // 
+            // LblDateYear
+            // 
+            this.LblDateYear.AutoSize = true;
+            this.LblDateYear.Depth = 0;
+            this.LblDateYear.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblDateYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblDateYear.Location = new System.Drawing.Point(309, 276);
+            this.LblDateYear.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblDateYear.Name = "LblDateYear";
+            this.LblDateYear.Size = new System.Drawing.Size(90, 19);
+            this.LblDateYear.TabIndex = 11;
+            this.LblDateYear.Text = "LblDateYear";
+            // 
+            // LblNumber
+            // 
+            this.LblNumber.AutoSize = true;
+            this.LblNumber.Depth = 0;
+            this.LblNumber.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblNumber.Location = new System.Drawing.Point(309, 246);
+            this.LblNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblNumber.Name = "LblNumber";
+            this.LblNumber.Size = new System.Drawing.Size(82, 19);
+            this.LblNumber.TabIndex = 10;
+            this.LblNumber.Text = "LblNumber";
+            // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.Depth = 0;
+            this.LblVersion.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblVersion.Location = new System.Drawing.Point(309, 216);
+            this.LblVersion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(81, 19);
+            this.LblVersion.TabIndex = 9;
+            this.LblVersion.Text = "LblVersion";
+            // 
+            // Logo
+            // 
+            this.Logo.Image = global::Cadastro_Assistencia_Tecnica.Properties.Resources.toolslogo;
+            this.Logo.Location = new System.Drawing.Point(64, 130);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(218, 201);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Logo.TabIndex = 8;
+            this.Logo.TabStop = false;
+            // 
+            // Lblname
+            // 
+            this.Lblname.AutoSize = true;
+            this.Lblname.BackColor = System.Drawing.Color.Transparent;
+            this.Lblname.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lblname.ForeColor = System.Drawing.Color.Black;
+            this.Lblname.Location = new System.Drawing.Point(309, 152);
+            this.Lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lblname.Name = "Lblname";
+            this.Lblname.Size = new System.Drawing.Size(208, 29);
+            this.Lblname.TabIndex = 7;
+            this.Lblname.Text = "Cadastro de Ficha";
             // 
             // MTBSelector
             // 
@@ -500,30 +579,50 @@
             this.MTBSelector.TabStop = false;
             this.MTBSelector.Text = "materialTabSelector2";
             // 
+            // ShadowTop
+            // 
+            this.ShadowTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShadowTop.Image = ((System.Drawing.Image)(resources.GetObject("ShadowTop.Image")));
+            this.ShadowTop.Location = new System.Drawing.Point(1, 105);
+            this.ShadowTop.Name = "ShadowTop";
+            this.ShadowTop.Size = new System.Drawing.Size(850, 20);
+            this.ShadowTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShadowTop.TabIndex = 157;
+            this.ShadowTop.TabStop = false;
+            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(852, 632);
+            this.Controls.Add(this.ShadowTop);
             this.Controls.Add(this.MTBSelector);
             this.Controls.Add(this.TbConfigs);
             this.Controls.Add(this.materialTabSelector1);
             this.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmConfig";
+            this.ShowInTaskbar = false;
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configurações";
             this.Load += new System.EventHandler(this.FrmConfig_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmConfig_KeyUp);
             this.TbConfigs.ResumeLayout(false);
             this.TbSugestion.ResumeLayout(false);
             this.TbSugestion.PerformLayout();
             this.TbConections.ResumeLayout(false);
             this.TbConections.PerformLayout();
+            this.TbSobre.ResumeLayout(false);
+            this.TbSobre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,5 +660,12 @@
         private Componentes.RaisedButtonRipple BtnMoveDown;
         private Componentes.RaisedButtonRipple BtnRemove;
         private MaterialSkin.Controls.MaterialLabel LblTips;
+        private System.Windows.Forms.TabPage TbSobre;
+        private MaterialSkin.Controls.MaterialLabel LblVersion;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.Label Lblname;
+        private MaterialSkin.Controls.MaterialLabel LblNumber;
+        private MaterialSkin.Controls.MaterialLabel LblDateYear;
+        private System.Windows.Forms.PictureBox ShadowTop;
     }
 }

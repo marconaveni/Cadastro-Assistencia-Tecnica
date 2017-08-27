@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Cadastro Assistencia Tecnica.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Cadastro Assistencia Tecnica.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="tools.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="Cadastro Assistencia Tecnica.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -50,31 +50,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C79g3RlPNOWQmCrl7yv//H8tl0V8EPX3aT+AEXjr2oQ=</dsig:DigestValue>
+        <dsig:DigestValue>DjlkAC6TqVbt+dl47zG/pF//Jojmlhh3lPEIVUo28Ys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="353792">
-      <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="1078784">
+      <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JJbpiueF+bE/kHFIk2EzqsqeRMznCujRbhcEjAhOUVo=</dsig:DigestValue>
+        <dsig:DigestValue>W+bla17YD6ekRio+V05Kz3bN+dTfflu5jBz5StuiXHM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.AcroPDFLib.dll" size="11776">
-      <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cFCvU31LDDdTrT/pEHuv7fC9j0j2EFBeKxmp0AlYBuE=</dsig:DigestValue>
+        <dsig:DigestValue>QDE/ojL0cQKLYqpvuRZ9lnF5Q0Ok52yRb6u5K2Ws880=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +102,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Cadastro Assistencia Tecnica.exe.config" size="413">
+  <file name="Cadastro Assistencia Tecnica.exe.config" size="1255">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mPXQPeZxPz32MKr1mKJYaHo8G9B9cpnhWZCaVuGrEl0=</dsig:DigestValue>
+      <dsig:DigestValue>YiryxKPU/0EJiFGDSg5uVwAmh73CjsUPdwBqnqWW4VM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\bg.png" size="18286">
@@ -120,13 +120,13 @@
       <dsig:DigestValue>fDcdo7KZ0QbaIpw6qJO0tmixbK0k0rnhPxTn/5Yf8Gw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="tools.ico" size="4286">
+  <file name="tools.ico" size="120869">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>bg+dbBI3PYnTF2bwY2nT8BDddhTuJSP5CJcFI0BPyvQ=</dsig:DigestValue>
+      <dsig:DigestValue>c8Ho6E5wSf/CdYzR/u5pUwf1Q9Z85lYuyUSvAhzFyFY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

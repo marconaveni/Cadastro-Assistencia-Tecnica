@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichasCadastrar));
             this.DgViewConsultar = new System.Windows.Forms.DataGridView();
             this.MSDataGrid = new MaterialSkin.Controls.MaterialContextMenuStrip();
@@ -92,13 +92,13 @@
             this.LinhaDivisoraTbPesq = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.Description = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.ShadowTop = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgViewConsultar)).BeginInit();
             this.MSDataGrid.SuspendLayout();
             this.TabMainMaterial.SuspendLayout();
             this.TabCadastroMaterial.SuspendLayout();
             this.TabPesquisaMaterial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).BeginInit();
             this.SuspendLayout();
             // 
             // DgViewConsultar
@@ -112,15 +112,15 @@
             this.DgViewConsultar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DgViewConsultar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgViewConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgViewConsultar.DefaultCellStyle = dataGridViewCellStyle1;
             this.DgViewConsultar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgViewConsultar.EnableHeadersVisualStyles = false;
             this.DgViewConsultar.GridColor = System.Drawing.Color.LightGray;
@@ -516,6 +516,7 @@
             this.TxtEstado.MaxLength = 40;
             this.TxtEstado.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtEstado.Name = "TxtEstado";
+            this.TxtEstado.PasswordChar = '\0';
             this.TxtEstado.ReadOnly = false;
             this.TxtEstado.Size = new System.Drawing.Size(282, 30);
             this.TxtEstado.TabIndex = 10;
@@ -531,6 +532,7 @@
             this.TxtAcessorios.MaxLength = 20;
             this.TxtAcessorios.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtAcessorios.Name = "TxtAcessorios";
+            this.TxtAcessorios.PasswordChar = '\0';
             this.TxtAcessorios.ReadOnly = false;
             this.TxtAcessorios.Size = new System.Drawing.Size(282, 30);
             this.TxtAcessorios.TabIndex = 9;
@@ -546,6 +548,7 @@
             this.TxtModelo.MaxLength = 25;
             this.TxtModelo.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtModelo.Name = "TxtModelo";
+            this.TxtModelo.PasswordChar = '\0';
             this.TxtModelo.ReadOnly = false;
             this.TxtModelo.Size = new System.Drawing.Size(282, 30);
             this.TxtModelo.TabIndex = 8;
@@ -561,6 +564,7 @@
             this.TxtMarca.MaxLength = 40;
             this.TxtMarca.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtMarca.Name = "TxtMarca";
+            this.TxtMarca.PasswordChar = '\0';
             this.TxtMarca.ReadOnly = false;
             this.TxtMarca.Size = new System.Drawing.Size(282, 30);
             this.TxtMarca.TabIndex = 7;
@@ -576,6 +580,7 @@
             this.TxtAparelho.MaxLength = 40;
             this.TxtAparelho.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtAparelho.Name = "TxtAparelho";
+            this.TxtAparelho.PasswordChar = '\0';
             this.TxtAparelho.ReadOnly = false;
             this.TxtAparelho.Size = new System.Drawing.Size(282, 30);
             this.TxtAparelho.TabIndex = 6;
@@ -592,6 +597,7 @@
             this.TxtTelefone.MaxLength = 30;
             this.TxtTelefone.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtTelefone.Name = "TxtTelefone";
+            this.TxtTelefone.PasswordChar = '\0';
             this.TxtTelefone.ReadOnly = false;
             this.TxtTelefone.Size = new System.Drawing.Size(282, 30);
             this.TxtTelefone.TabIndex = 3;
@@ -607,6 +613,7 @@
             this.TxtEndereco.MaxLength = 40;
             this.TxtEndereco.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtEndereco.Name = "TxtEndereco";
+            this.TxtEndereco.PasswordChar = '\0';
             this.TxtEndereco.ReadOnly = false;
             this.TxtEndereco.Size = new System.Drawing.Size(282, 30);
             this.TxtEndereco.TabIndex = 4;
@@ -622,6 +629,7 @@
             this.TxtCliente.MaxLength = 40;
             this.TxtCliente.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtCliente.Name = "TxtCliente";
+            this.TxtCliente.PasswordChar = '\0';
             this.TxtCliente.ReadOnly = false;
             this.TxtCliente.Size = new System.Drawing.Size(282, 30);
             this.TxtCliente.TabIndex = 2;
@@ -638,6 +646,7 @@
             this.TxtNumeroFicha.MaxLength = 9;
             this.TxtNumeroFicha.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtNumeroFicha.Name = "TxtNumeroFicha";
+            this.TxtNumeroFicha.PasswordChar = '\0';
             this.TxtNumeroFicha.ReadOnly = false;
             this.TxtNumeroFicha.Size = new System.Drawing.Size(135, 30);
             this.TxtNumeroFicha.TabIndex = 0;
@@ -893,6 +902,7 @@
             this.TxtNumeroEndereco.MaxLength = 15;
             this.TxtNumeroEndereco.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtNumeroEndereco.Name = "TxtNumeroEndereco";
+            this.TxtNumeroEndereco.PasswordChar = '\0';
             this.TxtNumeroEndereco.ReadOnly = false;
             this.TxtNumeroEndereco.Size = new System.Drawing.Size(282, 30);
             this.TxtNumeroEndereco.TabIndex = 5;
@@ -958,6 +968,7 @@
             this.TxtConsultar.MaxLength = 20;
             this.TxtConsultar.MinimumSize = new System.Drawing.Size(135, 30);
             this.TxtConsultar.Name = "TxtConsultar";
+            this.TxtConsultar.PasswordChar = '\0';
             this.TxtConsultar.ReadOnly = false;
             this.TxtConsultar.Size = new System.Drawing.Size(242, 30);
             this.TxtConsultar.TabIndex = 0;
@@ -970,7 +981,7 @@
             this.LblTipoPesquisa.Depth = 0;
             this.LblTipoPesquisa.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblTipoPesquisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblTipoPesquisa.Location = new System.Drawing.Point(332, 3);
+            this.LblTipoPesquisa.Location = new System.Drawing.Point(330, 3);
             this.LblTipoPesquisa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTipoPesquisa.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblTipoPesquisa.Name = "LblTipoPesquisa";
@@ -984,7 +995,7 @@
             this.LblPesquisa.Depth = 0;
             this.LblPesquisa.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblPesquisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblPesquisa.Location = new System.Drawing.Point(25, 3);
+            this.LblPesquisa.Location = new System.Drawing.Point(19, 3);
             this.LblPesquisa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPesquisa.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblPesquisa.Name = "LblPesquisa";
@@ -1035,24 +1046,24 @@
             this.materialTabSelector1.TabStop = false;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // pictureBox27
+            // ShadowTop
             // 
-            this.pictureBox27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ShadowTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(1, 109);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(880, 20);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 156;
-            this.pictureBox27.TabStop = false;
+            this.ShadowTop.Image = ((System.Drawing.Image)(resources.GetObject("ShadowTop.Image")));
+            this.ShadowTop.Location = new System.Drawing.Point(1, 109);
+            this.ShadowTop.Name = "ShadowTop";
+            this.ShadowTop.Size = new System.Drawing.Size(880, 20);
+            this.ShadowTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShadowTop.TabIndex = 156;
+            this.ShadowTop.TabStop = false;
             // 
             // FrmFichasCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 670);
-            this.Controls.Add(this.pictureBox27);
+            this.Controls.Add(this.ShadowTop);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.TabMainMaterial);
             this.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1075,7 +1086,7 @@
             this.TabCadastroMaterial.PerformLayout();
             this.TabPesquisaMaterial.ResumeLayout(false);
             this.TabPesquisaMaterial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShadowTop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1125,7 +1136,7 @@
         private Componentes.ComboTextField CmbOk;
         private Componentes.ComboTextField CmbEntrega;
         private Componentes.ComboTextField CmbPesquisa;
-        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox ShadowTop;
         private MaterialSkin.Controls.MaterialDivider LinhaDivisoraTbCad;
         private Componentes.TextAreaField TxtDetalhes;
         private Componentes.DateTextField DtEntrega;

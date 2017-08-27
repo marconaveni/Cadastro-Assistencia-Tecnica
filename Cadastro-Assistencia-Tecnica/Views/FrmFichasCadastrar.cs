@@ -79,7 +79,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
                 Clear();
 
-
                 StartTheme();
 
                 TabMainMaterial.SelectedTab = TabPesquisaMaterial;
@@ -88,12 +87,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 GetFichas();
 
 
-                //List<string> fc = new List<string>();
-                //fc.Add("teste");
-                //fc.Add("teste2");
-                //fc.Add("teste3");
-                //fc.Add("teste4");
-                //Autocomplete.GravarArquivo("nome_arquivo.cf",fc);
                 Sugestion();
 
 
@@ -300,6 +293,13 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 DgViewConsultar.Rows[i].Height = 40;
             }
 
+            //for (int i = 0; i < DgViewConsultar.RowCount; i++)
+            //{
+            //    Decimal j = 0;
+            //    DgViewConsultar.Rows[i].Cells[12]. = false;
+            //}
+
+
             foreach (DataGridViewColumn column in DgViewConsultar.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -327,7 +327,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             DgViewConsultar.Columns[9].Visible = false;
             DgViewConsultar.Columns[10].Visible = false;
             DgViewConsultar.Columns[11].Visible = false;
-            //DgViewAltera.Columns[12].Visible = false;
+            //DgViewConsultar.Columns[12].Visible = false;
             DgViewConsultar.Columns[13].Visible = false;
             DgViewConsultar.Columns[14].Visible = false;
             DgViewConsultar.Columns[15].Visible = false;

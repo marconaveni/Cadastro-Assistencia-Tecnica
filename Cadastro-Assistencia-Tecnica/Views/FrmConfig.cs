@@ -53,6 +53,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             LblTips.Visible = false;
 
+
+            LblVersion.Text = "Versão:   BETA";
+            LblNumber.Text = "Número da versão:  " + ProductVersion.ToString();
+            LblDateYear.Text = "Copyright 2017 By Marco Naveni. Todos os direitos reservados.";
+
             TxtNameSever.Text = ConfigurationManager.AppSettings["nameserver"].ToString();
             TxtDataBase.Text = ConfigurationManager.AppSettings["database"].ToString();
             TxtDbUser.Text = ConfigurationManager.AppSettings["dbuser"].ToString();
@@ -84,41 +89,57 @@ namespace Cadastro_Assistencia_Tecnica.Views
             LblTips.Visible = false;
             if (CmbSugestion.Text == "Aparelhos")
             {
+                TxtAddSugestion.MaxLength = 40;
                 listname = "LIST_APARELHOS.CF";
             }
             else if (CmbSugestion.Text == "Marcas")
             {
+                TxtAddSugestion.MaxLength = 40;
                 listname = "LIST_MARCAS.CF";
             }
             else if (CmbSugestion.Text == "Modelos")
             {
+                TxtAddSugestion.MaxLength = 25;
                 listname = "LIST_MODELOS.CF";
             }
             else if (CmbSugestion.Text == "Acessórios")
             {
+                TxtAddSugestion.MaxLength = 20;
                 listname = "LIST_ACESSORIOS.CF";
             }
             else if (CmbSugestion.Text == "Defeitos")
             {
+                TxtAddSugestion.MaxLength = 40;
                 listname = "LIST_DEFEITOS.CF";
             }
             else
                 return;
 
             LoadListSugestion();
+            TxtAddSugestion.Text = "";
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void Add()
         {
             if (TxtAddSugestion.Text.Length > 3)
             {
                 LstSugestions.Items.Add(TxtAddSugestion.Text);
                 TxtAddSugestion.Text = "";
+                LblTips.Visible = true;
             }
-            LblTips.Visible = true;
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            Delete();
+        }
+
+        private void Delete()
         {
             while (LstSugestions.SelectedItems.Count > 0)
             {
@@ -238,6 +259,30 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void CmbSugestion_Click(object sender, EventArgs e)
         {
             Salvar();
+        }
+
+        private void FrmConfig_KeyUp(object sender, KeyEventArgs e)
+        {
+            Control ctl;
+            ctl = (Control)sender;
+            if (e.KeyCode == Keys.BrowserForward)
+            {
+                ctl.SelectNextControl(ActiveControl, true, true, true, true);
+            }
+            else if (e.KeyCode == Keys.BrowserBack)
+            {
+                // MessageBox.Show(this.ActiveControl.Name);
+                ctl.SelectNextControl(ActiveControl, false, true, true, true);
+            }
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                Add();
+            }
+            if (e.KeyCode == Keys.Delete)
+            {
+                Delete();
+            }
         }
     }
 }
