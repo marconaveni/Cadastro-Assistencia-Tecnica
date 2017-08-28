@@ -764,11 +764,17 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void BtnOpcoes_Click(object sender, EventArgs e)
         {
 
-            FrmConfig cf = new FrmConfig();
-            cf.ShowDialog();
 
-            Sugestion();
+            FrmSenha fr = new FrmSenha();
+            fr.ShowDialog();
+            if (fr.Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
+            {
+                FrmConfig cf = new FrmConfig();
+                cf.ShowDialog();
+                Sugestion();
+            }
 
+           
             //try
             //{
             //    string processFilename = Microsoft.Win32.Registry.LocalMachine

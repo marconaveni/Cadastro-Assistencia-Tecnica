@@ -210,7 +210,6 @@ D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\itextsharp.xml
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\Interop.AcroPDFLib.dll
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Debug\AxInterop.AcroPDFLib.dll
-D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csprojResolveAssemblyReference.cache
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Interop.AcroPDFLib.dll
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\AxInterop.AcroPDFLib.dll
 D:\Cadastro Ficha Git\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Debug\Cadastro-Assistencia-Tecnica.csproj.ResolveComReference.cache

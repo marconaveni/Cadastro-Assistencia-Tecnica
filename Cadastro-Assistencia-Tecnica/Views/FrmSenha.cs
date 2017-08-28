@@ -30,6 +30,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void FrmSobre_Load(object sender, EventArgs e)
         {
             materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
+            TxtSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtSenha.Focus();
             BtnCancelar.Text = "Cancelar";
             BtnOk.Text = "Login";
@@ -56,7 +57,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         private void DoValidarSenha() {
             if (Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
             {
-                MessageBox.Show("Logado como Administrador", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -66,7 +66,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 {
                     MessageBox.Show("Senha errada, número de tentativas excedido", "Senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     BtnOk.Enabled = false;
-                    TxtSenha.Enabled = false;
+                    TxtSenha.EnableTextField(false);
                 }
                 else
                 {

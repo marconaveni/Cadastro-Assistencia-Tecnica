@@ -34,6 +34,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void FrmConfig_Load(object sender, EventArgs e)
         {
+            TbConfigs.SelectedTab = TbSobre;
+            TbConfigs.SelectedTab = TbSugestion;
+
+
             CmbSugestion.Items = "Aparelhos";
             CmbSugestion.Items = "Marcas";
             CmbSugestion.Items = "Modelos";
@@ -45,11 +49,15 @@ namespace Cadastro_Assistencia_Tecnica.Views
             BtnDefaut.Text = "Padrão";
             BtnSalvarDb.Text = "Salvar";
             BtnTest.Text = "Testar";
+            BtnSalvarSenha.Text = "Salvar";
+            BtnSair.Text = "Sair";
 
             BtnAdd.Text = "Adicionar";
             BtnRemove.Text = "Remover";
             BtnMoveDown.Text = "Mover Baixo";
             BtnMoveUp.Text = "Mover Cima";
+            BtnOderBy.Text = "Ordenar A-Z";
+            BtnRestore.Text = "Restaurar";
 
             LblTips.Visible = false;
 
@@ -69,6 +77,9 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtDataBase.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtDbUser.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtDbPassword.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtAtualSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtNovaSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtConfirmarSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
 
         }
 
@@ -85,6 +96,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
         private void CmbSugestion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeList();
+        }
+
+        private void ChangeList()
         {
             LblTips.Visible = false;
             if (CmbSugestion.Text == "Aparelhos")
@@ -130,6 +146,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 LstSugestions.Items.Add(TxtAddSugestion.Text);
                 TxtAddSugestion.Text = "";
+                LstSugestions.SetSelected(LstSugestions.Items.Count - 1, true);
                 LblTips.Visible = true;
             }
         }
@@ -149,7 +166,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
         private void BtnSalvar_Clicked(object sender, EventArgs e)
-        {
+        {         
             Salvar();
         }
 
@@ -284,5 +301,73 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 Delete();
             }
         }
+
+        private void BtnSair_Clicked(object sender, EventArgs e)
+        {
+            Salvar();
+            this.Close();
+        }
+
+        private void BtnOderBy_Clicked(object sender, EventArgs e)
+        {
+            LstSugestions.Sorted = true;
+            LstSugestions.Sorted = false;
+        }
+
+        private void BtnRestore_Clicked(object sender, EventArgs e)
+        {
+            ChangeList();
+        }
+
+        private void BtnSalvarSenha_Clicked(object sender, EventArgs e)
+        {
+            if (TxtNovaSenha.Text.Length < 4)
+            {
+                MessageBox.Show("Nova senha deve ter no minímo 4 carácteres!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtNovaSenha.LineColor = Color.Red;
+                TxtConfirmarSenha.LineColor = Color.Red;
+            }
+            else if(ConfigurationManager.AppSettings["pass"].ToString() == TxtAtualSenha.Text)
+            {
+                if (TxtNovaSenha.Text == TxtConfirmarSenha.Text)
+                {
+                    if (TxtAtualSenha.Text != TxtNovaSenha.Text)
+                    {
+                        Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                        configuration.AppSettings.Settings["pass"].Value = TxtNovaSenha.Text;
+                        configuration.Save();
+                        ConfigurationManager.RefreshSection("appSettings");
+                        MessageBox.Show("Senha de Administrador alterada com sucesso", "Alteração", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        
+                    }
+                }
+                else
+                {
+                    TxtNovaSenha.LineColor = Color.Red;
+                    TxtConfirmarSenha.LineColor = Color.Red;
+                    MessageBox.Show("Senha não confere!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Senha Atual errada!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtAtualSenha.LineColor = Color.Red;
+            }
+
+            TxtAtualSenha.Text = "";
+            TxtNovaSenha.Text = "";
+            TxtConfirmarSenha.Text = "";
+            TxtAtualSenha.Focus();
+        }
+
+        private void AlterColorLine(object sender, EventArgs e)
+        {
+            TxtAtualSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtNovaSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+            TxtConfirmarSenha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
+
+        }
+
     }
 }
