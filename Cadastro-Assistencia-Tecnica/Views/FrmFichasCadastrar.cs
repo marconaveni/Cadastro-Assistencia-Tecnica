@@ -22,15 +22,10 @@ namespace Cadastro_Assistencia_Tecnica.Views
 {
     public partial class FrmFichasCadastrar : MaterialForm
     {
-        private readonly MaterialSkinManager materialSkinManager;
-
         private IFichaService service = new FichaService();
-
+        private readonly MaterialSkinManager materialSkinManager;
         private int id = 0;
-        private string texto;
 
-
-        #region "Load e inicialização"
 
         public FrmFichasCadastrar()
         {
@@ -39,7 +34,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = MaterialSchemeColor.ThemeChanger();
-            //materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
         }
 
@@ -61,7 +55,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 CmbAprovado.Items = "Não";
                 CmbAprovado.SelectedIndex = 0;
 
-
                 CmbOk.Items = "Não";
                 CmbOk.Items = "Sim";
                 CmbOk.Items = "Devolução";
@@ -73,23 +66,18 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 CmbEntrega.SelectedIndex = 0;
 
                 CmbPesquisa.Items = "Número";
-                CmbPesquisa.Items = "Nome";
+                CmbPesquisa.Items = "Cliente";
                 CmbPesquisa.Items = "Telefone";
                 CmbPesquisa.SelectedIndex = 0;
 
                 Clear();
-
                 StartTheme();
 
                 TabMainMaterial.SelectedTab = TabPesquisaMaterial;
                 TabMainMaterial.SelectedTab = TabCadastroMaterial;
 
                 GetFichas();
-
-
                 Sugestion();
-
-
 
             }
             catch (Exception ex)
@@ -117,18 +105,11 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 TxtAcessorios.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_ACESSORIOS.CF");
                 TxtEstado.AutoCompleteCustomSource = Autocomplete.LerArquivo("LIST_DEFEITOS.CF");
 
-
                 MessageBox.Show("Configuração inicial feita, clique ok para reiniciar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
         }
 
-
-        #endregion "Load e inicialização"
-
-
-
-        #region "Metodos cadastro ficha"
 
         /// <summary>
         /// metodo que adiciona valores aos atributos da classe de model Ficha
@@ -136,7 +117,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         /// <returns>retorna valores preenchidos da classe</returns>
         private Ficha GetForm()
         {
-
             System.Globalization.CultureInfo cultureinfo = System.Threading.Thread.CurrentThread.CurrentCulture;
             Ficha ficha = new Ficha()
             {
@@ -150,7 +130,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 Aparelho = cultureinfo.TextInfo.ToTitleCase(TxtAparelho.Text),
                 Marca = cultureinfo.TextInfo.ToTitleCase(TxtMarca.Text),
                 Modelo = cultureinfo.TextInfo.ToTitleCase(TxtModelo.Text),
-                Acessorios = TxtAcessorios.Text,
+                Acessorios = cultureinfo.TextInfo.ToTitleCase(TxtAcessorios.Text),
                 Estado = cultureinfo.TextInfo.ToTitleCase(TxtEstado.Text)
             };
             if (TxtValor.Text.Equals("")) { TxtValor.Text = "0"; } else { ficha.Valor = Convert.ToDecimal(String.Format("{0:C}", TxtValor.Text)); }
@@ -244,7 +224,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 DgViewConsultar.Columns.Clear();
                 Ficha ficha = new Ficha();
-                if (CmbPesquisa.Text.Equals("Nome"))
+                if (CmbPesquisa.Text.Equals("Cliente"))
                 {
                     ficha.Cliente = TxtConsultar.Text;
                     DgViewConsultar.DataSource = service.findCliente(ficha);
@@ -261,15 +241,24 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 }
                 FormatCells();
 
-
+                if (DgViewConsultar.Rows.Count > 0)
+                {
+                    DgViewConsultar.Visible = true;
+                    LblDgMessage.Text = "";
+                    LblDgMessage.Visible = false;
+                }
+                else
+                {
+                    DgViewConsultar.Visible = false;
+                    LblDgMessage.Text = "Nenhum " + CmbPesquisa.Text.ToLower() + " '" + TxtConsultar.Text.ToLower() + "' encontrado.";
+                    LblDgMessage.Visible = true;
+                }
 
             }
             catch (BusinessException ex)
             {
-                MessageBox.Show(ex.Message, "Erro",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
 
@@ -293,13 +282,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 DgViewConsultar.Rows[i].Height = 40;
             }
 
-            //for (int i = 0; i < DgViewConsultar.RowCount; i++)
-            //{
-            //    Decimal j = 0;
-            //    DgViewConsultar.Rows[i].Cells[12]. = false;
-            //}
-
-
             foreach (DataGridViewColumn column in DgViewConsultar.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -313,7 +295,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             DataGridViewCellStyle style = DgViewConsultar.ColumnHeadersDefaultCellStyle;
             style.BackColor = Color.White;
             style.ForeColor = Color.Gray;
-
 
             DgViewConsultar.Columns[0].Visible = false;
             //DgViewConsultar.Columns[1].Visible = false;
@@ -350,16 +331,17 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             try
             {
-                DgViewConsultar.Rows[0].Selected = false;
+                if (DgViewConsultar.Rows.Count > 0)
+                {
+                    DgViewConsultar.Rows[0].Selected = false;
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
-
 
         }
-
 
 
         private void StartTheme(object sender, EventArgs e)
@@ -369,8 +351,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         private void StartTheme()
         {
-
-
             TxtNumeroFicha.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtCliente.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
             TxtTelefone.LineColor = Color.FromArgb(MaterialSchemeColor.red, MaterialSchemeColor.green, MaterialSchemeColor.blue);
@@ -395,8 +375,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
-
-
         /// <summary>
         /// transição de uma tab para tab cadastro
         /// </summary>
@@ -406,11 +384,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             TxtValor.Focus();
         }
 
-        #endregion  "Metodos cadastro ficha"
-
-        #region "botoes"
-
-        #region "Botoes aba Cadastro de ficha"
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
@@ -448,7 +421,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 MessageBox.Show(ex.Message, "erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -524,17 +496,42 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         }
 
-        #endregion "Botoes aba Cadastro de ficha"
+
+        private void BtnThemeMaterial_Click(object sender, EventArgs e)
+        {
+            materialSkinManager.ColorScheme = MaterialSchemeColor.ChangeColor();
+            StartTheme();
+            TxtNumeroFicha.Focus();
+        }
 
 
+        private void BtnOpcoes_Click(object sender, EventArgs e)
+        {
+            FrmSenha fr = new FrmSenha();
+            fr.ShowDialog();
+            if (fr.Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
+            {
+                FrmConfig cf = new FrmConfig();
+                cf.ShowDialog();
+                Sugestion();
+            }
 
-        #endregion "botoes"
+        }
 
+        private void BtnCalculator_Click(object sender, EventArgs e)
+        {
+            string ProgramName = "calc";
+            Process.Start(ProgramName);
+        }
 
+        private void BtnLimparPesquisa_Click(object sender, EventArgs e)
+        {
+            if (TxtConsultar.Text != "")
+                TxtConsultar.Text = "";
 
-        #region "eventos"
+            TxtConsultar.Focus();
+        }
 
-        #region "verificação no combo box"
 
         private void CmbAprovado_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -579,10 +576,8 @@ namespace Cadastro_Assistencia_Tecnica.Views
             {
                 DtEntrega.Visible = false;
             }
-
-
         }
-        #endregion"verificação no combo box"
+
 
         /// <summary>
         /// evento de duplo clique no datagrid
@@ -612,103 +607,75 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 {
                     MSDataGrid.Show(Cursor.Position);
                 }
-
-                Ficha ficha = new Ficha()
+                if (DgViewConsultar.CurrentRow != null)
                 {
-                    Id = Convert.ToInt16(DgViewConsultar.CurrentRow.Cells[0].Value),
-                    DataEntrada = Convert.ToDateTime(DgViewConsultar.CurrentRow.Cells[1].Value.ToString()),
-                    NroFicha = DgViewConsultar.CurrentRow.Cells[2].Value.ToString(),
-                    Cliente = DgViewConsultar.CurrentRow.Cells[3].Value.ToString(),
-                    Telefone = DgViewConsultar.CurrentRow.Cells[4].Value.ToString(),
-                    Endereco = DgViewConsultar.CurrentRow.Cells[5].Value.ToString(),
-                    NroEndereco = DgViewConsultar.CurrentRow.Cells[6].Value.ToString(),
-                    Aparelho = DgViewConsultar.CurrentRow.Cells[7].Value.ToString(),
-                    Marca = DgViewConsultar.CurrentRow.Cells[8].Value.ToString(),
-                    Modelo = DgViewConsultar.CurrentRow.Cells[9].Value.ToString(),
-                    Acessorios = DgViewConsultar.CurrentRow.Cells[10].Value.ToString(),
-                    Estado = DgViewConsultar.CurrentRow.Cells[11].Value.ToString(),
-                    Valor = Convert.ToDecimal(DgViewConsultar.CurrentRow.Cells[12].Value.ToString()),
-                    Aprovado = DgViewConsultar.CurrentRow.Cells[13].Value.ToString(),
-                    DataAprovado = DgViewConsultar.CurrentRow.Cells[14].Value.ToString(),
-                    Ok = DgViewConsultar.CurrentRow.Cells[15].Value.ToString(),
-                    DataOk = DgViewConsultar.CurrentRow.Cells[16].Value.ToString(),
-                    Entrega = DgViewConsultar.CurrentRow.Cells[17].Value.ToString(),
-                    DataEntrega = DgViewConsultar.CurrentRow.Cells[18].Value.ToString(),
-                    Detalhes = DgViewConsultar.CurrentRow.Cells[19].Value.ToString()
-                };
-                texto = ficha.DoExibir();
-                SetForm(ficha);
 
-                BtnImprimir.Visible = true;
-                BtnAlterar.Visible = true;
-                BtnExcluir.Enabled = true;
-                BtnCadastrar.Visible = false;
-                BtnAdmin.Visible = true;
-                BtnExcluir.Visible = false;
-                TxtNumeroFicha.EnableTextField(false);
-                TxtCliente.EnableTextField(false);
-                DtEntrada.Enabled = false;
-                TxtAparelho.EnableTextField(false);
-                BtnAdmin.Icon = Resources._lock;
-                BtnAdmin.Enabled = true;
-                LblTexto.Text = "Alterar a ficha nº " + ficha.NroFicha;
+                    Ficha ficha = new Ficha()
+                    {
+                        Id = Convert.ToInt16(DgViewConsultar.CurrentRow.Cells[0].Value),
+                        DataEntrada = Convert.ToDateTime(DgViewConsultar.CurrentRow.Cells[1].Value.ToString()),
+                        NroFicha = DgViewConsultar.CurrentRow.Cells[2].Value.ToString(),
+                        Cliente = DgViewConsultar.CurrentRow.Cells[3].Value.ToString(),
+                        Telefone = DgViewConsultar.CurrentRow.Cells[4].Value.ToString(),
+                        Endereco = DgViewConsultar.CurrentRow.Cells[5].Value.ToString(),
+                        NroEndereco = DgViewConsultar.CurrentRow.Cells[6].Value.ToString(),
+                        Aparelho = DgViewConsultar.CurrentRow.Cells[7].Value.ToString(),
+                        Marca = DgViewConsultar.CurrentRow.Cells[8].Value.ToString(),
+                        Modelo = DgViewConsultar.CurrentRow.Cells[9].Value.ToString(),
+                        Acessorios = DgViewConsultar.CurrentRow.Cells[10].Value.ToString(),
+                        Estado = DgViewConsultar.CurrentRow.Cells[11].Value.ToString(),
+                        Valor = Convert.ToDecimal(DgViewConsultar.CurrentRow.Cells[12].Value.ToString()),
+                        Aprovado = DgViewConsultar.CurrentRow.Cells[13].Value.ToString(),
+                        DataAprovado = DgViewConsultar.CurrentRow.Cells[14].Value.ToString(),
+                        Ok = DgViewConsultar.CurrentRow.Cells[15].Value.ToString(),
+                        DataOk = DgViewConsultar.CurrentRow.Cells[16].Value.ToString(),
+                        Entrega = DgViewConsultar.CurrentRow.Cells[17].Value.ToString(),
+                        DataEntrega = DgViewConsultar.CurrentRow.Cells[18].Value.ToString(),
+                        Detalhes = DgViewConsultar.CurrentRow.Cells[19].Value.ToString()
+                    };
+
+                    SetForm(ficha);
+
+                    BtnImprimir.Visible = true;
+                    BtnAlterar.Visible = true;
+                    BtnExcluir.Enabled = true;
+                    BtnCadastrar.Visible = false;
+                    BtnAdmin.Visible = true;
+                    BtnExcluir.Visible = false;
+                    TxtNumeroFicha.EnableTextField(false);
+                    TxtCliente.EnableTextField(false);
+                    DtEntrada.Enabled = false;
+                    TxtAparelho.EnableTextField(false);
+                    BtnAdmin.Icon = Resources._lock;
+                    BtnAdmin.Enabled = true;
+                    LblTexto.Text = "Alterar a ficha nº " + ficha.NroFicha;
+                }
+
 
             }
-            catch (InvalidCastException)
-            {
-                TxtConsultar.Focus();
-            }
-            catch (NullReferenceException)
+            catch (Exception)
             {
                 TxtConsultar.Focus();
             }
         }
-
-
-
-        #endregion "eventos"
-
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            DataTable dataTable = new DataTable();
-            Ficha f = new Ficha();
-            List<Ficha> fc = new List<Ficha>();
-
-            f.Cliente = "juarez";
-            f.NroFicha = "123";
-
-            fc.Add(f);
-            fc.Add(f);
-
-            dataTable = service.findCliente(f);
-            string v = dataTable.Rows.Count.ToString();
-            //MessageBox.Show(dataTable.Rows[0]["cliente"].ToString());
-
-            foreach (var i in fc)
-            {
-                MessageBox.Show(i.NroFicha);
-            }
-
-
-        }
-
-
 
 
         private void DgViewConsultar_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                for (int i = 0; i < DgViewConsultar.ColumnCount; i++)
+                if (e.RowIndex > -1)
                 {
-                    DgViewConsultar.Rows[e.RowIndex].Cells[i].Style.BackColor = Color.FromArgb(235, 235, 235);
+                    for (int i = 1; i < DgViewConsultar.ColumnCount; i++)
+                    {
+                        DgViewConsultar.Rows[e.RowIndex].Cells[i].Style.BackColor = Color.FromArgb(235, 235, 235);
+                    }
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
 
         }
@@ -717,29 +684,24 @@ namespace Cadastro_Assistencia_Tecnica.Views
         {
             try
             {
-                for (int i = 0; i < DgViewConsultar.ColumnCount; i++)
+                if (e.RowIndex > -1)
                 {
-                    DgViewConsultar.Rows[e.RowIndex].Cells[i].Style.BackColor = Color.White;
+                    for (int i = 0; i < DgViewConsultar.ColumnCount; i++)
+                    {
+                        DgViewConsultar.Rows[e.RowIndex].Cells[i].Style.BackColor = Color.White;
+                    }
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void CmbPesquisa_DropDownClosed(object sender, EventArgs e)
         {
             GetFichas();
-        }
-
-
-        private void BtnThemeMaterial_Click(object sender, EventArgs e)
-        {
-            materialSkinManager.ColorScheme = MaterialSchemeColor.ChangeColor();
-            StartTheme();
-            TxtNumeroFicha.Focus();
         }
 
 
@@ -761,63 +723,12 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
-        private void BtnOpcoes_Click(object sender, EventArgs e)
-        {
-
-
-            FrmSenha fr = new FrmSenha();
-            fr.ShowDialog();
-            if (fr.Senha().Equals(ConfigurationManager.AppSettings["pass"].ToString()))
-            {
-                FrmConfig cf = new FrmConfig();
-                cf.ShowDialog();
-                Sugestion();
-            }
-
-           
-            //try
-            //{
-            //    string processFilename = Microsoft.Win32.Registry.LocalMachine
-            //    .OpenSubKey("Software")
-            //    .OpenSubKey("Microsoft")
-            //    .OpenSubKey("Windows")
-            //    .OpenSubKey("CurrentVersion")
-            //    .OpenSubKey("App Paths")
-            //    .OpenSubKey("AcroRd32.exe")
-            //    .GetValue(String.Empty).ToString();
-
-            //    ProcessStartInfo info = new ProcessStartInfo();
-            //    info.Verb = "print";
-            //    info.FileName = processFilename;
-            //    info.Arguments = String.Format("/p /h {0}", "output.pdf");
-            //    info.CreateNoWindow = true;
-            //    info.WindowStyle = ProcessWindowStyle.Hidden;
-            //    //(It won't be hidden anyway... thanks Adobe!)
-            //    info.UseShellExecute = false;
-
-            //    Process p = Process.Start(info);
-            //    p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            //}
-            //catch (Exception)
-            //{             
-            //    MessageBox.Show("Adobe não está instalado");
-            //}
-
-        }
-
-
-        private void BtnCalculator_Click(object sender, EventArgs e)
-        {
-            string ProgramName = "calc";
-            Process.Start(ProgramName);
-        }
-
 
         private void IMSVisualizarFicha_Click(object sender, EventArgs e)
         {
             FichaPDF fichapdf = new FichaPDF();
             Ficha ficha = GetForm();
-            bool gerou = fichapdf.save(ficha);
+            bool gerou = fichapdf.Save(ficha);
             if (gerou)
             {
                 FrmVisualizar vs = new FrmVisualizar();
@@ -826,18 +737,9 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
         }
 
-        private void BtnLimparPesquisa_Click(object sender, EventArgs e)
-        {
-            if (TxtConsultar.Text != "")
-                TxtConsultar.Text = "";
-
-            TxtConsultar.Focus();
-        }
 
         private void FrmFichasCadastrar_KeyUp(object sender, KeyEventArgs e)
         {
-
-
             Control ctl;
             ctl = (Control)sender;
             if (e.KeyCode == Keys.BrowserForward)
@@ -846,17 +748,68 @@ namespace Cadastro_Assistencia_Tecnica.Views
             }
             else if (e.KeyCode == Keys.BrowserBack)
             {
-                // MessageBox.Show(this.ActiveControl.Name);
                 ctl.SelectNextControl(ActiveControl, false, true, true, true);
             }
 
-
         }
 
-        private void BtnOpcoes_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 
 }
+
+
+
+
+//private void Button1_Click(object sender, EventArgs e)
+//{
+//    DataTable dataTable = new DataTable();
+//    Ficha f = new Ficha();
+//    List<Ficha> fc = new List<Ficha>();
+
+//    f.Cliente = "juarez";
+//    f.NroFicha = "123";
+
+//    fc.Add(f);
+//    fc.Add(f);
+
+//    dataTable = service.findCliente(f);
+//    string v = dataTable.Rows.Count.ToString();
+//    //MessageBox.Show(dataTable.Rows[0]["cliente"].ToString());
+
+//    foreach (var i in fc)
+//    {
+//        MessageBox.Show(i.NroFicha);
+//    }
+
+
+//}
+
+
+//try
+//{
+//    string processFilename = Microsoft.Win32.Registry.LocalMachine
+//    .OpenSubKey("Software")
+//    .OpenSubKey("Microsoft")
+//    .OpenSubKey("Windows")
+//    .OpenSubKey("CurrentVersion")
+//    .OpenSubKey("App Paths")
+//    .OpenSubKey("AcroRd32.exe")
+//    .GetValue(String.Empty).ToString();
+
+//    ProcessStartInfo info = new ProcessStartInfo();
+//    info.Verb = "print";
+//    info.FileName = processFilename;
+//    info.Arguments = String.Format("/p /h {0}", "output.pdf");
+//    info.CreateNoWindow = true;
+//    info.WindowStyle = ProcessWindowStyle.Hidden;
+//    //(It won't be hidden anyway... thanks Adobe!)
+//    info.UseShellExecute = false;
+
+//    Process p = Process.Start(info);
+//    p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+//}
+//catch (Exception)
+//{             
+//    MessageBox.Show("Adobe não está instalado");
+//}

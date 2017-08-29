@@ -179,90 +179,6 @@ namespace Cadastro_Assistencia_Tecnica.Model
         }
 
 
-
-
-
-
-        public String DoExibir()
-        {
-
-            StringBuilder stb = new StringBuilder();
-            stb.Append("                                                Assistência Tecnica                    ");
-            stb.Append("\n\n\n                     Data:  ");
-            stb.Append(DataEntrada);
-            stb.Append("     Nº:      ");
-            stb.Append(NroFicha);
-
-            stb.Append("\n\n                     Nome:  ");
-            stb.Append(Cliente);
-            stb.Append("     Telefone:   ");
-            stb.Append(Telefone);
-
-            stb.Append("\n\n                     Endereço: ");
-            stb.Append(Endereco);
-            stb.Append("      Nº: ");
-            stb.Append(NroEndereco);
-
-            stb.Append("\n\n                     Aparelho: ");
-            stb.Append(Aparelho);
-            stb.Append("      Marca: ");
-            stb.Append(Marca);
-
-            stb.Append("\n\n                     Modelo: ");
-            stb.Append(Modelo);
-            stb.Append("     Acessórios: ");
-            stb.Append(Acessorios);
-
-            stb.Append("\n\n                     Estado: ");
-            stb.Append(Estado);
-            stb.Append("       Valor  ");
-            stb.Append(String.Format("{0:C}", Valor));
-
-            stb.Append("\n\n                     ok:    ");
-            stb.Append(Ok);
-            stb.Append("   ");
-            stb.Append(DataOk);
-
-            stb.Append("\n\n                     Data Entrega:  ");
-            stb.Append(DataEntrega);
-
-            stb.Append("\n\n\n-------------------------------------------------------------------------------------------------------------------------------\n\n\n");
-
-            stb.Append("                                             Assistência Tecnica                    ");
-
-            stb.Append("\n\n\n\n                     Nome:  ");
-            stb.Append(Cliente);
-            stb.Append("     Nº:      ");
-            stb.Append(NroFicha);
-
-            stb.Append("\n\n                     Aparelho: ");
-            stb.Append(Aparelho);
-            stb.Append("      Marca: ");
-            stb.Append(Marca);
-
-            stb.Append("\n\n                     Modelo: ");
-            stb.Append(Modelo);
-            stb.Append("     Acessórios: ");
-            stb.Append(Acessorios);
-
-            stb.Append("\n\n                     Estado: ");
-            stb.Append(Estado);
-            stb.Append("       Valor  ");
-            stb.Append(String.Format("{0:C}", Valor));
-
-            stb.Append("\n\n                     Data Entrada:  ");
-            stb.Append(DataEntrada);
-
-            stb.Append("\n\n                     Data Entrega:  ");
-            stb.Append(DataEntrega);
-            stb.Append("\n\n\n\n         ");
-
-            return stb.ToString();
-
-        }
-
-
-
         public string[] ListaAparelhos()
         {
             var data = new[] {  "2 Ferros",
@@ -273,16 +189,15 @@ namespace Cadastro_Assistencia_Tecnica.Model
                                 "Aquecedor",
                                 "Aspirador",
                                 "Batedeira",
+                                "Chapinha",
                                 "Cafeteira",
                                 "Centrifuga de Fruta",
                                 "Centrifuga de Roupas",
-                                "Chapinha",
                                 "Churrasqueira elétrica",
                                 "Circulador de Ar",
                                 "Climatizador",
                                 "Enceradeira",
                                 "Espremedor",
-                                "Faca Elétrica",
                                 "Ferro",
                                 "Forninho",
                                 "Forno",
@@ -679,9 +594,81 @@ namespace Cadastro_Assistencia_Tecnica.Model
 
         public string[] ListaDefeitos()
         {
-            var data = new[] { "Parou",
-                               "Não Funciona",
-                               "Não Liga"
+            var data = new[] {
+                                "2 Não funciona",
+                                "2 Parou de funcionar",
+                                "2 Não esquenta",
+                                "Acende a luz e não funciona",
+                                "Acende a luz e não esquenta",
+                                "Arraste",
+                                "Arraste e engate",
+                                "Arraste e acoplamento",
+                                "Aspira pouco",
+                                "Barulhento",
+                                "Barulho",
+                                "Barulho estranho",
+                                "Base",
+                                "Base Troca",
+                                "Botão",
+                                "Botão Liga/Desliga",
+                                "Cabo quebrado",
+                                "Caiu",
+                                "Caiu, vazando",
+                                "Caiu, quebrado",
+                                "Caiu, Não esquenta",
+                                "Caiu, Aberto",
+                                "Chave",
+                                "Cheira queimado",
+                                "Cheirou queimado, parou",
+                                "Conserto do fio",
+                                "Copo e Arraste",
+                                "Desliga durante o uso",
+                                "Desligando sozinho",
+                                "Deu estouro e parou",
+                                "Engrenagens",
+                                "Esquenta Muito",
+                                "Esquenta o cabo",
+                                "Esquenta só de um lado",
+                                "Esquenta pouco",
+                                "Esquenta, vazando",
+                                "Esquenta saiu fumaça",
+                                "Esquenta só uma cima",
+                                "Esquenta só em baixo",
+                                "Fio",
+                                "Fio troca",
+                                "Fio (Conserto)",
+                                "Fraco",
+                                "Hélice",
+                                "Ligou no 220V",
+                                "Membrana",
+                                "Mola",
+                                "Não Funciona",
+                                "Não liga",
+                                "Não esquenta",
+                                "Não aquece",
+                                "Não aspira",
+                                "Não Desliga", 
+                                "Não Gira",
+                                "Não puxa",
+                                "Não soube dizer defeito",
+                                "Não sai vapor",
+                                "Não suga",
+                                "Parou",
+                                "Parou de funcionar",
+                                "Parou de esquentar",
+                                "Pino",
+                                "Pino (tomada)",
+                                "Pino derretido",
+                                "Placa de proteção",
+                                "Quebrado",
+                                "Queimou",
+                                "Resistência",
+                                "Revisão",
+                                "Troca do fio",
+                                "Travado",
+                                "Vazando",
+                                "Ventoinha",
+                                "Trouxe desmontado"
                              };
             return data;
         }

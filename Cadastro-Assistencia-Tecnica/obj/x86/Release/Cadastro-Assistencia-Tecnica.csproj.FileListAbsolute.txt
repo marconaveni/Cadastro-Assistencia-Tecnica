@@ -1,0 +1,30 @@
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Cadastro Assistencia Tecnica.exe.config
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Cadastro Assistencia Tecnica.pdb
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\itextsharp.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\MaterialSkin.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\itextsharp.xml
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\Interop.AcroPDFLib.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\bin\Release\AxInterop.AcroPDFLib.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Interop.AcroPDFLib.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\AxInterop.AcroPDFLib.dll
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro-Assistencia-Tecnica.csproj.ResolveComReference.cache
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.ComboTextField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.ColoredButton.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.TextAreaField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.DateTextField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.RaisedButtonRipple.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.TextFieldValor.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Componentes.TextField.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Properties.Resources.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Views.FrmConfig.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Views.FrmFichasCadastrar.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Views.FrmSenha.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro_Assistencia_Tecnica.Views.FrmVisualizar.resources
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro-Assistencia-Tecnica.csproj.GenerateResource.Cache
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro Assistencia Tecnica.exe.manifest
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro Assistencia Tecnica.application
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro Assistencia Tecnica.exe
+D:\Documentos\Área de Trabalho\Material Beta dev\Cadastro-Assistencia-Tecnica\Cadastro-Assistencia-Tecnica\obj\x86\Release\Cadastro Assistencia Tecnica.pdb

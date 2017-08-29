@@ -273,11 +273,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
             Salvar();
         }
 
-        private void CmbSugestion_Click(object sender, EventArgs e)
-        {
-            Salvar();
-        }
-
         private void FrmConfig_KeyUp(object sender, KeyEventArgs e)
         {
             Control ctl;
@@ -326,6 +321,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
                 MessageBox.Show("Nova senha deve ter no minímo 4 carácteres!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtNovaSenha.LineColor = Color.Red;
                 TxtConfirmarSenha.LineColor = Color.Red;
+                TxtAtualSenha.Focus();
             }
             else if(ConfigurationManager.AppSettings["pass"].ToString() == TxtAtualSenha.Text)
             {
@@ -337,28 +333,30 @@ namespace Cadastro_Assistencia_Tecnica.Views
                         configuration.AppSettings.Settings["pass"].Value = TxtNovaSenha.Text;
                         configuration.Save();
                         ConfigurationManager.RefreshSection("appSettings");
-                        MessageBox.Show("Senha de Administrador alterada com sucesso", "Alteração", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        
+                        MessageBox.Show("Senha de Administrador alterada com sucesso.", "Alteração", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TxtAtualSenha.Text = "";
+                        TxtNovaSenha.Text = "";
+                        TxtConfirmarSenha.Text = "";
+                        TxtAtualSenha.Focus();
+
                     }
                 }
                 else
                 {
+                    MessageBox.Show("A confirmação está diferente da senha informada.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtNovaSenha.Focus();
+                    TxtConfirmarSenha.Text = "";
                     TxtNovaSenha.LineColor = Color.Red;
                     TxtConfirmarSenha.LineColor = Color.Red;
-                    MessageBox.Show("Senha não confere!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Senha Atual errada!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Senha Atual não está correta.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtAtualSenha.LineColor = Color.Red;
+                TxtAtualSenha.Focus();
             }
 
-            TxtAtualSenha.Text = "";
-            TxtNovaSenha.Text = "";
-            TxtConfirmarSenha.Text = "";
-            TxtAtualSenha.Focus();
         }
 
         private void AlterColorLine(object sender, EventArgs e)

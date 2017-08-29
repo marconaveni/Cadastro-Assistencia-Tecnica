@@ -21,7 +21,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         string filename = System.AppDomain.CurrentDomain.BaseDirectory + "output.pdf";
 
 
-
         public FrmVisualizar()
         {
             InitializeComponent();

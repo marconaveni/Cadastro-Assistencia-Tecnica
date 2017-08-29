@@ -43,7 +43,6 @@ namespace Cadastro_Assistencia_Tecnica.Views
         }
 
 
-
         public String Senha() { 
             return TxtSenha.Text;
         }
@@ -90,7 +89,7 @@ namespace Cadastro_Assistencia_Tecnica.Views
 
             if (e.KeyCode == Keys.F4)
             {
-                this.Hide();
+                this.Close();
             }
         }
 

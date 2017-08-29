@@ -64,9 +64,7 @@ namespace Cadastro_Assistencia_Tecnica.Save
             }
 
             cell = new PdfPCell(new Phrase(print, Roboto));
-            cell.Colspan = colspan;
-
-
+           
 
             if (Align == AlignEnum.center)
                 cell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -78,6 +76,8 @@ namespace Cadastro_Assistencia_Tecnica.Save
                 cell.HorizontalAlignment = Element.ALIGN_BOTTOM;
             else if (Align == AlignEnum.left)
                 cell.HorizontalAlignment = Element.ALIGN_LEFT;
+
+            cell.Colspan = colspan;
 
             cell.PaddingRight = right;
             cell.PaddingTop = top;
@@ -94,7 +94,7 @@ namespace Cadastro_Assistencia_Tecnica.Save
 
 
 
-        public bool save(Ficha ficha)
+        public bool Save(Ficha ficha)
         {
             string valor = "";
             if (ficha.Valor > 0 && ficha.Aprovado != "Não") valor = ficha.Valor.ToString();
@@ -358,13 +358,13 @@ namespace Cadastro_Assistencia_Tecnica.Save
                 }
 
             }
-            catch (IOException ex)
+            catch (IOException)
             {
 
                 MessageBox.Show("o arquivo 'output.pdf' não pode ser gravado ");
                 return false;
             }
-            catch (WebException ex)
+            catch (WebException)
             {
                 MessageBox.Show("o arquivo 'bg.png' não pode ser aberto ou localizado");
                 return false;

@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F1HDn+a7RLauQGT97s2DLfuWPeOvj9Sh0tUoZhN+TPs=</dsig:DigestValue>
+        <dsig:DigestValue>J80gKFquX8UGrCMd5u5VDqSEveMpUkc0AZo1zhR2zfA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5JEBI52pIsilmOWM36U/sjhs+bmWbK9nHOU7aEyX1sQ=</dsig:DigestValue>
+        <dsig:DigestValue>cGvNx/S0dwCC2aeTOLkmNqH+qDbIqEJ73xmR/2IlbZM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uVbhQhcMoY6Rb/lKTFp/06wNfVr7OlFq0+XNl4igdOw=</dsig:DigestValue>
+        <dsig:DigestValue>ZohUmKJWGKtmXsNf/N/RxtcYqvH1+9JV0933hCfV62I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +102,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Cadastro Assistencia Tecnica.exe.config" size="1255">
+  <file name="Cadastro Assistencia Tecnica.exe.config" size="372">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YiryxKPU/0EJiFGDSg5uVwAmh73CjsUPdwBqnqWW4VM=</dsig:DigestValue>
+      <dsig:DigestValue>GDj7RAlUfnPYj5bt34nk536wEi6fUP4MK2OHBZgRyOI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\bg.png" size="18286">

@@ -294,7 +294,6 @@
             this.CmbSugestion.Size = new System.Drawing.Size(324, 40);
             this.CmbSugestion.TabIndex = 1;
             this.CmbSugestion.SelectedIndexChanged += new System.EventHandler(this.CmbSugestion_SelectedIndexChanged);
-            this.CmbSugestion.Click += new System.EventHandler(this.CmbSugestion_Click);
             this.CmbSugestion.Enter += new System.EventHandler(this.CmbSugestion_Enter);
             // 
             // LstSugestions

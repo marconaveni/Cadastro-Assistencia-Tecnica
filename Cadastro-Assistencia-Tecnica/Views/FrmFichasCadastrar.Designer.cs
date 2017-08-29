@@ -93,6 +93,7 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.Description = new System.Windows.Forms.ToolTip(this.components);
             this.ShadowTop = new System.Windows.Forms.PictureBox();
+            this.LblDgMessage = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DgViewConsultar)).BeginInit();
             this.MSDataGrid.SuspendLayout();
             this.TabMainMaterial.SuspendLayout();
@@ -345,7 +346,6 @@
             this.BtnOpcoes.Size = new System.Drawing.Size(125, 50);
             this.BtnOpcoes.TabIndex = 25;
             this.BtnOpcoes.Clicked += new System.EventHandler(this.BtnOpcoes_Click);
-            this.BtnOpcoes.Load += new System.EventHandler(this.BtnOpcoes_Load);
             // 
             // BtnCalculator
             // 
@@ -925,6 +925,7 @@
             // TabPesquisaMaterial
             // 
             this.TabPesquisaMaterial.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TabPesquisaMaterial.Controls.Add(this.LblDgMessage);
             this.TabPesquisaMaterial.Controls.Add(this.BtnLimparPesquisa);
             this.TabPesquisaMaterial.Controls.Add(this.TxtConsultar);
             this.TabPesquisaMaterial.Controls.Add(this.LblTipoPesquisa);
@@ -1058,6 +1059,21 @@
             this.ShadowTop.TabIndex = 156;
             this.ShadowTop.TabStop = false;
             // 
+            // LblDgMessage
+            // 
+            this.LblDgMessage.AutoSize = true;
+            this.LblDgMessage.Depth = 0;
+            this.LblDgMessage.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblDgMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblDgMessage.Location = new System.Drawing.Point(19, 84);
+            this.LblDgMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblDgMessage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblDgMessage.Name = "LblDgMessage";
+            this.LblDgMessage.Size = new System.Drawing.Size(108, 19);
+            this.LblDgMessage.TabIndex = 6;
+            this.LblDgMessage.Text = "LblDgMessage";
+            this.LblDgMessage.Visible = false;
+            // 
             // FrmFichasCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -1154,5 +1170,6 @@
         private MaterialSkin.Controls.MaterialFlatButton BtnAdmin;
         private Componentes.ColoredButton BtnExcluir;
         private MaterialSkin.Controls.MaterialFlatButton BtnLimparPesquisa;
+        private MaterialSkin.Controls.MaterialLabel LblDgMessage;
     }
 }
