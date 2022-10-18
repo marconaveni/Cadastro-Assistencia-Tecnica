@@ -579,7 +579,7 @@ namespace Cadastro_Assistencia_Tecnica.Model
                                "Fio",
                                "Garfos",
                                "Jarra",
-                               "Magueira",
+                               "Mangueira",
                                "Prato",
                                "Sem Bocal",
                                "Sem Copo",

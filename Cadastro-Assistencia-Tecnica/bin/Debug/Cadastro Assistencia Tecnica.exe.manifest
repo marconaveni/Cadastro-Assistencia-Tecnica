@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J80gKFquX8UGrCMd5u5VDqSEveMpUkc0AZo1zhR2zfA=</dsig:DigestValue>
+        <dsig:DigestValue>7mCLEBiNX4Y2r8Ej7ixvGNSQJNBLJ6OWa4umey4rhw8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="1084416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cadastro Assistencia Tecnica.exe" size="1168896">
       <assemblyIdentity name="Cadastro Assistencia Tecnica" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cGvNx/S0dwCC2aeTOLkmNqH+qDbIqEJ73xmR/2IlbZM=</dsig:DigestValue>
+        <dsig:DigestValue>XRFE2Jd35fy2Zs16zcdCw/qfZBE64LIzKxyzUnLcZDY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZohUmKJWGKtmXsNf/N/RxtcYqvH1+9JV0933hCfV62I=</dsig:DigestValue>
+        <dsig:DigestValue>boDkyD6SfgE3eX9lMv6sDSU5w664enWExtOx08wrm5s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

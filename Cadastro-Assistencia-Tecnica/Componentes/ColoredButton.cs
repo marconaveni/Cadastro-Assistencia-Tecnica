@@ -40,7 +40,6 @@ namespace Cadastro_Assistencia_Tecnica.Componentes
             remove { Btn.Click -= value; }
         }
 
-
         [Browsable(true), EditorBrowsable(EditorBrowsableState.Always)]
         public override string Text
         {

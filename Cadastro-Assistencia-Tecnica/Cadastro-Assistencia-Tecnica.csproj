@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cadastro_Assistencia_Tecnica</RootNamespace>
     <AssemblyName>Cadastro Assistencia Tecnica</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -94,6 +94,12 @@
     <Compile Include="Business\IFichaService.cs" />
     <Compile Include="Business\Impl\ConnectionService.cs" />
     <Compile Include="Business\Impl\FichaService.cs" />
+    <Compile Include="Componentes\teste.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\teste.Designer.cs">
+      <DependentUpon>teste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\ComboTextField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     <Compile Include="Views\FrmVisualizar.Designer.cs">
       <DependentUpon>FrmVisualizar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Componentes\teste.resx">
+      <DependentUpon>teste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\ComboTextField.resx">
       <DependentUpon>ComboTextField.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +264,7 @@
     <None Include="Resources\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\circle.png" />
     <Content Include="tools.ico" />
     <None Include="Resources\shadow.png" />
     <None Include="Resources\calendar.png" />
